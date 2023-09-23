@@ -3,6 +3,7 @@
     "composite": true,
     "module": "commonjs",
     "declaration": true,
+    "declarationMap": true,
     "noImplicitAny": false,
     "removeComments": true,
     "noLib": false,
