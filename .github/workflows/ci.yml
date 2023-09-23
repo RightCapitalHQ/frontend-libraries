@@ -1,0 +1,33 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Prepare Node.js
+        uses: actions/setup-node@v3.8.1
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+
+      - name: Install deps
+        run: pnpm install
+
+      - name: Prettier code style check
+        run: pnpm prettier . --check
+
+      - name: Test
+        run: pnpm run test
+
+      - name: Build
+        run: pnpm run build
