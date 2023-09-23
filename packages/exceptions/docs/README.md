@@ -1,3 +1,5 @@
+@rightcapital/exceptions / [Exports](modules.md)
+
 # `exceptions`
 
 ## Introduction

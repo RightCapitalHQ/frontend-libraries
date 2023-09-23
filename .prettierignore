@@ -1,0 +1,5 @@
+# We need to ignore this cause this is auto-generated file
+pnpm-lock.yaml
+
+# skip for all auto-enerated docs
+docs
