@@ -9,6 +9,14 @@
 
 <!-- Badges area end -->
 
+## Introduction
+
+This is a Mono repository contains a set of useful libraries/helpers in TypeScript.
+
+it including the following packages:
+
+- @rightcapital/exceptions: This library provides a set of standard Exceptions ([docs](https://github.com/RightCapitalHQ/frontend-libraries/tree/main/packages/exceptions/docs))
+
 ## Development
 
 If you are confused about Develop and _README.md_, please see the document
