@@ -27,8 +27,8 @@ importers:
         specifier: 29.5.4
         version: 29.5.4
       beachball:
-        specifier: 2.36.0
-        version: 2.36.0
+        specifier: 2.37.0
+        version: 2.37.0
       commitizen:
         specifier: 4.3.0
         version: 4.3.0
@@ -1296,8 +1296,8 @@ packages:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
     dev: true
 
-  /beachball@2.36.0:
-    resolution: {integrity: sha512-JMh8nnqzT7WupTo35U7Xyq1EyhsrXTF31XWJqFP6v/hvLTR8EPD24OPeXI6yVRyCTcUExhG4JS4XEevXU/WTGQ==}
+  /beachball@2.37.0:
+    resolution: {integrity: sha512-JcHjlo+Srq7rXlfbjCgEAp6V/Fb1Nbu1EunU86A6Zv4f7r0HBFhTt+LBIvHutUn1Q7lzrTPJAKMb9eCEFCb7Fg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:

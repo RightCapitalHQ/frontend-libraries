@@ -44,7 +44,7 @@
     "@rightcapital/exceptions": "workspace:*",
     "@rightcapital/prettier-config": "^6.0.1",
     "@types/jest": "29.5.4",
-    "beachball": "2.36.0",
+    "beachball": "2.37.0",
     "commitizen": "4.3.0",
     "concurrently": "8.2.1",
     "eslint": "8.47.0",
