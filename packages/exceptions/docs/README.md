@@ -11,7 +11,7 @@ It is inspired by the [PHP's SPL exceptions](https://www.php.net/manual/en/spl.e
 ## Installation
 
 ```bash
-pnpm add @right/exceptions
+pnpm add @rightcapital/exceptions
 ```
 
 ## Usage
