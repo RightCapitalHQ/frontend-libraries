@@ -14,7 +14,7 @@ import {
   UnderflowException,
   UnexpectedValueException,
   BaseException,
-} from '../src/exceptions';
+} from '../src/index';
 
 const exceptionCtorList = [
   LogicException,
