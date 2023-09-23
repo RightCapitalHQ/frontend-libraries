@@ -23,12 +23,15 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
+    "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts",
     "eslint": "eslint --cache 'src/**/*.ts*'",
     "lint": "pnpm prettier && pnpm eslint",
     "lint:fix": "pnpm prettier --write && eslint 'src/**/*.ts*' --fix",
     "prettier": "prettier \"{src,__tests__}/**/*.{tsx,ts}\" -l"
   },
   "devDependencies": {
-    "prettier": "3.0.3"
+    "prettier": "3.0.3",
+    "typedoc": "^0.25.1",
+    "typedoc-plugin-markdown": "^3.16.0"
   }
 }

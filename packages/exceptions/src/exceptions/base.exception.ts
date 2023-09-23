@@ -1,6 +1,7 @@
 /**
  * The Base Exception that be used to emulate the PHP Base Exception
  * All exception should be based on this Error type
+ * @public
  *
  * @see https://www.php.net/manual/en/spl.exceptions.php
  * @see https://javascript.info/custom-errors
