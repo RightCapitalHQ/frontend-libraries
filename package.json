@@ -8,10 +8,7 @@
   "engines": {
     "node": ">=18.16.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.rightcapital.io:app/libraries.git"
-  },
+  "repository": "https://github.com/RightCapitalHQ/frontend-libraries",
   "scripts": {
     "docs": "pnpm -r --filter=./packages/** docs",
     "preinstall": "npx only-allow pnpm",
