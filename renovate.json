@@ -1,0 +1,68 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>RightCapitalHQ/renovate-config"],
+  "assignees": ["rainx"],
+  "reviewers": ["rainx"],
+  "labels": ["dependencies"],
+  "automergeType": "pr",
+  "platformAutomerge": true,
+  "prCreation": "immediate",
+  "postUpgradeTasks": {
+    "commands": [
+      "git add --all",
+      "npx beachball change --no-fetch --no-commit --type patch --message '{{{commitMessage}}}'",
+      "git reset"
+    ],
+    "executionMode": "branch",
+    "fileFilters": ["change/*.json"]
+  },
+  "lockFileMaintenance": {
+    "automerge": true,
+    "enabled": true,
+    "postUpgradeTasks": {
+      "commands": [
+        "git add --all",
+        "npx beachball change --no-fetch --no-commit --type none --message '{{{commitMessage}}}'",
+        "git reset"
+      ],
+      "executionMode": "branch",
+      "fileFilters": ["change/*.json"]
+    }
+  },
+  "packageRules": [
+    {
+      "automerge": false,
+      "description": "Mark rule and plugin updates as breaking changes",
+      "matchDepTypes": ["dependencies"],
+      "matchPackagePrefixes": [
+        "@typescript-eslint/",
+        "eslint-config-",
+        "eslint-plugin-"
+      ]
+    },
+    {
+      "automerge": false,
+      "description": "Group all RightCapital packages (non-major) together",
+      "groupName": "RightCapital packages (non-major)",
+      "groupSlug": "auto-merge-rightcapital-packages-non-major-updates",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchPackagePrefixes": ["@rightcapital"]
+    },
+    {
+      "automerge": false,
+      "description": "Group all DevDependencies together",
+      "groupName": "DevDependencies",
+      "groupSlug": "auto-merge-dev-dependencies-updates",
+      "matchDepTypes": ["devDependencies"],
+      "postUpgradeTasks": {
+        "commands": [
+          "git add --all",
+          "npx beachball change --no-fetch --no-commit --type none --message '{{{commitMessage}}}'",
+          "git reset"
+        ],
+        "fileFilters": ["change/*.json"],
+        "executionMode": "branch"
+      }
+    }
+  ]
+}
