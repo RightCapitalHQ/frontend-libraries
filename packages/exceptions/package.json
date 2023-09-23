@@ -1,0 +1,34 @@
+{
+  "name": "@rightcapital/exceptions",
+  "version": "1.1.1",
+  "description": "TypeScript Exception definitions inspired by PHP SPL Exceptions etc...",
+  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
+  "keywords": [
+    "Exception",
+    "Error",
+    "TypeScript"
+  ],
+  "homepage": "https://www.rightcapital.com",
+  "license": "MIT",
+  "packageManager": "pnpm@8.7.6",
+  "main": "lib/exceptions.js",
+  "typings": "lib/exceptions.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "eslint": "eslint --cache 'src/**/*.ts*'",
+    "lint": "pnpm prettier && pnpm eslint",
+    "lint:fix": "pnpm prettier --write && eslint 'src/**/*.ts*' --fix",
+    "prettier": "prettier \"{src,__tests__}/**/*.{tsx,ts}\" -l"
+  },
+  "devDependencies": {
+    "prettier": "3.0.2"
+  }
+}
