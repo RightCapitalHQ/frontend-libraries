@@ -6,22 +6,28 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  install:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Prepare pnpm
-        uses: pnpm/action-setup@v2
-
-      - name: Prepare Node.js
-        uses: actions/setup-node@v3.8.1
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
         with:
           node-version-file: .node-version
           cache: pnpm
+      - run: pnpm install
 
-      - name: Install deps
-        run: pnpm install
+  test:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install
 
       - name: Prettier code style check
         run: pnpm prettier . --check
@@ -29,5 +35,61 @@ jobs:
       - name: Test
         run: pnpm run test
 
+  build:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install
+
       - name: Build
         run: pnpm run build
+
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: mono-repos-dist
+          path: |
+            packages/**/dist/**
+
+  publish:
+    needs: [build, test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install
+
+      - name: Download production artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: mono-repos-dist
+
+      - name: Publish (development)
+        if: github.event.pull_request.head.repo.full_name == 'RightCapitalHQ/frontend-libraries' && github.base_ref == github.event.repository.default_branch
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+        run: |
+          npm config set //registry.npmjs.org/:_authToken "${NPM_TOKEN}"
+          preid=$(sed -e s:/:-:g <<<${{ github.head_ref }}).${{ github.run_number }}.${{ github.run_attempt }}
+          pnpm --filter './packages/*' exec npm --no-git-tag-version version prerelease --preid="${preid}"
+          pnpm --filter './packages/*' publish --no-git-checks --access public --tag development
+
+      - name: Publish (main)
+        if: github.repository == 'RightCapitalHQ/frontend-libraries' && github.event_name == 'push' && github.ref_name == github.event.repository.default_branch
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+        run: |
+          npm config set //registry.npmjs.org/:_authToken "${NPM_TOKEN}"
+          git config --local user.email "npm-publisher@rightcapital.com"
+          git config --local user.name "GitHub Actions[bot]"
+          pnpm beachball publish --yes -m 'chore(release): applying package updates'
