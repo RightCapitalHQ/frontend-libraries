@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "docs: revise the links of current API docs",
-  "packageName": "@rightcapital/exceptions",
-  "email": "i@rainx.cc",
-  "dependentChangeType": "patch"
-}
