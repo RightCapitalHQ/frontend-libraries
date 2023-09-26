@@ -40,7 +40,7 @@
     "@commitlint/config-conventional": "17.7.0",
     "@commitlint/cz-commitlint": "17.7.1",
     "@rightcapital/exceptions": "workspace:*",
-    "@rightcapital/prettier-config": "6.0.1",
+    "@rightcapital/prettier-config": "6.0.2",
     "@types/jest": "29.5.5",
     "beachball": "2.37.0",
     "commitizen": "4.3.0",
