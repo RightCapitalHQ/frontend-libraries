@@ -48,7 +48,7 @@ Exception thrown if a callback refers to an undefined function or if some argume
 
 #### Defined in
 
-[packages/exceptions/src/exceptions/base.exception.ts:14](https://github.com/RightCapitalHQ/frontend-libraries/blob/98a64d7/packages/exceptions/src/exceptions/base.exception.ts#L14)
+[packages/exceptions/src/exceptions/base.exception.ts:14](https://github.com/RightCapitalHQ/frontend-libraries/blob/d583627/packages/exceptions/src/exceptions/base.exception.ts#L14)
 
 ## Properties
 
@@ -64,7 +64,7 @@ The value of cause can be of any type. You should not make assumptions that the 
 
 #### Defined in
 
-[packages/exceptions/src/exceptions/base.exception.ts:16](https://github.com/RightCapitalHQ/frontend-libraries/blob/98a64d7/packages/exceptions/src/exceptions/base.exception.ts#L16)
+[packages/exceptions/src/exceptions/base.exception.ts:16](https://github.com/RightCapitalHQ/frontend-libraries/blob/d583627/packages/exceptions/src/exceptions/base.exception.ts#L16)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[packages/exceptions/src/exceptions/bad-function-call.exception.ts:8](https://github.com/RightCapitalHQ/frontend-libraries/blob/98a64d7/packages/exceptions/src/exceptions/bad-function-call.exception.ts#L8)
+[packages/exceptions/src/exceptions/bad-function-call.exception.ts:8](https://github.com/RightCapitalHQ/frontend-libraries/blob/d583627/packages/exceptions/src/exceptions/bad-function-call.exception.ts#L8)
 
 ___
 
@@ -134,4 +134,4 @@ true if the cause we passed is the original cause when the Exception constructed
 
 #### Defined in
 
-[packages/exceptions/src/exceptions/base.exception.ts:27](https://github.com/RightCapitalHQ/frontend-libraries/blob/98a64d7/packages/exceptions/src/exceptions/base.exception.ts#L27)
+[packages/exceptions/src/exceptions/base.exception.ts:27](https://github.com/RightCapitalHQ/frontend-libraries/blob/d583627/packages/exceptions/src/exceptions/base.exception.ts#L27)
