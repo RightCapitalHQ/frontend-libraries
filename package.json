@@ -26,7 +26,7 @@
     "create:library": "python scripts/create-new-library.py",
     "commit": "cz",
     "changelog:fix": "pnpm eachpkg --parallel exec generate-changelog",
-    "change": "beachball change",
+    "change": "beachball change --no-commit",
     "check": "beachball check"
   },
   "license": "MIT",
