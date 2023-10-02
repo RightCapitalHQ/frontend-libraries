@@ -10,7 +10,7 @@
   ],
   "homepage": "https://www.rightcapital.com",
   "license": "MIT",
-  "packageManager": "pnpm@8.7.6",
+  "packageManager": "pnpm@8.8.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "directories": {
