@@ -2,6 +2,21 @@
   "name": "@rightcapital/exceptions",
   "entries": [
     {
+      "date": "Sun, 08 Oct 2023 08:02:09 GMT",
+      "version": "1.2.3",
+      "tag": "@rightcapital/exceptions_v1.2.3",
+      "comments": {
+        "none": [
+          {
+            "author": "email not defined",
+            "package": "@rightcapital/exceptions",
+            "commit": "e02e58a1594e633756ccc4d07c0e58997ef2670c",
+            "comment": "chore(deps): update devdependency typedoc to v0.25.2"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 02 Oct 2023 03:55:58 GMT",
       "version": "1.2.3",
       "tag": "@rightcapital/exceptions_v1.2.3",
