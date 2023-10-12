@@ -1,0 +1,7 @@
+{
+  "type": "major",
+  "comment": "feat: add new package date-helpers",
+  "packageName": "@rightcapital/date-helpers",
+  "email": "38807139+liby@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
