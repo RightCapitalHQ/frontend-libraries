@@ -14,14 +14,15 @@ A utility class that provides various date formatting and parsing methods.
 
 - [isoDateFormat](DateHelpers.md#isodateformat)
 - [usLocaleDateFormat](DateHelpers.md#uslocaledateformat)
-- [usLocaleTimeFormat](DateHelpers.md#uslocaletimeformat)
+- [usLocaleDateTimeFormat](DateHelpers.md#uslocaledatetimeformat)
 
 ### Methods
 
-- [formatIsoDate](DateHelpers.md#formatisodate)
-- [formatMediumDate](DateHelpers.md#formatmonthdayyear)
-- [formatUsLocaleDate](DateHelpers.md#formatuslocaledate)
-- [formatUsLocaleTime](DateHelpers.md#formatuslocaletime)
+- [formatDateLikeToIsoDateString](DateHelpers.md#formatdateliketoisodatestring)
+- [formatDateLikeToString](DateHelpers.md#formatdateliketostring)
+- [formatDateLikeToUsLocaleDateString](DateHelpers.md#formatdateliketouslocaledatestring)
+- [formatDateLikeToUsLocaleDateTimeString](DateHelpers.md#formatdateliketouslocaledatetimestring)
+- [formatDateLikeToUsLocaleMediumDateString](DateHelpers.md#formatdateliketouslocalemediumdatestring)
 - [parseDateString](DateHelpers.md#parsedatestring)
 
 ## Constructors
@@ -40,9 +41,9 @@ Format for date strings in ISO format, e.g., "2023-12-31"
 
 #### Defined in
 
-[date-helpers.ts:24](https://github.com/RightCapitalHQ/frontend-libraries/blob/b0683ea/packages/date-helpers/src/date-helpers.ts#L24)
+[date-helpers.ts:23](https://github.com/RightCapitalHQ/frontend-libraries/blob/1759540/packages/date-helpers/src/date-helpers.ts#L23)
 
-___
+---
 
 ### usLocaleDateFormat
 
@@ -52,33 +53,33 @@ Format for date strings in US locale, e.g., "12/31/2023"
 
 #### Defined in
 
-[date-helpers.ts:18](https://github.com/RightCapitalHQ/frontend-libraries/blob/b0683ea/packages/date-helpers/src/date-helpers.ts#L18)
+[date-helpers.ts:17](https://github.com/RightCapitalHQ/frontend-libraries/blob/1759540/packages/date-helpers/src/date-helpers.ts#L17)
 
-___
+---
 
-### usLocaleTimeFormat
+### usLocaleDateTimeFormat
 
-▪ `Static` **usLocaleTimeFormat**: `string` = `'MM/dd/yyyy HH:mm:ss'`
+▪ `Static` **usLocaleDateTimeFormat**: `string` = `'MM/dd/yyyy HH:mm:ss'`
 
 Format for date and time strings in US locale, e.g., "12/31/2023 23:59:59"
 
 #### Defined in
 
-[date-helpers.ts:21](https://github.com/RightCapitalHQ/frontend-libraries/blob/b0683ea/packages/date-helpers/src/date-helpers.ts#L21)
+[date-helpers.ts:20](https://github.com/RightCapitalHQ/frontend-libraries/blob/1759540/packages/date-helpers/src/date-helpers.ts#L20)
 
 ## Methods
 
-### formatIsoDate
+### formatDateLikeToIsoDateString
 
-▸ `Static` **formatIsoDate**(`dateSource`): `string`
+▸ `Static` **formatDateLikeToIsoDateString**(`dateInput`): `string`
 
 Formats a date as an ISO date string.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dateSource` | [`DateType`](../modules.md#datetype) | The date to format, can be a Date object or a string. |
+| Name        | Type                                 | Description                                           |
+| :---------- | :----------------------------------- | :---------------------------------------------------- |
+| `dateInput` | [`DateLike`](../modules.md#datelike) | The date to format, can be a Date object or a string. |
 
 #### Returns
 
@@ -89,32 +90,40 @@ The formatted date string.
 **`Example`**
 
 ```typescript
-const isoDateString = DateHelpers.formatIsoDate(new Date(2023, 0, 31));
+const isoDateString = DateHelpers.formatDateLikeToIsoDateString(
+  new Date(2023, 0, 31),
+);
 // Result: "2023-01-31"
 
 // or
 
-const isoDateString = DateHelpers.formatIsoDate("2025/10/20");
+const isoDateString = DateHelpers.formatDateLikeToIsoDateString('2025/10/20');
 // Result: "2025-10-20"
 ```
 
 #### Defined in
 
-[date-helpers.ts:96](https://github.com/RightCapitalHQ/frontend-libraries/blob/b0683ea/packages/date-helpers/src/date-helpers.ts#L96)
+[date-helpers.ts:139](https://github.com/RightCapitalHQ/frontend-libraries/blob/1759540/packages/date-helpers/src/date-helpers.ts#L139)
 
-___
+---
 
-### formatMediumDate
+### formatDateLikeToString
 
-▸ `Static` **formatMediumDate**(`dateSource`): `string`
+▸ `Static` **formatDateLikeToString**(`dateInput`, `dateFormat`): `string`
 
-Formats a date as a string in the "Month day, year" format.
+Formats a date-like input into a string using a specified date format.
+
+This method accepts both `Date` objects and date strings as input and formats them into a string
+using the provided date format. It internally handles parsing of date strings and formatting of Date objects.
+If the input is an empty string, it returns the input without formatting. If the input is invalid or cannot be parsed,
+an `InvalidArgumentException` is thrown.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dateSource` | [`DateType`](../modules.md#datetype) | The date to format, can be a Date object or a string. |
+| Name         | Type                                 | Description                                             |
+| :----------- | :----------------------------------- | :------------------------------------------------------ |
+| `dateInput`  | [`DateLike`](../modules.md#datelike) | The date to format, can be a `Date` object or a string. |
+| `dateFormat` | `string`                             | The date format string to use for formatting the date.  |
 
 #### Returns
 
@@ -125,33 +134,43 @@ The formatted date string.
 **`Example`**
 
 ```typescript
-const monthDayYearString = DateHelpers.formatMediumDate(new Date(2023, 0, 1));
-// Result: "Jan 1, 2023"
+const formattedDate1 = DateHelpers.formatDateLikeToString(
+  new Date(2023, 0, 31),
+  'MM/dd/yyyy',
+);
+// Result: "01/31/2023"
 
-// or
+const formattedDate2 = DateHelpers.formatDateLikeToString(
+  '2023-01-31',
+  'yyyy-MM-dd',
+);
+// Result: "2023-01-31"
 
-const monthDayYearString = DateHelpers.formatMediumDate("2023/01/01");
-// Result: "Jan 1, 2023"
+const formattedDate3 = DateHelpers.formatDateLikeToString('', 'MM/dd/yyyy');
+// Result: ""
 ```
+
+**`Throws`**
+
+Throws an exception if the date string cannot be parsed or the input is invalid.
 
 #### Defined in
 
-[date-helpers.ts:186](https://github.com/RightCapitalHQ/frontend-libraries/blob/b0683ea/packages/date-helpers/src/date-helpers.ts#L186)
+[date-helpers.ts:103](https://github.com/RightCapitalHQ/frontend-libraries/blob/1759540/packages/date-helpers/src/date-helpers.ts#L103)
 
-___
+---
 
-### formatUsLocaleDate
+### formatDateLikeToUsLocaleDateString
 
-▸ `Static` **formatUsLocaleDate**(`dateSource`, `dateFormat?`): `string`
+▸ `Static` **formatDateLikeToUsLocaleDateString**(`dateInput`): `string`
 
 Formats a date as a US locale date string.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dateSource` | [`DateType`](../modules.md#datetype) | The date to format, can be a Date object or a string. |
-| `dateFormat?` | `string` | Optional, a custom date format string. |
+| Name        | Type                                 | Description                                           |
+| :---------- | :----------------------------------- | :---------------------------------------------------- |
+| `dateInput` | [`DateLike`](../modules.md#datelike) | The date to format, can be a Date object or a string. |
 
 #### Returns
 
@@ -162,33 +181,35 @@ The formatted date string.
 **`Example`**
 
 ```typescript
-const usDateString = DateHelpers.formatUsLocaleDate(new Date(2023, 0, 31));
+const usDateString = DateHelpers.formatDateLikeToUsLocaleDateString(
+  new Date(2023, 0, 31),
+);
 // Result: "01/31/2023"
 
 // or
 
-const usDateString = DateHelpers.formatUsLocaleDate("2025/10/20");
+const usDateString =
+  DateHelpers.formatDateLikeToUsLocaleDateString('2025/10/20');
 // Result: "10/20/2025"
 ```
 
 #### Defined in
 
-[date-helpers.ts:125](https://github.com/RightCapitalHQ/frontend-libraries/blob/b0683ea/packages/date-helpers/src/date-helpers.ts#L125)
+[date-helpers.ts:164](https://github.com/RightCapitalHQ/frontend-libraries/blob/1759540/packages/date-helpers/src/date-helpers.ts#L164)
 
-___
+---
 
-### formatUsLocaleTime
+### formatDateLikeToUsLocaleDateTimeString
 
-▸ `Static` **formatUsLocaleTime**(`dateSource`, `dateFormat?`): `string`
+▸ `Static` **formatDateLikeToUsLocaleDateTimeString**(`dateInput`): `string`
 
 Formats a date as a US locale time string.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dateSource` | [`DateType`](../modules.md#datetype) | The date to format, can be a Date object or a string. |
-| `dateFormat?` | `string` | Optional, a custom date format string. |
+| Name        | Type                                 | Description                                           |
+| :---------- | :----------------------------------- | :---------------------------------------------------- |
+| `dateInput` | [`DateLike`](../modules.md#datelike) | The date to format, can be a Date object or a string. |
 
 #### Returns
 
@@ -199,20 +220,71 @@ The formatted time string.
 **`Example`**
 
 ```typescript
-const usTimeString = DateHelpers.formatUsLocaleTime(new Date(2023, 0, 31, 12, 0, 0));
+const usTimeString = DateHelpers.formatDateLikeToUsLocaleDateTimeString(
+  new Date(2023, 0, 31, 12, 0, 0),
+);
 // Result: "01/31/2023 12:00:00"
 
 // or
 
-const usTimeString = DateHelpers.formatUsLocaleTime("2025/10/20 12:00:00");
+const usTimeString = DateHelpers.formatDateLikeToUsLocaleDateTimeString(
+  '2025/10/20 12:00:00',
+);
 // Result: "10/20/2025 12:00:00"
 ```
 
 #### Defined in
 
-[date-helpers.ts:159](https://github.com/RightCapitalHQ/frontend-libraries/blob/b0683ea/packages/date-helpers/src/date-helpers.ts#L159)
+[date-helpers.ts:191](https://github.com/RightCapitalHQ/frontend-libraries/blob/1759540/packages/date-helpers/src/date-helpers.ts#L191)
 
-___
+---
+
+### formatDateLikeToUsLocaleMediumDateString
+
+▸ `Static` **formatDateLikeToUsLocaleMediumDateString**(`dateInput`): `string`
+
+Formats a date as a string in the MDY format.
+
+#### Parameters
+
+| Name        | Type                                 | Description                                           |
+| :---------- | :----------------------------------- | :---------------------------------------------------- |
+| `dateInput` | [`DateLike`](../modules.md#datelike) | The date to format, can be a Date object or a string. |
+
+#### Returns
+
+`string`
+
+The formatted date string.
+
+**`Example`**
+
+```typescript
+const monthDayYearString = DateHelpers.formatDateLikeToUsLocaleMediumDateString(
+  new Date(2023, 0, 1),
+);
+// Result: "Jan 1, 2023"
+
+// or
+
+const monthDayYearString =
+  DateHelpers.formatDateLikeToUsLocaleMediumDateString('2023/01/01');
+// Result: "Jan 1, 2023"
+```
+
+**`Remarks`**
+
+Naming Origin: Derived from the Angular DatePipe official documentation.
+
+Reference:
+
+https://angular.io/api/common/DatePipe#:~:text=mediumDate
+
+#### Defined in
+
+[date-helpers.ts:223](https://github.com/RightCapitalHQ/frontend-libraries/blob/1759540/packages/date-helpers/src/date-helpers.ts#L223)
+
+---
 
 ### parseDateString
 
@@ -222,8 +294,8 @@ Converts a date string to a Date object using various possible formats.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description                 |
+| :------ | :------- | :-------------------------- |
 | `input` | `string` | The date string to convert. |
 
 #### Returns
@@ -235,7 +307,7 @@ The converted Date object.
 **`Example`**
 
 ```typescript
-const date = DateHelpers.parseDateString("2023/01/01");
+const date = DateHelpers.parseDateString('2023/01/01');
 // Result: Sun Jan 01 2023 00:00:00 GMT+0000 (Coordinated Universal Time)
 ```
 
@@ -245,4 +317,4 @@ Throws an exception if the date string cannot be parsed.
 
 #### Defined in
 
-[date-helpers.ts:39](https://github.com/RightCapitalHQ/frontend-libraries/blob/b0683ea/packages/date-helpers/src/date-helpers.ts#L39)
+[date-helpers.ts:38](https://github.com/RightCapitalHQ/frontend-libraries/blob/1759540/packages/date-helpers/src/date-helpers.ts#L38)

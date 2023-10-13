@@ -10,14 +10,14 @@
 
 ### Type Aliases
 
-- [DateType](modules.md#datetype)
+- [DateLike](modules.md#datelike)
 
 ## Type Aliases
 
-### DateType
+### DateLike
 
-Ƭ **DateType**: `Date` \| `string`
+Ƭ **DateLike**: `Date` \| `string`
 
 #### Defined in
 
-[date-helpers.ts:5](https://github.com/RightCapitalHQ/frontend-libraries/blob/b0683ea/packages/date-helpers/src/date-helpers.ts#L5)
+[date-helpers.ts:5](https://github.com/RightCapitalHQ/frontend-libraries/blob/1759540/packages/date-helpers/src/date-helpers.ts#L5)

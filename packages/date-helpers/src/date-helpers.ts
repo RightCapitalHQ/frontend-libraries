@@ -1,13 +1,13 @@
 import { InvalidArgumentException } from '@rightcapital/exceptions';
 import { captureException, withScope, Scope } from '@sentry/browser';
-import { format, formatISO, isValid, parse, parseISO } from 'date-fns';
+import { format, isValid, parse, parseISO } from 'date-fns';
 
-export type DateType = Date | string;
+export type DateLike = Date | string;
 
-const getParsedDate = (dateSource: DateType) =>
-  typeof dateSource === 'string'
-    ? DateHelpers.parseDateString(dateSource)
-    : dateSource;
+const getParsedDate = (dateInput: DateLike) =>
+  typeof dateInput === 'string'
+    ? DateHelpers.parseDateString(dateInput)
+    : dateInput;
 
 /**
  * A utility class that provides various date formatting and parsing methods.
@@ -17,7 +17,7 @@ export class DateHelpers {
   public static usLocaleDateFormat = 'MM/dd/yyyy';
 
   /** Format for date and time strings in US locale, e.g., "12/31/2023 23:59:59" */
-  public static usLocaleTimeFormat = 'MM/dd/yyyy HH:mm:ss';
+  public static usLocaleDateTimeFormat = 'MM/dd/yyyy HH:mm:ss';
 
   /** Format for date strings in ISO format, e.g., "2023-12-31" */
   public static isoDateFormat = 'yyyy-MM-dd';
@@ -50,7 +50,7 @@ export class DateHelpers {
       'M/d/yyyy',
       'MMM d, yyyy',
       'MMM yyyy',
-      DateHelpers.usLocaleTimeFormat,
+      DateHelpers.usLocaleDateTimeFormat,
     ];
 
     possibleFormats.some((pattern) => {
@@ -66,7 +66,7 @@ export class DateHelpers {
         });
         captureException(
           new InvalidArgumentException(
-            `Invalid Date: unable to parse date string - ${input}`,
+            `Invalid Date: unable to parse date string - ${input}. The input might not match any expected formats or is not a valid date.`,
           ),
         );
       });
@@ -76,31 +76,71 @@ export class DateHelpers {
   }
 
   /**
+   * Formats a date-like input into a string using a specified date format.
+   *
+   * This method accepts both `Date` objects and date strings as input and formats them into a string
+   * using the provided date format. It internally handles parsing of date strings and formatting of Date objects.
+   * If the input is an empty string, it returns the input without formatting. If the input is invalid or cannot be parsed,
+   * an `InvalidArgumentException` is thrown.
+   *
+   * @example
+   * ```typescript
+   * const formattedDate1 = DateHelpers.formatDateLikeToString(new Date(2023, 0, 31), 'MM/dd/yyyy');
+   * // Result: "01/31/2023"
+   *
+   * const formattedDate2 = DateHelpers.formatDateLikeToString("2023-01-31", 'yyyy-MM-dd');
+   * // Result: "2023-01-31"
+   *
+   * const formattedDate3 = DateHelpers.formatDateLikeToString("", 'MM/dd/yyyy');
+   * // Result: ""
+   * ```
+   *
+   * @param dateInput - The date to format, can be a `Date` object or a string.
+   * @param dateFormat - The date format string to use for formatting the date.
+   * @returns The formatted date string.
+   * @throws {InvalidArgumentException} Throws an exception if the date string cannot be parsed or the input is invalid.
+   */
+  public static formatDateLikeToString(
+    dateInput: DateLike,
+    dateFormat: string,
+  ): string {
+    // Do nothing with empty strings
+    if (dateInput === '') {
+      return dateInput;
+    }
+
+    try {
+      return format(getParsedDate(dateInput), dateFormat);
+    } catch (error) {
+      throw new InvalidArgumentException(
+        `Unable to format date: ${dateInput} with format: ${dateFormat}`,
+        error,
+      );
+    }
+  }
+
+  /**
    * Formats a date as an ISO date string.
    *
    * @example
    * ```typescript
-   * const isoDateString = DateHelpers.formatIsoDate(new Date(2023, 0, 31));
+   * const isoDateString = DateHelpers.formatDateLikeToIsoDateString(new Date(2023, 0, 31));
    * // Result: "2023-01-31"
    *
    * // or
    *
-   * const isoDateString = DateHelpers.formatIsoDate("2025/10/20");
+   * const isoDateString = DateHelpers.formatDateLikeToIsoDateString("2025/10/20");
    * // Result: "2025-10-20"
    * ```
    *
-   * @param dateSource - The date to format, can be a Date object or a string.
+   * @param dateInput - The date to format, can be a Date object or a string.
    * @returns The formatted date string.
    */
-  public static formatIsoDate(dateSource: DateType): string {
-    // Do nothing with empty strings
-    if (dateSource === '') {
-      return dateSource;
-    }
-
-    return formatISO(getParsedDate(dateSource), {
-      representation: 'date',
-    });
+  public static formatDateLikeToIsoDateString(dateInput: DateLike): string {
+    return DateHelpers.formatDateLikeToString(
+      dateInput,
+      DateHelpers.isoDateFormat,
+    );
   }
 
   /**
@@ -108,33 +148,26 @@ export class DateHelpers {
    *
    * @example
    * ```typescript
-   * const usDateString = DateHelpers.formatUsLocaleDate(new Date(2023, 0, 31));
+   * const usDateString = DateHelpers.formatDateLikeToUsLocaleDateString(new Date(2023, 0, 31));
    * // Result: "01/31/2023"
    *
    * // or
    *
-   * const usDateString = DateHelpers.formatUsLocaleDate("2025/10/20");
+   * const usDateString = DateHelpers.formatDateLikeToUsLocaleDateString("2025/10/20");
    * // Result: "10/20/2025"
    * ```
    *
-   * @param dateSource - The date to format, can be a Date object or a string.
+   * @param dateInput - The date to format, can be a Date object or a string.
    * @param dateFormat - Optional, a custom date format string.
    * @returns The formatted date string.
    */
-  public static formatUsLocaleDate(
-    dateSource: DateType,
-    dateFormat?: string,
+  public static formatDateLikeToUsLocaleDateString(
+    dateInput: DateLike,
   ): string {
-    // Do nothing with empty strings
-    if (dateSource === '') {
-      return dateSource;
-    }
-
-    if (dateFormat) {
-      return format(getParsedDate(dateSource), dateFormat);
-    }
-
-    return format(getParsedDate(dateSource), DateHelpers.usLocaleDateFormat);
+    return DateHelpers.formatDateLikeToString(
+      dateInput,
+      DateHelpers.usLocaleDateFormat,
+    );
   }
 
   /**
@@ -142,44 +175,43 @@ export class DateHelpers {
    *
    * @example
    * ```typescript
-   * const usTimeString = DateHelpers.formatUsLocaleTime(new Date(2023, 0, 31, 12, 0, 0));
+   * const usTimeString = DateHelpers.formatDateLikeToUsLocaleDateTimeString(new Date(2023, 0, 31, 12, 0, 0));
    * // Result: "01/31/2023 12:00:00"
    *
    * // or
    *
-   * const usTimeString = DateHelpers.formatUsLocaleTime("2025/10/20 12:00:00");
+   * const usTimeString = DateHelpers.formatDateLikeToUsLocaleDateTimeString("2025/10/20 12:00:00");
    * // Result: "10/20/2025 12:00:00"
    * ```
    *
-   * @param dateSource - The date to format, can be a Date object or a string.
+   * @param dateInput - The date to format, can be a Date object or a string.
    * @param dateFormat - Optional, a custom date format string.
    * @returns The formatted time string.
    */
-  public static formatUsLocaleTime(
-    dateSource: DateType,
-    dateFormat?: string,
+  public static formatDateLikeToUsLocaleDateTimeString(
+    dateInput: DateLike,
   ): string {
-    return DateHelpers.formatUsLocaleDate(
-      dateSource,
-      dateFormat ?? DateHelpers.usLocaleTimeFormat,
+    return DateHelpers.formatDateLikeToString(
+      dateInput,
+      DateHelpers.usLocaleDateTimeFormat,
     );
   }
 
   /**
-   * Formats a date as a string in the "Month day, year" format.
+   * Formats a date as a string in the MDY format.
    *
    * @example
    * ```typescript
-   * const monthDayYearString = DateHelpers.formatMediumDate(new Date(2023, 0, 1));
+   * const monthDayYearString = DateHelpers.formatDateLikeToUsLocaleMediumDateString(new Date(2023, 0, 1));
    * // Result: "Jan 1, 2023"
    *
    * // or
    *
-   * const monthDayYearString = DateHelpers.formatMediumDate("2023/01/01");
+   * const monthDayYearString = DateHelpers.formatDateLikeToUsLocaleMediumDateString("2023/01/01");
    * // Result: "Jan 1, 2023"
    * ```
    *
-   * @param dateSource - The date to format, can be a Date object or a string.
+   * @param dateInput - The date to format, can be a Date object or a string.
    * @returns The formatted date string.
    *
    * @remarks Naming Origin: Derived from the Angular DatePipe official documentation.
@@ -188,7 +220,9 @@ export class DateHelpers {
    *
    * https://angular.io/api/common/DatePipe#:~:text=mediumDate
    */
-  public static formatMediumDate(dateSource: DateType): string {
-    return format(getParsedDate(dateSource), 'MMM d, yyyy');
+  public static formatDateLikeToUsLocaleMediumDateString(
+    dateInput: DateLike,
+  ): string {
+    return DateHelpers.formatDateLikeToString(dateInput, 'MMM d, yyyy');
   }
 }

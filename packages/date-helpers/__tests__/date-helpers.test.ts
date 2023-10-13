@@ -9,24 +9,38 @@ describe('DateHelpers', () => {
   });
 
   it('date object or date string to ISO date string conversion test', () => {
-    expect(DateHelpers.formatIsoDate(output)).toBe('2019-10-21');
-    expect(DateHelpers.formatIsoDate('2019-10-21')).toBe('2019-10-21');
-  });
-
-  it('date object or date string to US date string conversion test', () => {
-    expect(DateHelpers.formatUsLocaleDate(output)).toBe('10/21/2019');
-    expect(DateHelpers.formatUsLocaleDate('2019-10-21')).toBe('10/21/2019');
-  });
-
-  it('date object or date string to US time string conversion test', () => {
-    expect(DateHelpers.formatUsLocaleTime(output)).toBe('10/21/2019 00:00:00');
-    expect(DateHelpers.formatUsLocaleTime('2019-10-21')).toBe(
-      '10/21/2019 00:00:00',
+    expect(DateHelpers.formatDateLikeToIsoDateString(output)).toBe(
+      '2019-10-21',
+    );
+    expect(DateHelpers.formatDateLikeToIsoDateString('2019-10-21')).toBe(
+      '2019-10-21',
     );
   });
 
+  it('date object or date string to US date string conversion test', () => {
+    expect(DateHelpers.formatDateLikeToUsLocaleDateString(output)).toBe(
+      '10/21/2019',
+    );
+    expect(DateHelpers.formatDateLikeToUsLocaleDateString('2019-10-21')).toBe(
+      '10/21/2019',
+    );
+  });
+
+  it('date object or date string to US time string conversion test', () => {
+    expect(DateHelpers.formatDateLikeToUsLocaleDateTimeString(output)).toBe(
+      '10/21/2019 00:00:00',
+    );
+    expect(
+      DateHelpers.formatDateLikeToUsLocaleDateTimeString('2019-10-21'),
+    ).toBe('10/21/2019 00:00:00');
+  });
+
   it('convertDateToMonthDayYearString should format dates correctly', () => {
-    expect(DateHelpers.formatMediumDate(output)).toBe('Oct 21, 2019');
-    expect(DateHelpers.formatMediumDate('2019-10-21')).toBe('Oct 21, 2019');
+    expect(DateHelpers.formatDateLikeToUsLocaleMediumDateString(output)).toBe(
+      'Oct 21, 2019',
+    );
+    expect(
+      DateHelpers.formatDateLikeToUsLocaleMediumDateString('2019-10-21'),
+    ).toBe('Oct 21, 2019');
   });
 });
