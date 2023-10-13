@@ -6,19 +6,7 @@ on:
     branches: [main]
 
 jobs:
-  install:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v3
-        with:
-          node-version-file: .node-version
-          cache: pnpm
-      - run: pnpm install
-
-  test:
-    needs: install
+  build_and_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -32,33 +20,21 @@ jobs:
       - name: Prettier code style check
         run: pnpm prettier . --check
 
-      - name: Test
-        run: pnpm run test
-
-  build:
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v3
-        with:
-          node-version-file: .node-version
-          cache: pnpm
-      - run: pnpm install
-
       - name: Build
         run: pnpm run build
 
-      - name: Archive production artifacts
+      - name: Test
+        run: pnpm run test
+
+      - name: Archive build artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: mono-repos-dist
+          name: build-artifacts
           path: |
             packages/*/lib/**
 
   publish:
-    needs: [build, test]
+    needs: build_and_test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -69,11 +45,11 @@ jobs:
           cache: pnpm
       - run: pnpm install
 
-      - name: Download production artifacts
+      - name: Download build artifacts
         uses: actions/download-artifact@v3
         with:
-          name: mono-repos-dist
-          path: packages
+          name: build-artifacts
+          path: packages/
 
       - name: Publish (development)
         if: github.event.pull_request.head.repo.full_name == 'RightCapitalHQ/frontend-libraries' && github.base_ref == github.event.repository.default_branch
