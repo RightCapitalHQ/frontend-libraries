@@ -60,6 +60,25 @@ importers:
         specifier: 5.2.2
         version: 5.2.2
 
+  packages/date-helpers:
+    dependencies:
+      '@rightcapital/exceptions':
+        specifier: workspace:*
+        version: link:../exceptions
+      date-fns:
+        specifier: 2.30.0
+        version: 2.30.0
+    devDependencies:
+      '@sentry/browser':
+        specifier: 7.73.0
+        version: 7.73.0
+      typedoc:
+        specifier: 0.25.2
+        version: 0.25.2(typescript@5.2.2)
+      typedoc-plugin-markdown:
+        specifier: 3.16.0
+        version: 3.16.0(typedoc@0.25.2)
+
   packages/exceptions:
     devDependencies:
       prettier:
@@ -381,7 +400,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.0
-    dev: true
 
   /@babel/template@7.22.15:
     resolution: {integrity: sha512-QPErUVm4uyJa60rkI73qneDacvdvzxshT3kksGqlGWYdOTIUOwJ7RDUL8sGqslY1uXWSL6xMFKEXDS3ox2uF0w==}
@@ -975,6 +993,59 @@ packages:
       prettier: ^3.0.0
     dependencies:
       prettier: 3.0.3
+    dev: true
+
+  /@sentry-internal/tracing@7.73.0:
+    resolution: {integrity: sha512-ig3WL/Nqp8nRQ52P205NaypGKNfIl/G+cIqge9xPW6zfRb5kJdM1YParw9GSJ1SPjEZBkBORGAML0on5H2FILw==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@sentry/core': 7.73.0
+      '@sentry/types': 7.73.0
+      '@sentry/utils': 7.73.0
+      tslib: 2.6.2
+    dev: true
+
+  /@sentry/browser@7.73.0:
+    resolution: {integrity: sha512-e301hUixcJ5+HNKCJwajFF5smF4opXEFSclyWsJuFNufv5J/1C1SDhbwG2JjBt5zzdSoKWJKT1ewR6vpICyoDw==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@sentry-internal/tracing': 7.73.0
+      '@sentry/core': 7.73.0
+      '@sentry/replay': 7.73.0
+      '@sentry/types': 7.73.0
+      '@sentry/utils': 7.73.0
+      tslib: 2.6.2
+    dev: true
+
+  /@sentry/core@7.73.0:
+    resolution: {integrity: sha512-9FEz4Gq848LOgVN2OxJGYuQqxv7cIVw69VlAzWHEm3njt8mjvlTq+7UiFsGRo84+59V2FQuHxzA7vVjl90WfSg==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@sentry/types': 7.73.0
+      '@sentry/utils': 7.73.0
+      tslib: 2.6.2
+    dev: true
+
+  /@sentry/replay@7.73.0:
+    resolution: {integrity: sha512-a8IC9SowBisLYD2IdLkXzx7gN4iVwHDJhQvLp2B8ARs1PyPjJ7gCxSMHeGrYp94V0gOXtorNYkrxvuX8ayPROA==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@sentry/core': 7.73.0
+      '@sentry/types': 7.73.0
+      '@sentry/utils': 7.73.0
+    dev: true
+
+  /@sentry/types@7.73.0:
+    resolution: {integrity: sha512-/v8++bly8jW7r4cP2wswYiiVpn7eLLcqwnfPUMeCQze4zj3F3nTRIKc9BGHzU0V+fhHa3RwRC2ksqTGq1oJMDg==}
+    engines: {node: '>=8'}
+    dev: true
+
+  /@sentry/utils@7.73.0:
+    resolution: {integrity: sha512-h3ZK/qpf4k76FhJV9uiSbvMz3V/0Ovy94C+5/9UgPMVCJXFmVsdw8n/dwANJ7LupVPfYP23xFGgebDMFlK1/2w==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@sentry/types': 7.73.0
+      tslib: 2.6.2
     dev: true
 
   /@sinclair/typebox@0.27.8:
@@ -1716,7 +1787,6 @@ packages:
     engines: {node: '>=0.11'}
     dependencies:
       '@babel/runtime': 7.23.1
-    dev: true
 
   /debug@4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
@@ -3650,7 +3720,6 @@ packages:
 
   /regenerator-runtime@0.14.0:
     resolution: {integrity: sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==}
-    dev: true
 
   /require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
