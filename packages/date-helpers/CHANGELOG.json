@@ -1,0 +1,20 @@
+{
+  "name": "@rightcapital/date-helpers",
+  "entries": [
+    {
+      "date": "Sat, 14 Oct 2023 02:21:52 GMT",
+      "version": "3.0.0",
+      "tag": "@rightcapital/date-helpers_v3.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "38807139+liby@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "4ab31e685e41ae5656e57d2d58c4f3c469859075",
+            "comment": "feat: add new package date-helpers"
+          }
+        ]
+      }
+    }
+  ]
+}
