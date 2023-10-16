@@ -3,8 +3,7 @@
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./lib",
-    "declaration": true,
-    "removeComments": false
+    "declaration": true
   },
   "references": [
     {
