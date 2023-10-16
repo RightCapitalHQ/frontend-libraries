@@ -2,6 +2,21 @@
   "name": "@rightcapital/date-helpers",
   "entries": [
     {
+      "date": "Mon, 16 Oct 2023 13:45:47 GMT",
+      "version": "3.0.1",
+      "tag": "@rightcapital/date-helpers_v3.0.1",
+      "comments": {
+        "none": [
+          {
+            "author": "email not defined",
+            "package": "@rightcapital/date-helpers",
+            "commit": "c45cefd03b1ed9e13ac1d63f57a85eab1ada70b2",
+            "comment": "chore(deps): update devdependencies"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 16 Oct 2023 08:26:13 GMT",
       "version": "3.0.1",
       "tag": "@rightcapital/date-helpers_v3.0.1",
