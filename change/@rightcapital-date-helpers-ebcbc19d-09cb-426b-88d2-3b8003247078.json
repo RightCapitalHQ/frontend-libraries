@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "fix(date-helpers): correct package entry points and include TypeDoc in _.d.ts_ for npm release",
+  "packageName": "@rightcapital/date-helpers",
+  "email": "38807139+liby@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
