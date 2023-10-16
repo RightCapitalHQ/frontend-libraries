@@ -1,7 +1,0 @@
-{
-  "type": "none",
-  "comment": "build: disable `removeComments` to all packages",
-  "packageName": "@rightcapital/date-helpers",
-  "email": "i@rainx.cc",
-  "dependentChangeType": "none"
-}

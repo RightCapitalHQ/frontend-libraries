@@ -2,6 +2,21 @@
   "name": "@rightcapital/date-helpers",
   "entries": [
     {
+      "date": "Mon, 16 Oct 2023 07:57:12 GMT",
+      "version": "3.0.1",
+      "tag": "@rightcapital/date-helpers_v3.0.1",
+      "comments": {
+        "none": [
+          {
+            "author": "i@rainx.cc",
+            "package": "@rightcapital/date-helpers",
+            "commit": "ba1f0959f12c61ff01ef61bbb5fa303388d8956b",
+            "comment": "build: disable `removeComments` to all packages"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 16 Oct 2023 07:31:04 GMT",
       "version": "3.0.1",
       "tag": "@rightcapital/date-helpers_v3.0.1",
