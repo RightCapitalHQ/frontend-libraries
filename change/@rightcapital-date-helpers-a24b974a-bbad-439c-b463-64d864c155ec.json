@@ -1,7 +1,0 @@
-{
-  "type": "none",
-  "comment": "build: remove duplicate option in subpackage's tsconfig.json file",
-  "packageName": "@rightcapital/date-helpers",
-  "email": "i@rainx.cc",
-  "dependentChangeType": "none"
-}
