@@ -13,6 +13,5 @@
     "sourceMap": true,
     "skipLibCheck": true
   },
-  "include": ["packages/**/__tests__/**/*.ts"],
   "exclude": ["node_modules"]
 }
