@@ -16,7 +16,7 @@
     "build": "pnpm run clean && pnpm -r --filter=./packages/** run build",
     "clean": "pnpm -r --parallel --filter=./packages/** exec tsc --build --clean",
     "pretest": "pnpm run build",
-    "test": "jest",
+    "test": "pnpm run pretest && jest",
     "lint": "concurrently pnpm:lint:*",
     "lint:eslint": "eslint --max-warnings=0 .",
     "lint:prettier": "prettier -c .",

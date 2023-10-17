@@ -37,11 +37,9 @@
     "date-fns": "2.30.0"
   },
   "peerDependencies": {
-    "@sentry/browser": "7.x",
     "date-fns": "^2.29.3"
   },
   "devDependencies": {
-    "@sentry/browser": "7.74.0",
     "typedoc": "0.25.2",
     "typedoc-plugin-markdown": "3.16.0"
   }

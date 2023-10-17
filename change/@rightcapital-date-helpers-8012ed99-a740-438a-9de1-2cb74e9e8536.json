@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "feat(date-helpers): add type assertion for `DateLike` input",
+  "packageName": "@rightcapital/date-helpers",
+  "email": "38807139+liby@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
