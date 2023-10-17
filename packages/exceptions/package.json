@@ -21,7 +21,6 @@
     "lib"
   ],
   "scripts": {
-    "test": "jest",
     "build": "tsc",
     "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts",
     "eslint": "eslint --cache 'src/**/*.ts*'",

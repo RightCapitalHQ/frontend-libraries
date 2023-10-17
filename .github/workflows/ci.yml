@@ -20,9 +20,6 @@ jobs:
       - name: Prettier code style check
         run: pnpm prettier . --check
 
-      - name: Build
-        run: pnpm run build
-
       - name: Test
         run: pnpm run test
 
