@@ -22,6 +22,24 @@ export class DateHelpers {
   /** Format for date strings in ISO format, e.g., "2023-12-31" */
   public static isoDateFormat = 'yyyy-MM-dd';
 
+  private static ensureValidDateInput(input: unknown): asserts input is DateLike {
+    if (input === null || input === undefined) {
+      throw new InvalidArgumentException(`Input cannot be null or undefined. Received: ${input}`);
+    }
+  
+    if (input instanceof Date) {
+      return; // It's a valid Date object.
+    }
+  
+    if (typeof input === 'string') {
+      return; // It's a valid string.
+    }
+  
+    throw new InvalidArgumentException(
+      `Input must be a Date object or a string. Received: ${typeof input} - ${input}`
+    );
+  }
+
   /**
    * Converts a date string to a Date object using various possible formats.
    *
@@ -36,6 +54,8 @@ export class DateHelpers {
    * @throws {InvalidArgumentException} Throws an exception if the date string cannot be parsed.
    */
   public static parseDateString(input: string): Date {
+    this.ensureValidDateInput(input);
+
     let output = parseISO(input);
 
     if (isValid(output)) {
@@ -104,6 +124,8 @@ export class DateHelpers {
     dateInput: DateLike,
     dateFormat: string,
   ): string {
+    this.ensureValidDateInput(dateInput);
+
     // Do nothing with empty strings
     if (dateInput === '') {
       return dateInput;
