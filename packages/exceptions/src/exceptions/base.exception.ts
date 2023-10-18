@@ -13,7 +13,7 @@ export class BaseException extends Error {
    */
   public constructor(
     message: string,
-    public cause?: any,
+    public cause?: unknown,
   ) {
     super(message);
   }
@@ -24,7 +24,7 @@ export class BaseException extends Error {
    * @param cause the cause we assume that cause the current exception
    * @returns true if the cause we passed is the original cause when the Exception constructed. otherwise, it returns false
    */
-  public isCausedBy(cause) {
+  public isCausedBy(cause: unknown) {
     return cause === this.cause;
   }
 }
