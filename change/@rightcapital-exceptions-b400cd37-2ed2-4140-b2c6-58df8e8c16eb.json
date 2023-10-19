@@ -1,0 +1,7 @@
+{
+  "type": "none",
+  "comment": "chore: add repository link to packages",
+  "packageName": "@rightcapital/exceptions",
+  "email": "zhangjie9477@gmail.com",
+  "dependentChangeType": "none"
+}

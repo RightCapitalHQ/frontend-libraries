@@ -14,6 +14,7 @@
     "TypeScript"
   ],
   "homepage": "https://www.rightcapital.com",
+  "repository": "https://github.com/RightCapitalHQ/frontend-libraries",
   "license": "MIT",
   "packageManager": "pnpm@8.9.2",
   "main": "lib/date-helpers.js",
