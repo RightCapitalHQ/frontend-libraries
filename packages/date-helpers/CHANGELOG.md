@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/date-helpers
 
-This log was last generated on Mon, 16 Oct 2023 07:31:04 GMT and should not be manually modified.
+This log was last generated on Thu, 19 Oct 2023 03:27:44 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 3.1.0
+
+Thu, 19 Oct 2023 03:27:44 GMT
+
+### Minor changes
+
+- feat(date-helpers): add type assertion for `DateLike` input (38807139+liby@users.noreply.github.com)
 
 ## 3.0.1
 

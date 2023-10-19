@@ -2,6 +2,21 @@
   "name": "@rightcapital/date-helpers",
   "entries": [
     {
+      "date": "Thu, 19 Oct 2023 03:27:44 GMT",
+      "version": "3.1.0",
+      "tag": "@rightcapital/date-helpers_v3.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "38807139+liby@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "2c0a5337e92616e3e9530bcd3463c8fa6e2d0808",
+            "comment": "feat(date-helpers): add type assertion for `DateLike` input"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 16 Oct 2023 13:45:47 GMT",
       "version": "3.0.1",
       "tag": "@rightcapital/date-helpers_v3.0.1",
