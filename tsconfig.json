@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
+    "strict": true,
     "composite": true,
     "module": "commonjs",
     "declaration": true,
     "declarationMap": true,
-    "noImplicitAny": false,
     "removeComments": false,
     "noLib": false,
     "emitDecoratorMetadata": true,
@@ -12,6 +12,5 @@
     "target": "es6",
     "sourceMap": true,
     "skipLibCheck": true
-  },
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  }
 }

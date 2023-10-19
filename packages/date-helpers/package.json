@@ -19,15 +19,13 @@
   "main": "lib/date-helpers.js",
   "typings": "lib/date-helpers.d.ts",
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "lib"
   },
   "files": [
     "lib"
   ],
   "scripts": {
-    "test": "jest",
-    "build": "tsc",
+    "build": "tsc --build tsconfig.build.json",
     "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --out docs src/date-helpers.ts",
     "eslint": "eslint --cache 'src/**/*.ts*'",
     "lint": "pnpm prettier && pnpm eslint",
@@ -39,11 +37,9 @@
     "date-fns": "2.30.0"
   },
   "peerDependencies": {
-    "@sentry/browser": "7.x",
     "date-fns": "^2.29.3"
   },
   "devDependencies": {
-    "@sentry/browser": "7.74.0",
     "typedoc": "0.25.2",
     "typedoc-plugin-markdown": "3.16.0"
   }
