@@ -2,6 +2,21 @@
   "name": "@rightcapital/date-helpers",
   "entries": [
     {
+      "date": "Fri, 20 Oct 2023 01:25:04 GMT",
+      "version": "3.1.0",
+      "tag": "@rightcapital/date-helpers_v3.1.0",
+      "comments": {
+        "none": [
+          {
+            "author": "zhangjie9477@gmail.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "4e9e1173e72a5b43741c84536bc6f2b822e32305",
+            "comment": "chore: add repository link to packages"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 19 Oct 2023 03:27:44 GMT",
       "version": "3.1.0",
       "tag": "@rightcapital/date-helpers_v3.1.0",
