@@ -37,6 +37,6 @@ try {
 }
 ```
 
-## Modules
+## API Reference
 
 [Here](/packages/exceptions/docs/modules.md) is the API documentation for the modules included in the package.

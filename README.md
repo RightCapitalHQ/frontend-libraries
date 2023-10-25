@@ -15,7 +15,8 @@ This is a Mono repository contains a set of useful libraries/helpers in TypeScri
 
 it including the following packages:
 
-- @rightcapital/exceptions: This library provides a set of standard Exceptions ([docs](https://github.com/RightCapitalHQ/frontend-libraries/tree/main/packages/exceptions/docs))
+- @rightcapital/exceptions: This library provides a set of standard Exceptions ([API Reference](https://github.com/RightCapitalHQ/frontend-libraries/tree/main/packages/exceptions/docs))
+- @rightcapital/date-helpers: A utility class providing various date formatting and parsing methods in TypeScript. ([API Reference](https://github.com/RightCapitalHQ/frontend-libraries/blob/main/packages/date-helpers/docs/modules.md))
 
 ## Development
 
