@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "docs: update README files to add API Reference link for new packages",
+  "packageName": "@rightcapital/exceptions",
+  "email": "i@rainx.cc",
+  "dependentChangeType": "patch"
+}
