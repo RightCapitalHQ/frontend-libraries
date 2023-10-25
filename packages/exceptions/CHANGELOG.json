@@ -2,6 +2,21 @@
   "name": "@rightcapital/exceptions",
   "entries": [
     {
+      "date": "Wed, 25 Oct 2023 13:32:53 GMT",
+      "version": "1.2.5",
+      "tag": "@rightcapital/exceptions_v1.2.5",
+      "comments": {
+        "patch": [
+          {
+            "author": "i@rainx.cc",
+            "package": "@rightcapital/exceptions",
+            "commit": "9da50d58f17040cdd931dd4fcb79afd1b9034757",
+            "comment": "docs: update README files to add API Reference link for new packages"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 20 Oct 2023 01:25:04 GMT",
       "version": "1.2.4",
       "tag": "@rightcapital/exceptions_v1.2.4",

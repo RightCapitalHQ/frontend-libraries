@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/exceptions
 
-This log was last generated on Thu, 19 Oct 2023 03:27:44 GMT and should not be manually modified.
+This log was last generated on Wed, 25 Oct 2023 13:32:53 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 1.2.5
+
+Wed, 25 Oct 2023 13:32:53 GMT
+
+### Patches
+
+- docs: update README files to add API Reference link for new packages (i@rainx.cc)
 
 ## 1.2.4
 
