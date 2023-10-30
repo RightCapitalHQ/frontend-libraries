@@ -2,6 +2,21 @@
   "name": "@rightcapital/date-helpers",
   "entries": [
     {
+      "date": "Mon, 30 Oct 2023 03:09:40 GMT",
+      "version": "3.1.1",
+      "tag": "@rightcapital/date-helpers_v3.1.1",
+      "comments": {
+        "none": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "9c5a3375748df55e6680dddba6ab5ffb3ed3bc39",
+            "comment": "chore(deps): lock file maintenance non-major updates"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 20 Oct 2023 01:25:04 GMT",
       "version": "3.1.0",
       "tag": "@rightcapital/date-helpers_v3.1.0",
