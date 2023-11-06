@@ -2,6 +2,21 @@
   "name": "@rightcapital/exceptions",
   "entries": [
     {
+      "date": "Mon, 06 Nov 2023 03:26:56 GMT",
+      "version": "1.2.5",
+      "tag": "@rightcapital/exceptions_v1.2.5",
+      "comments": {
+        "none": [
+          {
+            "author": "email not defined",
+            "package": "@rightcapital/exceptions",
+            "commit": "036947ab16588fd617126c1acc16260c73d26f8a",
+            "comment": "chore(deps): lock file maintenance non-major updates"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 30 Oct 2023 03:09:40 GMT",
       "version": "1.2.5",
       "tag": "@rightcapital/exceptions_v1.2.5",
