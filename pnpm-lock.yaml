@@ -22,7 +22,7 @@ importers:
         version: 18.1.0
       '@commitlint/cz-commitlint':
         specifier: 18.2.0
-        version: 18.2.0(commitizen@4.3.0)(inquirer@9.2.11)(typescript@5.2.2)
+        version: 18.2.0(commitizen@4.3.0)(inquirer@9.2.12)(typescript@5.2.2)
       '@rightcapital/exceptions':
         specifier: workspace:*
         version: link:packages/exceptions
@@ -30,8 +30,8 @@ importers:
         specifier: 6.0.4
         version: 6.0.4(prettier@3.0.3)
       '@types/jest':
-        specifier: 29.5.7
-        version: 29.5.7
+        specifier: 29.5.8
+        version: 29.5.8
       beachball:
         specifier: 2.39.0
         version: 2.39.0(typescript@5.2.2)
@@ -48,8 +48,8 @@ importers:
         specifier: 8.0.3
         version: 8.0.3
       inquirer:
-        specifier: 9.2.11
-        version: 9.2.11
+        specifier: 9.2.12
+        version: 9.2.12
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@20.8.10)(ts-node@10.9.1)
@@ -76,8 +76,8 @@ importers:
         specifier: 0.25.3
         version: 0.25.3(typescript@5.2.2)
       typedoc-plugin-markdown:
-        specifier: 3.17.0
-        version: 3.17.0(typedoc@0.25.3)
+        specifier: 3.17.1
+        version: 3.17.1(typedoc@0.25.3)
 
   packages/exceptions:
     devDependencies:
@@ -88,8 +88,8 @@ importers:
         specifier: 0.25.3
         version: 0.25.3(typescript@5.2.2)
       typedoc-plugin-markdown:
-        specifier: 3.17.0
-        version: 3.17.0(typedoc@0.25.3)
+        specifier: 3.17.1
+        version: 3.17.1(typedoc@0.25.3)
 
 packages:
 
@@ -1353,7 +1353,7 @@ packages:
       ajv: 8.12.0
     dev: true
 
-  /@commitlint/cz-commitlint@18.2.0(commitizen@4.3.0)(inquirer@9.2.11)(typescript@5.2.2):
+  /@commitlint/cz-commitlint@18.2.0(commitizen@4.3.0)(inquirer@9.2.12)(typescript@5.2.2):
     resolution: {integrity: sha512-37zzllDFwUWA61lYR6KBpbCkjgQl7zcZ6IAXxI1qfkSeZPRnjf5KSyzQvUqP5bd6xr24A6Dlh/kaS44CR44WSw==}
     engines: {node: '>=v18'}
     peerDependencies:
@@ -1365,7 +1365,7 @@ packages:
       '@commitlint/types': 18.1.0
       chalk: 4.1.2
       commitizen: 4.3.0(typescript@5.2.2)
-      inquirer: 9.2.11
+      inquirer: 9.2.12
       lodash.isplainobject: 4.0.6
       word-wrap: 1.2.5
     transitivePeerDependencies:
@@ -1953,8 +1953,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.2
     dev: true
 
-  /@types/jest@29.5.7:
-    resolution: {integrity: sha512-HLyetab6KVPSiF+7pFcUyMeLsx25LDNDemw9mGsJBkai/oouwrjTycocSDYopMEwFhN2Y4s9oPyOCZNofgSt2g==}
+  /@types/jest@29.5.8:
+    resolution: {integrity: sha512-fXEFTxMV2Co8ZF5aYFJv+YeA08RTYJfhtN5c9JSv/mFEMe+xxjufCb+PHL+bJcMs/ebPUsBu+UNTEz+ydXrR6g==}
     dependencies:
       expect: 29.7.0
       pretty-format: 29.7.0
@@ -3395,8 +3395,8 @@ packages:
       wrap-ansi: 7.0.0
     dev: true
 
-  /inquirer@9.2.11:
-    resolution: {integrity: sha512-B2LafrnnhbRzCWfAdOXisUzL89Kg8cVJlYmhqoi3flSiV/TveO+nsXwgKr9h9PIo+J1hz7nBSk6gegRIMBBf7g==}
+  /inquirer@9.2.12:
+    resolution: {integrity: sha512-mg3Fh9g2zfuVWJn6lhST0O7x4n03k7G8Tx5nvikJkbq8/CK47WDVm+UznF0G6s5Zi0KcyUisr6DU8T67N5U+1Q==}
     engines: {node: '>=14.18.0'}
     dependencies:
       '@ljharb/through': 2.3.11
@@ -5104,8 +5104,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /typedoc-plugin-markdown@3.17.0(typedoc@0.25.3):
-    resolution: {integrity: sha512-+uh5fHNfNSGdUxae0FWOuJ8Xu9Sl08jkdshOg6dilAqN/ZXmYsUFFDKw70fYfiGxdCLvpUuyr9FYO+WAa2lHeA==}
+  /typedoc-plugin-markdown@3.17.1(typedoc@0.25.3):
+    resolution: {integrity: sha512-QzdU3fj0Kzw2XSdoL15ExLASt2WPqD7FbLeaqwT70+XjKyTshBnUlQA5nNREO1C2P8Uen0CDjsBLMsCQ+zd0lw==}
     peerDependencies:
       typedoc: '>=0.24.0'
     dependencies:
