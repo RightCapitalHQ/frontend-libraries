@@ -16,7 +16,7 @@
   "homepage": "https://www.rightcapital.com",
   "repository": "https://github.com/RightCapitalHQ/frontend-libraries",
   "license": "MIT",
-  "packageManager": "pnpm@8.10.2",
+  "packageManager": "pnpm@8.10.5",
   "main": "lib/date-helpers.js",
   "typings": "lib/date-helpers.d.ts",
   "directories": {
