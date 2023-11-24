@@ -1,0 +1,20 @@
+{
+  "name": "@rightcapital/color-helpers",
+  "entries": [
+    {
+      "date": "Fri, 24 Nov 2023 16:07:12 GMT",
+      "version": "2.1.0",
+      "tag": "@rightcapital/color-helpers_v2.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "i@rainx.cc",
+            "package": "@rightcapital/color-helpers",
+            "commit": "9d55868c2f21e156f2af692cc2b43aa209c4d21d",
+            "comment": "feat(color-helpers): add color-helpers"
+          }
+        ]
+      }
+    }
+  ]
+}
