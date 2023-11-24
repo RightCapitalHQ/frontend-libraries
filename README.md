@@ -17,6 +17,7 @@ it including the following packages:
 
 - @rightcapital/exceptions: This library provides a set of standard Exceptions ([API Reference](https://github.com/RightCapitalHQ/frontend-libraries/tree/main/packages/exceptions/docs))
 - @rightcapital/date-helpers: A utility class providing various date formatting and parsing methods in TypeScript. ([API Reference](https://github.com/RightCapitalHQ/frontend-libraries/blob/main/packages/date-helpers/docs/modules.md))
+- @rightcapital/color-helpers: Color science related helpers ([API Reference](https://github.com/RightCapitalHQ/frontend-libraries/blob/main/packages/color-helpers/docs/modules.md))
 
 ## Development
 

@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2017"],
+    "rootDir": ".",
+    "outDir": "./lib"
+  },
+  "include": ["src", "__tests__"]
+}
