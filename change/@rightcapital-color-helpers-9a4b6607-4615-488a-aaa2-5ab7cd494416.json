@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "feat(color-helpers): add color-helpers",
+  "packageName": "@rightcapital/color-helpers",
+  "email": "i@rainx.cc",
+  "dependentChangeType": "patch"
+}

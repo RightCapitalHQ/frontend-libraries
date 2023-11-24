@@ -63,6 +63,15 @@ importers:
         specifier: 5.3.2
         version: 5.3.2
 
+  packages/color-helpers:
+    devDependencies:
+      typedoc:
+        specifier: 0.25.3
+        version: 0.25.3(typescript@5.2.2)
+      typedoc-plugin-markdown:
+        specifier: 3.17.1
+        version: 3.17.1(typedoc@0.25.3)
+
   packages/date-helpers:
     dependencies:
       '@rightcapital/exceptions':
