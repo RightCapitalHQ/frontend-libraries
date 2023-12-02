@@ -2,6 +2,21 @@
   "name": "@rightcapital/exceptions",
   "entries": [
     {
+      "date": "Sat, 02 Dec 2023 03:14:08 GMT",
+      "version": "1.2.5",
+      "tag": "@rightcapital/exceptions_v1.2.5",
+      "comments": {
+        "none": [
+          {
+            "author": "email not defined",
+            "package": "@rightcapital/exceptions",
+            "commit": "8d9f6fe465c5d3abb684ef44a1fe62a910c8c38a",
+            "comment": "chore(deps): update devdependencies"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 17 Nov 2023 03:24:38 GMT",
       "version": "1.2.5",
       "tag": "@rightcapital/exceptions_v1.2.5",
