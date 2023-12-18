@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/date-helpers
 
-This log was last generated on Thu, 19 Oct 2023 03:27:44 GMT and should not be manually modified.
+This log was last generated on Mon, 18 Dec 2023 06:41:44 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 3.1.2
+
+Mon, 18 Dec 2023 06:41:44 GMT
+
+### Patches
+
+- chore(deps): update non-major updates(auto merge) (email not defined)
 
 ## 3.1.0
 

@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/color-helpers
 
-This log was last generated on Fri, 24 Nov 2023 16:07:12 GMT and should not be manually modified.
+This log was last generated on Mon, 18 Dec 2023 06:41:44 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 2.1.1
+
+Mon, 18 Dec 2023 06:41:44 GMT
+
+### Patches
+
+- chore(deps): update non-major updates(auto merge) (email not defined)
 
 ## 2.1.0
 

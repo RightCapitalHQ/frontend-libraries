@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/exceptions
 
-This log was last generated on Wed, 25 Oct 2023 13:32:53 GMT and should not be manually modified.
+This log was last generated on Mon, 18 Dec 2023 06:41:44 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 1.2.6
+
+Mon, 18 Dec 2023 06:41:44 GMT
+
+### Patches
+
+- chore(deps): update non-major updates(auto merge) (email not defined)
 
 ## 1.2.5
 

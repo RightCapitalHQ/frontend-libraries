@@ -2,6 +2,21 @@
   "name": "@rightcapital/color-helpers",
   "entries": [
     {
+      "date": "Mon, 18 Dec 2023 06:41:44 GMT",
+      "version": "2.1.1",
+      "tag": "@rightcapital/color-helpers_v2.1.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "email not defined",
+            "package": "@rightcapital/color-helpers",
+            "commit": "b1e93a634148f8c2bc874b70fd7cbb854b1d5e47",
+            "comment": "chore(deps): update non-major updates(auto merge)"
+          }
+        ]
+      }
+    },
+    {
       "date": "Sat, 02 Dec 2023 03:14:08 GMT",
       "version": "2.1.0",
       "tag": "@rightcapital/color-helpers_v2.1.0",
