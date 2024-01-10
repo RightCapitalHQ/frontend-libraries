@@ -2,6 +2,21 @@
   "name": "@rightcapital/date-helpers",
   "entries": [
     {
+      "date": "Wed, 10 Jan 2024 19:56:06 GMT",
+      "version": "3.1.5",
+      "tag": "@rightcapital/date-helpers_v3.1.5",
+      "comments": {
+        "patch": [
+          {
+            "author": "email not defined",
+            "package": "@rightcapital/date-helpers",
+            "commit": "82cbfc65f7f087f174095ce8d7343f244885d189",
+            "comment": "chore(deps): update non-major updates(auto merge)"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 03 Jan 2024 04:54:38 GMT",
       "version": "3.1.4",
       "tag": "@rightcapital/date-helpers_v3.1.4",
