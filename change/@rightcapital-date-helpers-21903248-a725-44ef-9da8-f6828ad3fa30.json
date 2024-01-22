@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "fix(deps): update non-major updates(auto merge)",
+  "packageName": "@rightcapital/date-helpers",
+  "email": "email not defined",
+  "dependentChangeType": "patch"
+}
