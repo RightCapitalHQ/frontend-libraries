@@ -2,6 +2,21 @@
   "name": "@rightcapital/exceptions",
   "entries": [
     {
+      "date": "Mon, 22 Jan 2024 14:52:38 GMT",
+      "version": "1.2.10",
+      "tag": "@rightcapital/exceptions_v1.2.10",
+      "comments": {
+        "patch": [
+          {
+            "author": "email not defined",
+            "package": "@rightcapital/exceptions",
+            "commit": "4de79c76c1f5389e22c2330f9ef0bb857da37f9a",
+            "comment": "fix(deps): update non-major updates(auto merge)"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 10 Jan 2024 19:56:06 GMT",
       "version": "1.2.9",
       "tag": "@rightcapital/exceptions_v1.2.9",

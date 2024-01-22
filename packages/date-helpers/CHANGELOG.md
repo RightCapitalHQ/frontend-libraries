@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/date-helpers
 
-This log was last generated on Mon, 22 Jan 2024 09:00:02 GMT and should not be manually modified.
+This log was last generated on Mon, 22 Jan 2024 14:52:38 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 3.1.7
+
+Mon, 22 Jan 2024 14:52:38 GMT
+
+### Patches
+
+- fix(deps): update non-major updates(auto merge) (email not defined)
 
 ## 3.1.6
 
