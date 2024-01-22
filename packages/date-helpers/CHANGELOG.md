@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/date-helpers
 
-This log was last generated on Wed, 10 Jan 2024 19:56:06 GMT and should not be manually modified.
+This log was last generated on Mon, 22 Jan 2024 09:00:02 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 3.1.6
+
+Mon, 22 Jan 2024 09:00:02 GMT
+
+### Patches
+
+- chore(deps): update peerdependency date-fns to v3 (email not defined)
 
 ## 3.1.5
 

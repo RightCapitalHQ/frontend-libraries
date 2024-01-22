@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "chore(deps): update peerdependency date-fns to v3",
-  "packageName": "@rightcapital/date-helpers",
-  "email": "email not defined",
-  "dependentChangeType": "patch"
-}

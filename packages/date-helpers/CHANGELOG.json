@@ -2,6 +2,21 @@
   "name": "@rightcapital/date-helpers",
   "entries": [
     {
+      "date": "Mon, 22 Jan 2024 09:00:02 GMT",
+      "version": "3.1.6",
+      "tag": "@rightcapital/date-helpers_v3.1.6",
+      "comments": {
+        "patch": [
+          {
+            "author": "email not defined",
+            "package": "@rightcapital/date-helpers",
+            "commit": "9b7f4b7721a4398628465ce43a7ddb4eb515a169",
+            "comment": "chore(deps): update peerdependency date-fns to v3"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 10 Jan 2024 19:56:06 GMT",
       "version": "3.1.5",
       "tag": "@rightcapital/date-helpers_v3.1.5",
