@@ -35,10 +35,10 @@
   },
   "dependencies": {
     "@rightcapital/exceptions": "workspace:*",
-    "date-fns": "2.30.0"
+    "date-fns": "3.3.0"
   },
   "peerDependencies": {
-    "date-fns": "^2.29.3"
+    "date-fns": "^2.29.3 || ^3.0.0"
   },
   "devDependencies": {
     "typedoc": "0.25.4",
