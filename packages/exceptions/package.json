@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/exceptions",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "description": "TypeScript Exception definitions inspired by PHP SPL Exceptions etc...",
   "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
   "keywords": [

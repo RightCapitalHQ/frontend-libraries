@@ -2,6 +2,21 @@
   "name": "@rightcapital/exceptions",
   "entries": [
     {
+      "date": "Tue, 23 Jan 2024 15:35:19 GMT",
+      "version": "1.2.11",
+      "tag": "@rightcapital/exceptions_v1.2.11",
+      "comments": {
+        "patch": [
+          {
+            "author": "email not defined",
+            "package": "@rightcapital/exceptions",
+            "commit": "1a0e14bc9d769ecfde7d5a4c92194636767a4574",
+            "comment": "chore(deps): update pnpm to v8.14.3"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 22 Jan 2024 14:52:38 GMT",
       "version": "1.2.10",
       "tag": "@rightcapital/exceptions_v1.2.10",
