@@ -12,7 +12,7 @@
   "scripts": {
     "docs": "pnpm -r --filter=./packages/** docs",
     "preinstall": "npx only-allow pnpm",
-    "prepare": "husky install",
+    "prepare": "husky",
     "build": "pnpm run clean && pnpm -r --filter=./packages/** run build",
     "clean": "pnpm -r --parallel --filter=./packages/** exec tsc --build --clean",
     "pretest": "pnpm run build",
