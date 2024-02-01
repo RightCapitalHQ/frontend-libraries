@@ -3,7 +3,7 @@
   "compilerOptions": {
     "lib": ["ES2017"],
     "rootDir": ".",
-    "outDir": "./lib"
+    "outDir": "./lib",
   },
-  "include": ["src", "__tests__"]
+  "include": ["src", "__tests__"],
 }

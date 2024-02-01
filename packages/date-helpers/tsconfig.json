@@ -2,8 +2,8 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "rootDir": ".",
-    "outDir": "./lib"
+    "outDir": "./lib",
   },
   "references": [{ "path": "../exceptions" }],
-  "include": ["src", "__tests__"]
+  "include": ["src", "__tests__"],
 }
