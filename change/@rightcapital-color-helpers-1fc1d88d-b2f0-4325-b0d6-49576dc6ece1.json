@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "chore(deps): update pnpm to v8.15.3",
-  "packageName": "@rightcapital/color-helpers",
-  "email": "email not defined",
-  "dependentChangeType": "patch"
-}
