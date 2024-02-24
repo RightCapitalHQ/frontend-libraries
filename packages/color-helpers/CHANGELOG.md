@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/color-helpers
 
-This log was last generated on Thu, 15 Feb 2024 17:00:41 GMT and should not be manually modified.
+This log was last generated on Sat, 24 Feb 2024 18:15:44 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 2.1.11
+
+Sat, 24 Feb 2024 18:15:44 GMT
+
+### Patches
+
+- chore(deps): update pnpm to v8.15.4 (email not defined)
 
 ## 2.1.10
 

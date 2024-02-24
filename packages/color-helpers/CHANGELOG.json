@@ -2,6 +2,21 @@
   "name": "@rightcapital/color-helpers",
   "entries": [
     {
+      "date": "Sat, 24 Feb 2024 18:15:44 GMT",
+      "version": "2.1.11",
+      "tag": "@rightcapital/color-helpers_v2.1.11",
+      "comments": {
+        "patch": [
+          {
+            "author": "email not defined",
+            "package": "@rightcapital/color-helpers",
+            "commit": "494a82982cba2515610d8d0332fd6583ea67ee18",
+            "comment": "chore(deps): update pnpm to v8.15.4"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 15 Feb 2024 17:00:41 GMT",
       "version": "2.1.10",
       "tag": "@rightcapital/color-helpers_v2.1.10",
