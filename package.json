@@ -39,9 +39,9 @@
   "devDependencies": {
     "@babel/preset-env": "7.23.9",
     "@babel/preset-typescript": "7.23.3",
-    "@commitlint/cli": "18.6.0",
-    "@commitlint/config-conventional": "18.6.0",
-    "@commitlint/cz-commitlint": "18.6.0",
+    "@commitlint/cli": "19.0.0",
+    "@commitlint/config-conventional": "19.0.0",
+    "@commitlint/cz-commitlint": "19.0.0",
     "@rightcapital/exceptions": "workspace:*",
     "@rightcapital/prettier-config": "6.0.12",
     "@types/jest": "29.5.11",
