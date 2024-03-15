@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/date-helpers
 
-This log was last generated on Mon, 11 Mar 2024 16:27:28 GMT and should not be manually modified.
+This log was last generated on Fri, 15 Mar 2024 05:27:04 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 3.1.15
+
+Fri, 15 Mar 2024 05:27:04 GMT
+
+### Patches
+
+- fix(deps): update dependency date-fns to v3.5.0 (29139614+renovate[bot]@users.noreply.github.com)
 
 ## 3.1.14
 

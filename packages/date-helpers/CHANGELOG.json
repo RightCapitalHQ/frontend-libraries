@@ -2,6 +2,21 @@
   "name": "@rightcapital/date-helpers",
   "entries": [
     {
+      "date": "Fri, 15 Mar 2024 05:27:04 GMT",
+      "version": "3.1.15",
+      "tag": "@rightcapital/date-helpers_v3.1.15",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "28120552ffea3bd75b1c4bf4f779bd9a137cf097",
+            "comment": "fix(deps): update dependency date-fns to v3.5.0"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 11 Mar 2024 16:27:28 GMT",
       "version": "3.1.14",
       "tag": "@rightcapital/date-helpers_v3.1.14",
