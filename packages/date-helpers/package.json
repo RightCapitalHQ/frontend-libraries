@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@rightcapital/exceptions": "workspace:*",
-    "date-fns": "3.4.0"
+    "date-fns": "3.5.0"
   },
   "peerDependencies": {
     "date-fns": "^2.29.3 || ^3.0.0"
