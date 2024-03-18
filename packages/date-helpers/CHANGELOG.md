@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/date-helpers
 
-This log was last generated on Fri, 15 Mar 2024 05:27:04 GMT and should not be manually modified.
+This log was last generated on Mon, 18 Mar 2024 01:45:04 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 3.1.16
+
+Mon, 18 Mar 2024 01:45:04 GMT
+
+### Patches
+
+- chore(deps): update pnpm to v8.15.5 (email not defined)
 
 ## 3.1.15
 
