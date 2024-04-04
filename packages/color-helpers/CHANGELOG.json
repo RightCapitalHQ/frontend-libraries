@@ -2,6 +2,21 @@
   "name": "@rightcapital/color-helpers",
   "entries": [
     {
+      "date": "Thu, 04 Apr 2024 01:03:29 GMT",
+      "version": "2.1.13",
+      "tag": "@rightcapital/color-helpers_v2.1.13",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/color-helpers",
+            "commit": "f8d88cf2860088ab13ceff110bb0db3bceb3ab44",
+            "comment": "chore(deps): update non-major updates(auto merge)"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 18 Mar 2024 01:45:04 GMT",
       "version": "2.1.12",
       "tag": "@rightcapital/color-helpers_v2.1.12",

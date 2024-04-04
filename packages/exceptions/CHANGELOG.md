@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/exceptions
 
-This log was last generated on Mon, 18 Mar 2024 01:45:04 GMT and should not be manually modified.
+This log was last generated on Thu, 04 Apr 2024 01:03:29 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 1.2.18
+
+Thu, 04 Apr 2024 01:03:29 GMT
+
+### Patches
+
+- chore(deps): update non-major updates(auto merge) (29139614+renovate[bot]@users.noreply.github.com)
 
 ## 1.2.17
 
