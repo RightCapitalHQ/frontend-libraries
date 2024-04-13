@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "chore(deps): update pnpm to v8.15.7",
+  "packageName": "@rightcapital/exceptions",
+  "email": "email not defined",
+  "dependentChangeType": "patch"
+}
