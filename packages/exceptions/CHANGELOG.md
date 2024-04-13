@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/exceptions
 
-This log was last generated on Thu, 04 Apr 2024 01:03:29 GMT and should not be manually modified.
+This log was last generated on Sat, 13 Apr 2024 20:32:39 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 1.2.19
+
+Sat, 13 Apr 2024 20:32:39 GMT
+
+### Patches
+
+- chore(deps): update pnpm to v8.15.7 (email not defined)
 
 ## 1.2.18
 
