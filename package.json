@@ -1,36 +1,32 @@
 {
   "name": "@rightcapital/libraries",
   "version": "1.0.2",
-  "main": "index.js",
-  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
   "private": true,
-  "packageManager": "pnpm@8.15.8",
-  "engines": {
-    "node": ">=18.16.1"
-  },
   "repository": "https://github.com/RightCapitalHQ/frontend-libraries",
+  "license": "MIT",
+  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
+  "main": "index.js",
   "scripts": {
-    "docs": "pnpm -r --filter=./packages/** docs",
-    "preinstall": "npx only-allow pnpm",
-    "prepare": "husky",
     "build": "pnpm run clean && pnpm -r --filter=./packages/** run build",
+    "change": "beachball change --no-commit",
+    "changelog:fix": "pnpm eachpkg --parallel exec generate-changelog",
+    "check": "beachball check",
     "clean": "pnpm -r --parallel --filter=./packages/** exec tsc --build --clean",
-    "pretest": "pnpm run build",
-    "test": "pnpm run pretest && jest",
-    "lint": "concurrently pnpm:lint:*",
-    "lint:eslint": "eslint --max-warnings=0 .",
-    "lint:prettier": "prettier -c .",
+    "commit": "cz",
+    "create:library": "python scripts/create-new-library.py",
+    "docs": "pnpm -r --filter=./packages/** docs",
+    "eachpkg": "pnpm -r --filter './packages/**'",
     "fix": "pnpm run fix:eslint && pnpm run fix:prettier",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write .",
-    "eachpkg": "pnpm -r --filter './packages/**'",
-    "create:library": "python scripts/create-new-library.py",
-    "commit": "cz",
-    "changelog:fix": "pnpm eachpkg --parallel exec generate-changelog",
-    "change": "beachball change --no-commit",
-    "check": "beachball check"
+    "preinstall": "npx only-allow pnpm",
+    "lint": "concurrently pnpm:lint:*",
+    "lint:eslint": "eslint --max-warnings=0 .",
+    "lint:prettier": "prettier -c .",
+    "prepare": "husky",
+    "pretest": "pnpm run build",
+    "test": "pnpm run pretest && jest"
   },
-  "license": "MIT",
   "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
@@ -42,6 +38,8 @@
     "@commitlint/cli": "19.0.0",
     "@commitlint/config-conventional": "19.0.0",
     "@commitlint/cz-commitlint": "19.0.0",
+    "@rightcapital/eslint-config-javascript": "29.0.0",
+    "@rightcapital/eslint-config-typescript": "29.0.0",
     "@rightcapital/exceptions": "workspace:*",
     "@rightcapital/prettier-config": "7.1.3",
     "@types/jest": "29.5.11",
@@ -55,5 +53,9 @@
     "prettier": "3.2.4",
     "ts-node": "10.9.2",
     "typescript": "5.3.3"
+  },
+  "packageManager": "pnpm@8.15.8",
+  "engines": {
+    "node": ">=18.16.1"
   }
 }
