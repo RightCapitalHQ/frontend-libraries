@@ -2,7 +2,6 @@
   "name": "@rightcapital/color-helpers",
   "version": "2.1.15",
   "description": "Color science related helpers",
-  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
   "keywords": [
     "color",
     "color-science",
@@ -10,12 +9,12 @@
     "WCAG",
     "TypeScript"
   ],
-  "license": "MIT",
-  "packageManager": "pnpm@8.15.8",
-  "main": "lib/color-helpers.js",
-  "typings": "lib/color-helpers.d.ts",
   "homepage": "https://www.rightcapital.com",
   "repository": "https://github.com/RightCapitalHQ/frontend-libraries",
+  "license": "MIT",
+  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
+  "main": "lib/color-helpers.js",
+  "typings": "lib/color-helpers.d.ts",
   "directories": {
     "lib": "lib"
   },
@@ -23,16 +22,17 @@
     "lib"
   ],
   "scripts": {
-    "test": "jest",
     "build": "tsc --build tsconfig.build.json",
     "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --out docs src/color-helpers.ts",
     "eslint": "eslint --cache 'src/**/*.ts*'",
     "lint": "pnpm prettier && pnpm eslint",
     "lint:fix": "pnpm prettier --write && eslint 'src/**/*.ts*' --fix",
-    "prettier": "prettier \"{src,__tests__}/**/*.{tsx,ts}\" -l"
+    "prettier": "prettier \"{src,__tests__}/**/*.{tsx,ts}\" -l",
+    "test": "jest"
   },
   "devDependencies": {
     "typedoc": "0.25.7",
     "typedoc-plugin-markdown": "4.1.0"
-  }
+  },
+  "packageManager": "pnpm@8.15.8"
 }

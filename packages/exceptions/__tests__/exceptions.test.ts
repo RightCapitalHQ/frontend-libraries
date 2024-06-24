@@ -1,19 +1,19 @@
 import {
-  BadMethodCallException,
-  RuntimeException,
-  LogicException,
-  IgnorableException,
   BadFunctionCallException,
+  BadMethodCallException,
+  BaseException,
   DomainException,
+  IgnorableException,
   InvalidArgumentException,
   LengthException,
+  LogicException,
   OutOfBoundsException,
   OutOfRangeException,
   OverflowException,
   RangeException,
+  RuntimeException,
   UnderflowException,
   UnexpectedValueException,
-  BaseException,
 } from '../src/index';
 
 const exceptionCtorList = [
@@ -52,6 +52,7 @@ describe('Exceptions', () => {
   });
 
   test('toString()', () => {
+    // eslint-disable-next-line @typescript-eslint/no-base-to-string
     expect(runtimeException.toString()).toBe(
       'RuntimeException: This is a runtime exception',
     );
@@ -66,20 +67,23 @@ describe('Exceptions', () => {
   test('BadMethodCallException is (inherited from) LogicException', () => {
     expect(() => {
       throw new BadMethodCallException('Bad Method Call');
-    }).toThrowError(LogicException);
+    }).toThrow(LogicException);
   });
 
   test('All Exception has own name property', () => {
-    exceptionCtorList.forEach((exceptionCtor) => {
-      expect(new exceptionCtor('Exception', {}).hasOwnProperty('name')).toBe(
-        true,
-      );
+    exceptionCtorList.forEach((ExceptionCtor) => {
+      expect(
+        Object.prototype.hasOwnProperty.call(
+          new ExceptionCtor('Exception', {}),
+          'name',
+        ),
+      ).toBe(true);
     });
   });
 
   test('All Exception has name that equals to class name', () => {
-    exceptionCtorList.forEach((exceptionCtor, index) => {
-      expect(new exceptionCtor('Exception', {}).name).toEqual(
+    exceptionCtorList.forEach((ExceptionCtor, index) => {
+      expect(new ExceptionCtor('Exception', {}).name).toEqual(
         exceptionNameList[index],
       );
     });

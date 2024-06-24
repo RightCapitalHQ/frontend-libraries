@@ -2,7 +2,6 @@
   "name": "@rightcapital/date-helpers",
   "version": "3.1.20",
   "description": "Format dates with date-fns.",
-  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
   "keywords": [
     "date",
     "date-fns",
@@ -16,7 +15,7 @@
   "homepage": "https://www.rightcapital.com",
   "repository": "https://github.com/RightCapitalHQ/frontend-libraries",
   "license": "MIT",
-  "packageManager": "pnpm@8.15.8",
+  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
   "main": "lib/date-helpers.js",
   "typings": "lib/date-helpers.d.ts",
   "directories": {
@@ -37,11 +36,12 @@
     "@rightcapital/exceptions": "workspace:*",
     "date-fns": "3.6.0"
   },
-  "peerDependencies": {
-    "date-fns": "^2.29.3 || ^3.0.0"
-  },
   "devDependencies": {
     "typedoc": "0.25.7",
     "typedoc-plugin-markdown": "4.1.0"
-  }
+  },
+  "peerDependencies": {
+    "date-fns": "^2.29.3 || ^3.0.0"
+  },
+  "packageManager": "pnpm@8.15.8"
 }

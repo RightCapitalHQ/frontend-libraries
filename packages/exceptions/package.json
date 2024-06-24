@@ -2,7 +2,6 @@
   "name": "@rightcapital/exceptions",
   "version": "1.2.20",
   "description": "TypeScript Exception definitions inspired by PHP SPL Exceptions etc...",
-  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
   "keywords": [
     "Exception",
     "Error",
@@ -11,7 +10,7 @@
   "homepage": "https://www.rightcapital.com",
   "repository": "https://github.com/RightCapitalHQ/frontend-libraries",
   "license": "MIT",
-  "packageManager": "pnpm@8.15.8",
+  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "directories": {
@@ -32,5 +31,6 @@
     "prettier": "3.2.4",
     "typedoc": "0.25.7",
     "typedoc-plugin-markdown": "4.1.0"
-  }
+  },
+  "packageManager": "pnpm@8.15.8"
 }

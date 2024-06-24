@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./node_modules/.cache/rightcapital/exceptions-tests"
+  },
+  "include": ["./__tests__"],
+  "exclude": ["./src"],
+  "references": [{ "path": "./tsconfig.build.json" }]
+}

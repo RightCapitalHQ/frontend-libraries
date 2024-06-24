@@ -39,7 +39,7 @@ export class DateHelpers {
     }
 
     throw new InvalidArgumentException(
-      `Input must be a Date object or a string. Received: ${typeof input} - ${input}`,
+      `Input must be a Date object or a string. Received: ${typeof input} - ${String(input)}`,
     );
   }
 
@@ -130,6 +130,7 @@ export class DateHelpers {
       return format(getParsedDate(dateInput), dateFormat);
     } catch (error) {
       throw new InvalidArgumentException(
+        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
         `Unable to format date: ${dateInput} with format: ${dateFormat}`,
         error,
       );

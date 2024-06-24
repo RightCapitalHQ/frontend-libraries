@@ -45,9 +45,8 @@ export class ColorHelpers {
     // If the background is light (closer to white), we return the "dark" foreground content.
     if (backgroundBrightnessDirection === BrightnessDirection.Dark) {
       return contentCandidates.light;
-    } else {
-      return contentCandidates.dark;
     }
+    return contentCandidates.dark;
   }
 
   /**
@@ -103,21 +102,19 @@ export class ColorHelpers {
    * @returns normalized hexadecimal color with format RRGGBB
    */
   public static normalizeHexColor(color: string): string {
-    if (color[0] === '#') {
-      color = color.substr(1);
-    }
+    const trimmedColor = color.startsWith('#') ? color.substring(1) : color;
 
-    if (color.length > 6) {
-      return color.substring(0, 6);
+    if (trimmedColor.length > 6) {
+      return trimmedColor.substring(0, 6);
     }
-    if (color.length === 6) {
-      return color;
+    if (trimmedColor.length === 6) {
+      return trimmedColor;
     }
-    if (color.length > 3) {
-      return color.padEnd(6, '0');
+    if (trimmedColor.length > 3) {
+      return trimmedColor.padEnd(6, '0');
     }
-    if (color.length > 0) {
-      return color
+    if (trimmedColor.length > 0) {
+      return trimmedColor
         .split('')
         .map((c) => `${c}${c}`)
         .join('')

@@ -1,13 +1,14 @@
-import { parseISO } from 'date-fns';
-import { DateHelpers } from '../src/date-helpers';
 import { InvalidArgumentException } from '@rightcapital/exceptions';
+import { parseISO } from 'date-fns';
+
+import { DateHelpers } from '../src/date-helpers';
 
 const output = parseISO('2019-10-21');
 
 describe('DateHelpers input validation', () => {
   it('parseDateString should throw for unrecognized date formats', () => {
     const invalidDateString = 'ABCDE';
-    expect(() => DateHelpers.parseDateString(invalidDateString)).toThrowError(
+    expect(() => DateHelpers.parseDateString(invalidDateString)).toThrow(
       InvalidArgumentException,
     );
   });
@@ -30,32 +31,32 @@ describe('DateHelpers input validation', () => {
         'invalid date',
         DateHelpers.isoDateFormat,
       ),
-    ).toThrowError(InvalidArgumentException);
+    ).toThrow(InvalidArgumentException);
   });
 
   it('formatDateLikeToString should throw InvalidArgumentException for invalid date format', () => {
     expect(() =>
       DateHelpers.formatDateLikeToString(new Date(), 'invalid format'),
-    ).toThrowError(InvalidArgumentException);
+    ).toThrow(InvalidArgumentException);
   });
 
   it('formatDateLikeToString should throw error for null, undefined, or invalid input', () => {
     expect(() =>
       // @ts-expect-error - intentionally passing invalid input to test error handling
       DateHelpers.formatDateLikeToString(null, DateHelpers.isoDateFormat),
-    ).toThrowError(InvalidArgumentException);
+    ).toThrow(InvalidArgumentException);
     expect(() =>
       // @ts-expect-error - intentionally passing invalid input to test error handling
       DateHelpers.formatDateLikeToString(undefined, DateHelpers.isoDateFormat),
-    ).toThrowError(InvalidArgumentException);
+    ).toThrow(InvalidArgumentException);
     expect(() =>
       // @ts-expect-error - intentionally passing invalid input to test error handling
       DateHelpers.formatDateLikeToString({}, DateHelpers.isoDateFormat),
-    ).toThrowError(InvalidArgumentException);
+    ).toThrow(InvalidArgumentException);
     expect(() =>
       // @ts-expect-error - intentionally passing invalid input to test error handling
       DateHelpers.formatDateLikeToString(12345, DateHelpers.isoDateFormat),
-    ).toThrowError(InvalidArgumentException);
+    ).toThrow(InvalidArgumentException);
   });
 });
 
