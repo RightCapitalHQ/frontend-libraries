@@ -2,6 +2,21 @@
   "name": "@rightcapital/date-helpers",
   "entries": [
     {
+      "date": "Thu, 18 Jul 2024 00:31:57 GMT",
+      "version": "3.1.21",
+      "tag": "@rightcapital/date-helpers_v3.1.21",
+      "comments": {
+        "patch": [
+          {
+            "author": "email not defined",
+            "package": "@rightcapital/date-helpers",
+            "commit": "a30d8763e5f2640ffdc24a438caab15035d64ff5",
+            "comment": "chore(deps): update pnpm to v8.15.9"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 30 Apr 2024 04:00:57 GMT",
       "version": "3.1.20",
       "tag": "@rightcapital/date-helpers_v3.1.20",
