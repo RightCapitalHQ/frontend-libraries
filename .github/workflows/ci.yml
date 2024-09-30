@@ -6,7 +6,7 @@ on:
     branches: [main]
 
 jobs:
-  build_and_test:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,8 +30,43 @@ jobs:
           path: |
             packages/*/lib/**
 
+  check-renovate-changefile:
+    if: startsWith(github.event.pull_request.head.ref, 'renovate/') && github.base_ref == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.RENOVATE_AUTO_BEACHBALL_CHANGEFILE_TOKEN }}
+
+      # Install dependencies (example using pnpm)
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install
+
+      - name: Check and generate changefile for Renovate
+        uses: RightCapitalHQ/frontend-style-guide/.github/actions/renovate-auto-beachball-changefile@main
+
+  check-beachball-changefile:
+    if: github.base_ref == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4.0.2
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install
+
+      - name: Check
+        run: pnpm exec beachball check
+
   publish:
-    needs: build_and_test
+    needs: [build-and-test, check-beachball-changefile]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
