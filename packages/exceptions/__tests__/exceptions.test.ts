@@ -1,19 +1,19 @@
 import {
-  BadMethodCallException,
-  RuntimeException,
-  LogicException,
-  IgnorableException,
   BadFunctionCallException,
+  BadMethodCallException,
+  BaseException,
   DomainException,
+  IgnorableException,
   InvalidArgumentException,
   LengthException,
+  LogicException,
   OutOfBoundsException,
   OutOfRangeException,
   OverflowException,
   RangeException,
+  RuntimeException,
   UnderflowException,
   UnexpectedValueException,
-  BaseException,
 } from '../src/index';
 
 const exceptionCtorList = [
@@ -52,7 +52,7 @@ describe('Exceptions', () => {
   });
 
   test('toString()', () => {
-    expect(runtimeException.toString()).toBe(
+    expect(String(runtimeException)).toBe(
       'RuntimeException: This is a runtime exception',
     );
   });
@@ -70,23 +70,21 @@ describe('Exceptions', () => {
   });
 
   test('All Exception has own name property', () => {
-    exceptionCtorList.forEach((exceptionCtor) => {
-      expect(new exceptionCtor('Exception', {}).hasOwnProperty('name')).toBe(
-        true,
-      );
+    exceptionCtorList.forEach((ExceptionCtor) => {
+      expect(new ExceptionCtor('Exception', {})).toHaveProperty('name');
     });
   });
 
   test('All Exception has name that equals to class name', () => {
-    exceptionCtorList.forEach((exceptionCtor, index) => {
-      expect(new exceptionCtor('Exception', {}).name).toEqual(
+    exceptionCtorList.forEach((ExceptionCtor, index) => {
+      expect(new ExceptionCtor('Exception', {}).name).toEqual(
         exceptionNameList[index],
       );
     });
   });
 
   test('Test cause by another exception', () => {
-    const originalException = new BaseException('Original exeption');
+    const originalException = new BaseException('Original Exception');
     const newException = new BaseException('New Exception', originalException);
 
     expect(newException.isCausedBy(originalException)).toBe(true);
