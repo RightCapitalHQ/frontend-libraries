@@ -1,4 +1,4 @@
-import { ColorHelpers, BrightnessDirection } from '../src/color-helpers';
+import { BrightnessDirection, ColorHelpers } from '../src/color-helpers';
 
 describe('@rightcapital/color-helpers', () => {
   test('Test getHighContrastContentOnBackgroundColor color result', () => {
