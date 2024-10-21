@@ -1,6 +1,7 @@
-import { parseISO } from 'date-fns';
-import { DateHelpers } from '../src/date-helpers';
 import { InvalidArgumentException } from '@rightcapital/exceptions';
+import { parseISO } from 'date-fns';
+
+import { DateHelpers } from '../src/date-helpers';
 
 const output = parseISO('2019-10-21');
 
