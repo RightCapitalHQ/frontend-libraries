@@ -1550,7 +1550,7 @@ packages:
       '@typescript-eslint/utils': 8.18.0(eslint@9.13.0)(typescript@5.3.3)
       '@typescript-eslint/visitor-keys': 8.0.1
       birecord: 0.1.1
-      remeda: 2.17.4
+      remeda: 2.18.0
       string-ts: 2.2.0
       ts-pattern: 5.6.0
     transitivePeerDependencies:
@@ -1572,7 +1572,7 @@ packages:
       '@typescript-eslint/type-utils': 8.18.0(eslint@9.13.0)(typescript@5.3.3)
       '@typescript-eslint/types': 8.18.0
       '@typescript-eslint/utils': 8.18.0(eslint@9.13.0)(typescript@5.3.3)
-      remeda: 2.17.4
+      remeda: 2.18.0
       short-unique-id: 5.2.0
       ts-pattern: 5.6.0
     transitivePeerDependencies:
@@ -1604,7 +1604,7 @@ packages:
       eslint-plugin-react-hooks-extra: 1.9.0(eslint@9.13.0)(typescript@5.3.3)
       eslint-plugin-react-naming-convention: 1.9.0(eslint@9.13.0)(typescript@5.3.3)
       eslint-plugin-react-x: 1.9.0(eslint@9.13.0)(typescript@5.3.3)
-      remeda: 2.17.4
+      remeda: 2.18.0
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -1620,7 +1620,7 @@ packages:
       '@typescript-eslint/scope-manager': 8.18.0
       '@typescript-eslint/types': 8.18.0
       '@typescript-eslint/utils': 8.18.0(eslint@9.13.0)(typescript@5.3.3)
-      remeda: 2.17.4
+      remeda: 2.18.0
       ts-pattern: 5.6.0
     transitivePeerDependencies:
       - eslint
@@ -1649,7 +1649,7 @@ packages:
       '@eslint-react/tools': 1.9.0
       '@typescript-eslint/types': 8.18.0
       '@typescript-eslint/utils': 8.18.0(eslint@9.13.0)(typescript@5.3.3)
-      remeda: 2.17.4
+      remeda: 2.18.0
     transitivePeerDependencies:
       - eslint
       - supports-color
@@ -1665,7 +1665,7 @@ packages:
       '@typescript-eslint/scope-manager': 8.18.0
       '@typescript-eslint/types': 8.18.0
       '@typescript-eslint/utils': 8.18.0(eslint@9.13.0)(typescript@5.3.3)
-      remeda: 2.17.4
+      remeda: 2.18.0
     transitivePeerDependencies:
       - eslint
       - supports-color
@@ -3770,7 +3770,7 @@ packages:
       eslint: 9.13.0
       eslint-plugin-es-x: 7.8.0(eslint@9.13.0)
       get-tsconfig: 4.8.1
-      globals: 15.11.0
+      globals: 15.14.0
       ignore: 5.3.2
       minimatch: 9.0.5
       semver: 7.6.3
@@ -3797,7 +3797,7 @@ packages:
       '@typescript-eslint/types': 8.18.0
       '@typescript-eslint/utils': 8.18.0(eslint@9.13.0)(typescript@5.3.3)
       eslint: 9.13.0
-      remeda: 2.17.4
+      remeda: 2.18.0
       string-ts: 2.2.0
       typescript: 5.3.3
     transitivePeerDependencies:
@@ -3825,7 +3825,7 @@ packages:
       '@typescript-eslint/types': 8.18.0
       '@typescript-eslint/utils': 8.18.0(eslint@9.13.0)(typescript@5.3.3)
       eslint: 9.13.0
-      remeda: 2.17.4
+      remeda: 2.18.0
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -3853,7 +3853,7 @@ packages:
       '@typescript-eslint/types': 8.18.0
       '@typescript-eslint/utils': 8.18.0(eslint@9.13.0)(typescript@5.3.3)
       eslint: 9.13.0
-      remeda: 2.17.4
+      remeda: 2.18.0
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -3889,7 +3889,7 @@ packages:
       '@typescript-eslint/types': 8.18.0
       '@typescript-eslint/utils': 8.18.0(eslint@9.13.0)(typescript@5.3.3)
       eslint: 9.13.0
-      remeda: 2.17.4
+      remeda: 2.18.0
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -3918,7 +3918,7 @@ packages:
       '@typescript-eslint/utils': 8.18.0(eslint@9.13.0)(typescript@5.3.3)
       eslint: 9.13.0
       is-immutable-type: 5.0.0(eslint@9.13.0)(typescript@5.3.3)
-      remeda: 2.17.4
+      remeda: 2.18.0
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -3945,7 +3945,7 @@ packages:
       core-js-compat: 3.39.0
       eslint: 9.13.0
       esquery: 1.6.0
-      globals: 15.11.0
+      globals: 15.14.0
       indent-string: 4.0.0
       is-builtin-module: 3.2.1
       jsesc: 3.1.0
@@ -4443,6 +4443,11 @@ packages:
 
   /globals@15.11.0:
     resolution: {integrity: sha512-yeyNSjdbyVaWurlwCpcA6XNBrHTMIeDdj0/hnvX/OLJ9ekOXYbLsLinH/MucQyGvNnXhidTdNhTtJaffL2sMfw==}
+    engines: {node: '>=18'}
+    dev: true
+
+  /globals@15.14.0:
+    resolution: {integrity: sha512-OkToC372DtlQeje9/zHIo5CT8lRP/FUgEOKBEhU4e0abL7J7CD24fD9ohiLN5hagG/kWCYj4K5oaxxtj2Z0Dig==}
     engines: {node: '>=18'}
     dev: true
 
@@ -6234,10 +6239,10 @@ packages:
       jsesc: 3.0.2
     dev: true
 
-  /remeda@2.17.4:
-    resolution: {integrity: sha512-pviU2Ag7Qx9mOCAKO4voxDx/scfLzdhp3v85qDO4xxntQsU76uE9sgrAAdK1ATn4zzaOJqCXYMMNRP+O9F4Wiw==}
+  /remeda@2.18.0:
+    resolution: {integrity: sha512-wvHvaApA7crz46HWhGTotPawkzd45w1iXzPK7r4ECQgbmcSqHLrVio2LOr7ZEp1pu5QDH1U391ZKu+qra7OoLw==}
     dependencies:
-      type-fest: 4.30.1
+      type-fest: 4.30.2
     dev: true
 
   /require-directory@2.1.1:
@@ -6823,8 +6828,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /type-fest@4.30.1:
-    resolution: {integrity: sha512-ojFL7eDMX2NF0xMbDwPZJ8sb7ckqtlAi1GsmgsFXvErT9kFTk1r0DuQKvrCh73M6D4nngeHJmvogF9OluXs7Hw==}
+  /type-fest@4.30.2:
+    resolution: {integrity: sha512-UJShLPYi1aWqCdq9HycOL/gwsuqda1OISdBO3t8RlXQC4QvtuIz4b5FCfe2dQIWEpmlRExKmcTBfP1r9bhY7ig==}
     engines: {node: '>=16'}
     dev: true
 
