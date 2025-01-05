@@ -24,7 +24,6 @@
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write .",
     "eachpkg": "pnpm -r --filter './packages/**'",
-    "create:library": "python scripts/create-new-library.py",
     "commit": "cz",
     "changelog:fix": "pnpm eachpkg --parallel exec generate-changelog",
     "change": "beachball change --no-commit",
