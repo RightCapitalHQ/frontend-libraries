@@ -11,7 +11,7 @@
   "homepage": "https://www.rightcapital.com",
   "repository": "https://github.com/RightCapitalHQ/frontend-libraries",
   "license": "MIT",
-  "packageManager": "pnpm@8.15.9",
+  "packageManager": "pnpm@9.15.3",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "directories": {
