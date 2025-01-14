@@ -11,7 +11,7 @@
     "TypeScript"
   ],
   "license": "MIT",
-  "packageManager": "pnpm@9.15.3",
+  "packageManager": "pnpm@9.15.4",
   "main": "lib/color-helpers.js",
   "typings": "lib/color-helpers.d.ts",
   "homepage": "https://www.rightcapital.com",
