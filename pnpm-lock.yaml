@@ -70,10 +70,10 @@ importers:
     devDependencies:
       typedoc:
         specifier: 0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        version: 0.25.7(typescript@5.8.2)
       typedoc-plugin-markdown:
         specifier: 3.17.1
-        version: 3.17.1(typedoc@0.25.7(typescript@5.3.3))
+        version: 3.17.1(typedoc@0.25.7(typescript@5.8.2))
 
   packages/date-helpers:
     dependencies:
@@ -86,10 +86,10 @@ importers:
     devDependencies:
       typedoc:
         specifier: 0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        version: 0.25.7(typescript@5.8.2)
       typedoc-plugin-markdown:
         specifier: 3.17.1
-        version: 3.17.1(typedoc@0.25.7(typescript@5.3.3))
+        version: 3.17.1(typedoc@0.25.7(typescript@5.8.2))
 
   packages/exceptions:
     devDependencies:
@@ -98,10 +98,10 @@ importers:
         version: 3.2.4
       typedoc:
         specifier: 0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        version: 0.25.7(typescript@5.8.2)
       typedoc-plugin-markdown:
         specifier: 3.17.1
-        version: 3.17.1(typedoc@0.25.7(typescript@5.3.3))
+        version: 3.17.1(typedoc@0.25.7(typescript@5.8.2))
 
 packages:
 
@@ -3476,6 +3476,11 @@ packages:
 
   typescript@5.3.3:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  typescript@5.8.2:
+    resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -7910,18 +7915,18 @@ snapshots:
       possible-typed-array-names: 1.1.0
       reflect.getprototypeof: 1.0.10
 
-  typedoc-plugin-markdown@3.17.1(typedoc@0.25.7(typescript@5.3.3)):
+  typedoc-plugin-markdown@3.17.1(typedoc@0.25.7(typescript@5.8.2)):
     dependencies:
       handlebars: 4.7.8
-      typedoc: 0.25.7(typescript@5.3.3)
+      typedoc: 0.25.7(typescript@5.8.2)
 
-  typedoc@0.25.7(typescript@5.3.3):
+  typedoc@0.25.7(typescript@5.8.2):
     dependencies:
       lunr: 2.3.9
       marked: 4.3.0
       minimatch: 9.0.5
       shiki: 0.14.7
-      typescript: 5.3.3
+      typescript: 5.8.2
 
   typescript-eslint@8.0.1(eslint@9.13.0(jiti@2.4.2))(typescript@5.3.3):
     dependencies:
@@ -7935,6 +7940,8 @@ snapshots:
       - supports-color
 
   typescript@5.3.3: {}
+
+  typescript@5.8.2: {}
 
   uglify-js@3.19.3:
     optional: true
