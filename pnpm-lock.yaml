@@ -2124,6 +2124,10 @@ packages:
     resolution: {integrity: sha512-yeyNSjdbyVaWurlwCpcA6XNBrHTMIeDdj0/hnvX/OLJ9ekOXYbLsLinH/MucQyGvNnXhidTdNhTtJaffL2sMfw==}
     engines: {node: '>=18'}
 
+  globals@15.14.0:
+    resolution: {integrity: sha512-OkToC372DtlQeje9/zHIo5CT8lRP/FUgEOKBEhU4e0abL7J7CD24fD9ohiLN5hagG/kWCYj4K5oaxxtj2Z0Dig==}
+    engines: {node: '>=18'}
+
   globalthis@1.0.4:
     resolution: {integrity: sha512-DpLKbNU4WylpxJykQujfCcwYWiV/Jhm50Goo0wrVILAv5jOr9d+H+UR3PhSCD2rCCEIg0uc+G+muBTwD54JhDQ==}
     engines: {node: '>= 0.4'}
@@ -3381,8 +3385,8 @@ packages:
     peerDependencies:
       typescript: '>=4.8.4'
 
-  ts-declaration-location@1.0.6:
-    resolution: {integrity: sha512-QwtM5UZ8S/NpDvSx4u2EHJgLx2+we7qN8sgyOia4nTpJlke3NO1s1Eb2ea/8IFlkc60b71SILGqWBzGGDnNeSw==}
+  ts-declaration-location@1.0.7:
+    resolution: {integrity: sha512-EDyGAwH1gO0Ausm9gV6T2nUvBgXT5kGoCMJPllOaooZ+4VvJiKBdZE7wK18N1deEowhcUptS+5GXZK8U/fvpwA==}
     peerDependencies:
       typescript: '>=4.0.0'
 
@@ -5971,7 +5975,7 @@ snapshots:
       eslint: 9.13.0(jiti@2.4.2)
       eslint-plugin-es-x: 7.8.0(eslint@9.13.0(jiti@2.4.2))
       get-tsconfig: 4.10.0
-      globals: 15.11.0
+      globals: 15.14.0
       ignore: 5.3.2
       minimatch: 9.0.5
       semver: 7.7.1
@@ -6092,7 +6096,7 @@ snapshots:
       core-js-compat: 3.41.0
       eslint: 9.13.0(jiti@2.4.2)
       esquery: 1.6.0
-      globals: 15.11.0
+      globals: 15.14.0
       indent-string: 4.0.0
       is-builtin-module: 3.2.1
       jsesc: 3.1.0
@@ -6420,6 +6424,8 @@ snapshots:
 
   globals@15.11.0: {}
 
+  globals@15.14.0: {}
+
   globalthis@1.0.4:
     dependencies:
       define-properties: 1.2.1
@@ -6638,7 +6644,7 @@ snapshots:
       '@typescript-eslint/type-utils': 8.26.1(eslint@9.13.0(jiti@2.4.2))(typescript@5.3.3)
       eslint: 9.13.0(jiti@2.4.2)
       ts-api-utils: 1.4.3(typescript@5.3.3)
-      ts-declaration-location: 1.0.6(typescript@5.3.3)
+      ts-declaration-location: 1.0.7(typescript@5.3.3)
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -7823,9 +7829,9 @@ snapshots:
     dependencies:
       typescript: 5.3.3
 
-  ts-declaration-location@1.0.6(typescript@5.3.3):
+  ts-declaration-location@1.0.7(typescript@5.3.3):
     dependencies:
-      minimatch: 9.0.5
+      picomatch: 4.0.2
       typescript: 5.3.3
 
   ts-node@10.9.2(@types/node@22.13.10)(typescript@5.3.3):
