@@ -799,6 +799,7 @@ packages:
 
   '@eslint-react/tools@1.9.0':
     resolution: {integrity: sha512-kfvaodU0vomJYq26KXI8SPLMk+1WZtJBzCyR+VEq7hvLaW5e3MAaEGd1bgmeJ04+UdgWO4q2vINSQQZ5n6RYAQ==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   '@eslint-react/types@1.9.0':
     resolution: {integrity: sha512-4T7vNBk8Mr07frnS9cqaaiLdbkXBZp7okpyNgxvXzwvhZixuP5SLR7asx93T4DGGHt3H+7gTCzToM2P7YKWutg==}
