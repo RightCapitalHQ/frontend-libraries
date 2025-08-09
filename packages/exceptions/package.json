@@ -29,8 +29,8 @@
     "prettier": "prettier \"{src,__tests__}/**/*.{tsx,ts}\" -l"
   },
   "devDependencies": {
-    "prettier": "3.2.4",
-    "typedoc": "0.25.7",
+    "prettier": "3.6.2",
+    "typedoc": "0.28.9",
     "typedoc-plugin-markdown": "3.17.1"
   }
 }
