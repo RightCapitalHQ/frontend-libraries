@@ -14,8 +14,11 @@
   "packageManager": "pnpm@10.13.1",
   "main": "lib/color-helpers.js",
   "typings": "lib/color-helpers.d.ts",
-  "homepage": "https://www.rightcapital.com",
-  "repository": "https://github.com/RightCapitalHQ/frontend-libraries",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RightCapitalHQ/frontend-libraries.git",
+    "directory": "packages/color-helpers"
+  },
   "directories": {
     "lib": "lib"
   },
