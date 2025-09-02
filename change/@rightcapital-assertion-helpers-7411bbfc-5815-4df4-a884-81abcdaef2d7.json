@@ -1,0 +1,7 @@
+{
+  "type": "major",
+  "comment": "feat: transplant AssertionHelpers into this project",
+  "packageName": "@rightcapital/assertion-helpers",
+  "email": "tcdw2011@gmail.com",
+  "dependentChangeType": "patch"
+}

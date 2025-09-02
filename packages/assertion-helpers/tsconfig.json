@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "./lib",
+    "target": "es2020",
+  },
+  "references": [{ "path": "../exceptions/tsconfig.build.json" }],
+  "include": ["src", "__tests__"],
+}
