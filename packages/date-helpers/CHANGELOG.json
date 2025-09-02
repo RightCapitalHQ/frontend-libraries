@@ -2,6 +2,21 @@
   "name": "@rightcapital/date-helpers",
   "entries": [
     {
+      "date": "Tue, 02 Sep 2025 09:22:19 GMT",
+      "version": "3.1.22",
+      "tag": "@rightcapital/date-helpers_v3.1.22",
+      "comments": {
+        "none": [
+          {
+            "author": "45930107+PinkChampagne17@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "cc32061cce3e483b0c55ab4ea1529472a3327cac",
+            "comment": "chore: specify the directory in `repository` field and remove `homepage` field"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 02 Sep 2025 08:42:58 GMT",
       "version": "3.1.22",
       "tag": "@rightcapital/date-helpers_v3.1.22",

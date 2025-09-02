@@ -2,6 +2,21 @@
   "name": "@rightcapital/color-helpers",
   "entries": [
     {
+      "date": "Tue, 02 Sep 2025 09:22:19 GMT",
+      "version": "2.1.17",
+      "tag": "@rightcapital/color-helpers_v2.1.17",
+      "comments": {
+        "none": [
+          {
+            "author": "45930107+PinkChampagne17@users.noreply.github.com",
+            "package": "@rightcapital/color-helpers",
+            "commit": "cc32061cce3e483b0c55ab4ea1529472a3327cac",
+            "comment": "chore: specify the directory in `repository` field and remove `homepage` field"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 02 Sep 2025 08:42:59 GMT",
       "version": "2.1.17",
       "tag": "@rightcapital/color-helpers_v2.1.17",

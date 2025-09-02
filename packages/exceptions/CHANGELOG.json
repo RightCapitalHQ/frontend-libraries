@@ -2,6 +2,21 @@
   "name": "@rightcapital/exceptions",
   "entries": [
     {
+      "date": "Tue, 02 Sep 2025 09:22:19 GMT",
+      "version": "1.2.22",
+      "tag": "@rightcapital/exceptions_v1.2.22",
+      "comments": {
+        "none": [
+          {
+            "author": "45930107+PinkChampagne17@users.noreply.github.com",
+            "package": "@rightcapital/exceptions",
+            "commit": "cc32061cce3e483b0c55ab4ea1529472a3327cac",
+            "comment": "chore: specify the directory in `repository` field and remove `homepage` field"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 02 Sep 2025 08:42:58 GMT",
       "version": "1.2.22",
       "tag": "@rightcapital/exceptions_v1.2.22",
