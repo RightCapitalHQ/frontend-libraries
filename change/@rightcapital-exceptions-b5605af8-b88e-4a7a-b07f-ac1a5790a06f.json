@@ -1,0 +1,7 @@
+{
+  "type": "none",
+  "comment": "chore: specify the directory in `repository` field and remove `homepage` field",
+  "packageName": "@rightcapital/exceptions",
+  "email": "45930107+PinkChampagne17@users.noreply.github.com",
+  "dependentChangeType": "none"
+}

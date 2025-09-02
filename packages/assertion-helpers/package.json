@@ -16,8 +16,11 @@
   "packageManager": "pnpm@10.13.1",
   "main": "lib/assertion-helpers.js",
   "typings": "lib/assertion-helpers.d.ts",
-  "homepage": "https://www.rightcapital.com",
-  "repository": "https://github.com/RightCapitalHQ/frontend-libraries",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RightCapitalHQ/frontend-libraries.git",
+    "directory": "packages/assertion-helpers"
+  },
   "directories": {
     "lib": "lib"
   },
