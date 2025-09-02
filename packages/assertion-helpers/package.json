@@ -1,0 +1,42 @@
+{
+  "name": "@rightcapital/assertion-helpers",
+  "version": "1.0.0",
+  "description": "Type-safe assertion utilities for defensive programming.",
+  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
+  "keywords": [
+    "assertion",
+    "type-safe",
+    "validation",
+    "defensive",
+    "TypeScript",
+    "helpers",
+    "utilities"
+  ],
+  "license": "MIT",
+  "packageManager": "pnpm@10.13.1",
+  "main": "lib/assertion-helpers.js",
+  "typings": "lib/assertion-helpers.d.ts",
+  "homepage": "https://www.rightcapital.com",
+  "repository": "https://github.com/RightCapitalHQ/frontend-libraries",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --out docs src/assertion-helpers.ts",
+    "eslint": "eslint --cache 'src/**/*.ts*'",
+    "lint": "pnpm prettier && pnpm eslint",
+    "lint:fix": "pnpm prettier --write && eslint 'src/**/*.ts*' --fix",
+    "prettier": "prettier \"{src,__tests__}/**/*.{tsx,ts}\" -l"
+  },
+  "dependencies": {
+    "@rightcapital/exceptions": "workspace:*"
+  },
+  "devDependencies": {
+    "typedoc": "0.25.7",
+    "typedoc-plugin-markdown": "3.17.1"
+  }
+}
