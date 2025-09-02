@@ -1,8 +1,39 @@
 # Change Log - @rightcapital/exceptions
 
-This log was last generated on Thu, 18 Jul 2024 00:31:57 GMT and should not be manually modified.
+This log was last generated on Tue, 02 Sep 2025 08:42:58 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 1.2.22
+
+Tue, 02 Sep 2025 08:42:58 GMT
+
+### Patches
+
+- chore(deps): update pnpm to v10.6.2 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.6.0 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.6.3 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.12.3 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.6.4 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.7.1 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v9.15.5 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.6.5 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.11.1 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v9.15.4 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.12.1 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.13.1 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.10.0 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v9.15.6 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.8.0 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.7.0 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.12.4 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v9 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.11.0 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.6.1 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.8.1 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.12.2 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.9.0 (29139614+renovate[bot]@users.noreply.github.com)
 
 ## 1.2.21
 

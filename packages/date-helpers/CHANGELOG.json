@@ -2,6 +2,173 @@
   "name": "@rightcapital/date-helpers",
   "entries": [
     {
+      "date": "Tue, 02 Sep 2025 08:42:58 GMT",
+      "version": "3.1.22",
+      "tag": "@rightcapital/date-helpers_v3.1.22",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.12.4"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v9.15.4"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.12.2"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v9.15.5"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.8.1"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.6.2"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.9.0"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.12.1"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v9.15.6"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.6.5"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.7.1"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.6.1"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.10.0"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.13.1"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "fix(deps): update peerdependency date-fns to v4"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v9"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.8.0"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.12.3"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.7.0"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.11.1"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.6.3"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.6.0"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.11.0"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore(deps): update pnpm to v10.6.4"
+          }
+        ],
+        "none": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/date-helpers",
+            "commit": "27292c9cd80be801ef36f1bb05f3d529c315874a",
+            "comment": "chore: bump ESLint to v9"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 18 Jul 2024 00:31:57 GMT",
       "version": "3.1.21",
       "tag": "@rightcapital/date-helpers_v3.1.21",

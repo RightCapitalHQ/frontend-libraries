@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "fix(deps): update peerdependency date-fns to v4",
-  "packageName": "@rightcapital/date-helpers",
-  "email": "29139614+renovate[bot]@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}
