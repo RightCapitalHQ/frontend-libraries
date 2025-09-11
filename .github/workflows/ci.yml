@@ -91,6 +91,7 @@ jobs:
       - name: Publish (development)
         env:
           NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+          HEAD_REF: ${{ github.head_ref }}
         run: |
           npm config set //registry.npmjs.org/:_authToken "${NPM_TOKEN}"
           preid="${HEAD_REF//\//-}".${{ github.run_number }}.${{ github.run_attempt }}
