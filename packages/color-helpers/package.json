@@ -11,7 +11,7 @@
     "TypeScript"
   ],
   "license": "MIT",
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.15.1",
   "main": "lib/color-helpers.js",
   "typings": "lib/color-helpers.d.ts",
   "repository": {
