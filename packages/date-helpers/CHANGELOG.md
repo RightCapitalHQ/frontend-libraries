@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/date-helpers
 
-This log was last generated on Tue, 02 Sep 2025 08:42:58 GMT and should not be manually modified.
+This log was last generated on Thu, 11 Sep 2025 14:36:47 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 3.1.23
+
+Thu, 11 Sep 2025 14:36:47 GMT
+
+### Patches
+
+- chore(deps): update automerge non-major updates (29139614+renovate[bot]@users.noreply.github.com)
 
 ## 3.1.22
 

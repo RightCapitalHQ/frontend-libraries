@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/assertion-helpers",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Type-safe assertion utilities for defensive programming.",
   "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
   "keywords": [

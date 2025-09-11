@@ -2,6 +2,21 @@
   "name": "@rightcapital/date-helpers",
   "entries": [
     {
+      "date": "Thu, 11 Sep 2025 14:36:47 GMT",
+      "version": "3.1.23",
+      "tag": "@rightcapital/date-helpers_v3.1.23",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "63d4823bc5da2c80f486f59cf7c47a4c22ac70e8",
+            "comment": "chore(deps): update automerge non-major updates"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 02 Sep 2025 09:22:19 GMT",
       "version": "3.1.22",
       "tag": "@rightcapital/date-helpers_v3.1.22",
