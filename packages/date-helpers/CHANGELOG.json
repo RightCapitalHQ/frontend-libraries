@@ -2,6 +2,21 @@
   "name": "@rightcapital/date-helpers",
   "entries": [
     {
+      "date": "Fri, 19 Sep 2025 18:12:59 GMT",
+      "version": "3.1.24",
+      "tag": "@rightcapital/date-helpers_v3.1.24",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/date-helpers",
+            "commit": "c279a9b96675552fc5e0da641787222f8e9a17d0",
+            "comment": "chore(deps): update pnpm to v10.16.0"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 11 Sep 2025 14:36:47 GMT",
       "version": "3.1.23",
       "tag": "@rightcapital/date-helpers_v3.1.23",
