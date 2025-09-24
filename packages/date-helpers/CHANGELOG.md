@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/date-helpers
 
-This log was last generated on Sun, 21 Sep 2025 01:37:20 GMT and should not be manually modified.
+This log was last generated on Wed, 24 Sep 2025 20:59:05 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 3.1.26
+
+Wed, 24 Sep 2025 20:59:05 GMT
+
+### Patches
+
+- chore(deps): update pnpm to v10.17.0 (29139614+renovate[bot]@users.noreply.github.com)
 
 ## 3.1.25
 
