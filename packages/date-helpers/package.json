@@ -19,7 +19,7 @@
     "directory": "packages/date-helpers"
   },
   "license": "MIT",
-  "packageManager": "pnpm@10.22.0",
+  "packageManager": "pnpm@10.23.0",
   "main": "lib/date-helpers.js",
   "typings": "lib/date-helpers.d.ts",
   "directories": {
