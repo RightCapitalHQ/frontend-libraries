@@ -13,7 +13,7 @@
     "utilities"
   ],
   "license": "MIT",
-  "packageManager": "pnpm@10.23.0",
+  "packageManager": "pnpm@10.24.0",
   "main": "lib/assertion-helpers.js",
   "typings": "lib/assertion-helpers.d.ts",
   "repository": {
