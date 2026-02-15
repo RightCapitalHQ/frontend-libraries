@@ -14,7 +14,7 @@
     "directory": "packages/exceptions"
   },
   "license": "MIT",
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "pnpm@10.29.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "directories": {
