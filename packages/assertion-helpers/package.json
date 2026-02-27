@@ -39,7 +39,7 @@
     "@rightcapital/exceptions": "workspace:*"
   },
   "devDependencies": {
-    "typedoc": "0.25.7",
+    "typedoc": "0.28.17",
     "typedoc-plugin-markdown": "3.17.1"
   }
 }
