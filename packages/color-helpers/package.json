@@ -28,7 +28,7 @@
   "scripts": {
     "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --out docs src/color-helpers.ts",
     "prepack": "nx build",
-    "test": "jest"
+    "test": "vitest"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"

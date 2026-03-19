@@ -10,7 +10,6 @@ node_modules/
 .pnpm-store
 pnpm-lock.yaml
 coverage/
-.jest-*
 
 lib/
 build/

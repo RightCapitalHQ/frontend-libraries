@@ -46,8 +46,7 @@
         ".*ignore",
         "prettier.config.*",
         "eslint.config.*",
-        "jest.*.js",
-        "babel.config.js",
+        "vitest.config.*",
         ".pnpm-store/**",
         ".vscode/**",
         "pnpm-lock.yaml"
