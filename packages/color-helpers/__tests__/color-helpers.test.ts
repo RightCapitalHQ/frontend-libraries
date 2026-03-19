@@ -1,3 +1,5 @@
+import { describe, expect, test } from 'vitest';
+
 import { BrightnessDirection, ColorHelpers } from '../src/color-helpers';
 
 describe('@rightcapital/color-helpers', () => {
