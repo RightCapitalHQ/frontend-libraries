@@ -2,6 +2,105 @@
   "name": "@rightcapital/assertion-helpers",
   "entries": [
     {
+      "date": "Fri, 20 Mar 2026 09:34:53 GMT",
+      "version": "2.0.6",
+      "tag": "@rightcapital/assertion-helpers_v2.0.6",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "8b2732bbc803920365f53ba05951e1b52b3011f5",
+            "comment": "chore(deps): update pnpm to v10.27.0"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "8b2732bbc803920365f53ba05951e1b52b3011f5",
+            "comment": "chore(deps): update pnpm to v10.26.0"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "8b2732bbc803920365f53ba05951e1b52b3011f5",
+            "comment": "chore(deps): update pnpm to v10.30.0"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "8b2732bbc803920365f53ba05951e1b52b3011f5",
+            "comment": "chore(deps): update pnpm to v10.26.1"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "8b2732bbc803920365f53ba05951e1b52b3011f5",
+            "comment": "chore(deps): update pnpm to v10.24.0"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "8b2732bbc803920365f53ba05951e1b52b3011f5",
+            "comment": "chore(deps): update pnpm to v10.28.0"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "8b2732bbc803920365f53ba05951e1b52b3011f5",
+            "comment": "chore(deps): update pnpm to v10.25.0"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "8b2732bbc803920365f53ba05951e1b52b3011f5",
+            "comment": "chore(deps): update pnpm to v10.29.3"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "8b2732bbc803920365f53ba05951e1b52b3011f5",
+            "comment": "chore(deps): update automerge non-major updates"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "8b2732bbc803920365f53ba05951e1b52b3011f5",
+            "comment": "chore(deps): update pnpm to v10.28.2"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "8b2732bbc803920365f53ba05951e1b52b3011f5",
+            "comment": "chore(deps): update automerge non-major updates"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "8b2732bbc803920365f53ba05951e1b52b3011f5",
+            "comment": "chore(deps): update pnpm to v10.26.2"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "8b2732bbc803920365f53ba05951e1b52b3011f5",
+            "comment": "chore(deps): update pnpm to v10.29.1"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "8b2732bbc803920365f53ba05951e1b52b3011f5",
+            "comment": "chore(deps): update pnpm to v10.23.0"
+          },
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "8b2732bbc803920365f53ba05951e1b52b3011f5",
+            "comment": "chore(deps): update pnpm to v10.28.1"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 24 Sep 2025 20:59:05 GMT",
       "version": "2.0.4",
       "tag": "@rightcapital/assertion-helpers_v2.0.4",

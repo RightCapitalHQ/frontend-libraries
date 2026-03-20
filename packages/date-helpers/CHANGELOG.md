@@ -1,8 +1,30 @@
 # Change Log - @rightcapital/date-helpers
 
-This log was last generated on Wed, 24 Sep 2025 20:59:05 GMT and should not be manually modified.
+This log was last generated on Fri, 20 Mar 2026 09:34:53 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 3.1.28
+
+Fri, 20 Mar 2026 09:34:53 GMT
+
+### Patches
+
+- chore(deps): update pnpm to v10.26.0 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.25.0 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.29.1 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update automerge non-major updates (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.24.0 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.23.0 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.29.3 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update automerge non-major updates (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.27.0 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.28.2 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.26.2 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.30.0 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.26.1 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.28.0 (29139614+renovate[bot]@users.noreply.github.com)
+- chore(deps): update pnpm to v10.28.1 (29139614+renovate[bot]@users.noreply.github.com)
 
 ## 3.1.26
 
