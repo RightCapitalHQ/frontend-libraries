@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { UnexpectedValueException } from '@rightcapital/exceptions';
 
 import { AssertionHelpers } from '../src/assertion-helpers';
