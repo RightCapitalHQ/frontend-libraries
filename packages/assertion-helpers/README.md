@@ -33,6 +33,31 @@ const admin = AssertionHelpers.ensure(
 // admin is now typed as AdminUser
 ```
 
+## Agent Skills
+
+This package ships with an [Agent Skill](https://agentskills.io) that teaches AI
+coding agents (Claude Code, Cursor, etc.) how to use the assertion-helpers API
+correctly, following the
+[npm-based Agent Skills Convention](https://github.com/antfu/skills-npm).
+
+### Automatic discovery (recommended)
+
+If your project uses [`skills-npm`](https://github.com/antfu/skills-npm), the
+skill is discovered automatically from `node_modules`:
+
+```bash
+npx skills-npm
+```
+
+### Manual installation
+
+You can also install the skill directly using the
+[`skills` CLI](https://github.com/vercel-labs/skills):
+
+```bash
+npx skills add https://github.com/RightCapitalHQ/frontend-libraries/tree/main/packages/assertion-helpers/skills
+```
+
 ## API Reference
 
 See the [generated documentation](./docs/README.md) for detailed API reference.

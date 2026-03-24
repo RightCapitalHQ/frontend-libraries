@@ -25,7 +25,8 @@
     "lib": "lib"
   },
   "files": [
-    "lib"
+    "lib",
+    "skills"
   ],
   "scripts": {
     "build": "tsc --build tsconfig.build.json",
