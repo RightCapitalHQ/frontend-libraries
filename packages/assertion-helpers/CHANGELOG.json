@@ -2,6 +2,21 @@
   "name": "@rightcapital/assertion-helpers",
   "entries": [
     {
+      "date": "Tue, 24 Mar 2026 03:54:45 GMT",
+      "version": "2.1.0",
+      "tag": "@rightcapital/assertion-helpers_v2.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "45930107+PinkChampagne17@users.noreply.github.com",
+            "package": "@rightcapital/assertion-helpers",
+            "commit": "30848477c46d3fbd7f14a25b85f00fe321f8d9a4",
+            "comment": "Add Agent Skill for AI coding agent integration"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 20 Mar 2026 09:34:53 GMT",
       "version": "2.0.6",
       "tag": "@rightcapital/assertion-helpers_v2.0.6",
