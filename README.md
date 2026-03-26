@@ -74,31 +74,34 @@ $ pnpm add -D @types/lodash -w
 
 ## Test
 
-We prefer to use `jest` as test platform. and if you wanna run all tests for all packages.
+We use `vitest` as the test platform. If you want to run all tests for all packages:
 
 ```sh
 $ pnpm -w test # in anywhere inside the workspace
 
-# if you wanna test individual package. just run
+# if you wanna test an individual package, just run
 $ pnpm test # in the root of the packages
 ```
 
-to support TypeScript for jest you need:
+To support TypeScript tests in the workspace root:
 
 ```sh
-$ pnpm add -D jest @types/jest -w
+$ pnpm add -D vitest @vitest/coverage-v8 -w
 ```
 
-and put config file:
+and add a root config file:
 
-`packages\[your-package]\jest.config.js`
+`vitest.config.ts`
 
 ```javascript
-module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.ts$',
-};
+import { defineConfig } from 'vitest/config';
+
+export default defineConfig({
+  test: {
+    globals: true,
+    include: ['**/__tests__/**/*.ts?(x)', '**/?(*.)+(spec|test).ts?(x)'],
+  },
+});
 ```
 
 ## Publish

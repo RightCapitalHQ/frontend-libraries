@@ -7,7 +7,7 @@ module.exports = {
     '.*ignore',
     'prettier.config.cjs',
     'eslintrc.js',
-    'jest.*.js',
+    'vitest.config.*',
     '.pnpm-store/**',
     '.vscode/**',
     'pnpm-lock.yaml',
