@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: pnpm
@@ -44,7 +44,7 @@ jobs:
 
       # Install dependencies (example using pnpm)
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: pnpm
@@ -60,7 +60,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v5.0.0
+      - uses: actions/setup-node@v6.3.0
         with:
           node-version-file: .node-version
           cache: pnpm
@@ -79,7 +79,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: pnpm
@@ -110,7 +110,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: pnpm
