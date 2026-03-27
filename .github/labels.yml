@@ -29,6 +29,9 @@
 - name: 'dependencies'
   color: 1d76db
   description: 'Change in project dependencies.'
+- name: 'release'
+  color: 6e5494
+  description: 'Automated release pull request.'
 
 - name: 'in-progress'
   color: fbca04

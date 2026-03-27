@@ -22,5 +22,6 @@ jobs:
           github-token: ${{ steps.app-token.outputs.token }}
           valid-labels: >-
             breaking-change, bugfix, documentation, enhancement,
-            refactor, performance, new-feature, maintenance, ci, dependencies
+            refactor, performance, new-feature, maintenance, ci, dependencies,
+            release
           disable-reviews: true
