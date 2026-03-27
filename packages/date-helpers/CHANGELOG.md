@@ -12,12 +12,6 @@
 
 - Jiahao Guo @frantic1048
 
-# Change Log - @rightcapital/date-helpers
-
-This log was last generated on Fri, 20 Mar 2026 09:34:53 GMT and should not be manually modified.
-
-<!-- Start content -->
-
 ## 3.1.28
 
 Fri, 20 Mar 2026 09:34:53 GMT

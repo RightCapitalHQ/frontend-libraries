@@ -33,7 +33,7 @@ const admin = AssertionHelpers.ensure(currentUser, isAdminUser, 'Admin required'
 
 ## API Reference
 
-See the [generated documentation](./docs/README.md) for detailed API reference.
+See the [generated documentation](./modules.md) for detailed API reference.
 
 ## License
 

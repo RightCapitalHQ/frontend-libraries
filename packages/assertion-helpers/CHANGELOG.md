@@ -12,12 +12,6 @@
 
 - Jiahao Guo @frantic1048
 
-# Change Log - @rightcapital/assertion-helpers
-
-This log was last generated on Tue, 24 Mar 2026 03:54:45 GMT and should not be manually modified.
-
-<!-- Start content -->
-
 ## 2.1.0
 
 Tue, 24 Mar 2026 03:54:45 GMT
