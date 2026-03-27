@@ -20,3 +20,8 @@ __pycache_
 *.pyc
 
 *.tsbuildinfo
+
+# nx
+/.nx/cache
+/.nx/workspace-data
+!/.nx/version-plans/

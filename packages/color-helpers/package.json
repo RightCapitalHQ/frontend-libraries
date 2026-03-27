@@ -26,13 +26,12 @@
     "lib"
   ],
   "scripts": {
-    "test": "jest",
-    "build": "tsc --build tsconfig.build.json",
     "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --out docs src/color-helpers.ts",
-    "eslint": "eslint --cache 'src/**/*.ts*'",
-    "lint": "pnpm prettier && pnpm eslint",
-    "lint:fix": "pnpm prettier --write && eslint 'src/**/*.ts*' --fix",
-    "prettier": "prettier \"{src,__tests__}/**/*.{tsx,ts}\" -l"
+    "prepack": "nx build",
+    "test": "jest"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
     "typedoc": "0.25.7",

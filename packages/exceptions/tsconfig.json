@@ -1,8 +1,10 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "composite": true,
     "rootDir": ".",
-    "outDir": "./lib",
+    "outDir": "./node_modules/.cache/rightcapital/typecheck",
   },
   "include": ["src", "__tests__"],
+  "references": [{ "path": "./tsconfig.lib.json" }],
 }

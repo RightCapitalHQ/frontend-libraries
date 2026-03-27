@@ -6,12 +6,24 @@ on:
     branches: [main]
 
 jobs:
-  build-and-test:
+  install:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install
+
+  test:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: pnpm
@@ -26,104 +38,66 @@ jobs:
       - name: Test
         run: pnpm run test
 
-      - name: Archive build artifacts
-        uses: actions/upload-artifact@v4
+  check-version-plan:
+    needs: install
+    if: github.base_ref == github.event.repository.default_branch && github.head_ref != 'release' && !startsWith(github.head_ref, 'renovate/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
         with:
-          name: build-artifacts
-          path: |
-            packages/*/lib/**
+          fetch-depth: 0
 
-  check-and-generate-renovate-changefile:
+      - name: Prepare pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Prepare Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Set SHAs for Nx
+        uses: nrwl/nx-set-shas@v4
+
+      - name: Check version plan
+        run: pnpm exec nx release plan:check
+
+  check-renovate-version-plan:
+    needs: install
     if: startsWith(github.event.pull_request.head.ref, 'renovate/') && github.base_ref == github.event.repository.default_branch
+    uses: RightCapitalHQ/actions/.github/workflows/nx-release-auto-plan.yml@nx-release-auto-plan/v0.4.1
+    secrets: inherit
+
+  prerelease:
+    if: >-
+      !failure() && !cancelled()
+      && github.event_name == 'pull_request'
+      && github.event.pull_request.head.repo.full_name == 'RightCapitalHQ/frontend-libraries'
+      && github.base_ref == github.event.repository.default_branch
+      && github.head_ref != 'release'
+    needs: [test, check-version-plan, check-renovate-version-plan]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/create-github-app-token@v3
+        id: app-token
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
-          token: ${{ secrets.RENOVATE_AUTO_BEACHBALL_CHANGEFILE_TOKEN }}
-
-      # Install dependencies (example using pnpm)
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v5
-        with:
-          node-version-file: .node-version
-          cache: pnpm
-      - run: pnpm install
-
-      - name: Check and generate changefile for Renovate
-        # Pin to the last commit on main before this action was removed (replaced by renovate-auto-version-plan)
-        uses: RightCapitalHQ/frontend-style-guide/.github/actions/renovate-auto-beachball-changefile@e7e6cdd89b0a5e56bb7b1b5280aae241d9e4e848
-
-  check-beachball-changefile:
-    if: github.base_ref == github.event.repository.default_branch
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v5.0.0
-        with:
-          node-version-file: .node-version
-          cache: pnpm
-      - run: pnpm install
-
-      - name: Check
-        run: pnpm exec beachball check
-
-  publish-development:
-    if: github.event.pull_request.head.repo.full_name == 'RightCapitalHQ/frontend-libraries' && github.base_ref == github.event.repository.default_branch
-    needs: [build-and-test, check-beachball-changefile]
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
-    steps:
-      - uses: actions/checkout@v5
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v5
-        with:
-          node-version-file: .node-version
-          cache: pnpm
-
-      - run: pnpm install
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v5
-        with:
-          name: build-artifacts
-          path: packages/
-
-      - name: Publish (development)
+          app-id: ${{ secrets.RC_BOT_APP_ID }}
+          private-key: ${{ secrets.RC_BOT_PRIVATE_KEY }}
+          permission-actions: write
+      - name: Trigger prerelease workflow
         env:
-          HEAD_REF: ${{ github.head_ref }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          BRANCH_NAME: ${{ github.head_ref }}
+          RUN_NUMBER: ${{ github.run_number }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
         run: |
-          preid="${HEAD_REF//\//-}".${{ github.run_number }}.${{ github.run_attempt }}
-          pnpm --filter './packages/*' exec npm --no-git-tag-version version prerelease --preid="${preid}"
-          pnpm --filter './packages/*' publish --no-git-checks --access public --tag development
-
-  publish-main:
-    if: github.repository == 'RightCapitalHQ/frontend-libraries' && github.event_name == 'push' && github.ref_name == github.event.repository.default_branch
-    needs: [build-and-test]
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: write
-    steps:
-      - uses: actions/checkout@v5
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v5
-        with:
-          node-version-file: .node-version
-          cache: pnpm
-      - run: pnpm install
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v5
-        with:
-          name: build-artifacts
-          path: packages/
-
-      - name: Publish (main)
-        run: |
-          git config --local user.email "npm-publisher@rightcapital.com"
-          git config --local user.name "GitHub Actions[bot]"
-          pnpm beachball publish --yes -m 'chore(release): applying package updates'
+          gh workflow run release.yml \
+            --repo "$GITHUB_REPOSITORY" \
+            -f prerelease=true \
+            -f "branch_name=${BRANCH_NAME}" \
+            -f "run_number=${RUN_NUMBER}" \
+            -f "run_attempt=${RUN_ATTEMPT}"

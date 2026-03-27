@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/nx/schemas/project-schema.json",
+  "name": "@rightcapital/libraries",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "nx:noop"
+    },
+    "docs": {
+      "executor": "nx:noop"
+    },
+    "typecheck": {
+      "command": "tsc --build --emitDeclarationOnly tsconfig.json"
+    }
+  }
+}

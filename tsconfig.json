@@ -13,4 +13,11 @@
     "sourceMap": true,
     "skipLibCheck": true,
   },
+  "files": [],
+  "references": [
+    { "path": "./packages/exceptions" },
+    { "path": "./packages/assertion-helpers" },
+    { "path": "./packages/date-helpers" },
+    { "path": "./packages/color-helpers" },
+  ],
 }

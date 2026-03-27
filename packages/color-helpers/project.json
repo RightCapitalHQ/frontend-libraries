@@ -1,0 +1,7 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "color-helpers",
+  "projectType": "library",
+  "sourceRoot": "packages/color-helpers/src",
+  "targets": {}
+}
