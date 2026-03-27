@@ -1,3 +1,18 @@
+## 2.1.2 (2026-03-27)
+
+### 🩹 Fixes
+
+- Remove legacy Beachball changelog headings and JSON files; update README docs. ([55f9247](https://github.com/RightCapitalHQ/frontend-libraries/commit/55f9247))
+
+### 🧱 Updated Dependencies
+
+- Updated exceptions to 1.2.30
+
+### ❤️ Thank You
+
+- Claude Opus 4.6
+- Jiahao Guo @frantic1048
+
 ## 2.1.1 (2026-03-27)
 
 ### 🩹 Fixes
