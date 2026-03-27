@@ -1,3 +1,13 @@
+## 2.1.24 (2026-03-27)
+
+### 🩹 Fixes
+
+- Migrate build tooling from pnpm workspace + Beachball to Nx-managed monorepo. ([f7ce2ed](https://github.com/RightCapitalHQ/frontend-libraries/commit/f7ce2ed))
+
+### ❤️ Thank You
+
+- Jiahao Guo @frantic1048
+
 # Change Log - @rightcapital/color-helpers
 
 This log was last generated on Fri, 20 Mar 2026 09:34:53 GMT and should not be manually modified.
