@@ -13,9 +13,15 @@ jobs:
     name: ♻️ Sync labels
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/create-github-app-token@v3
+        id: app-token
+        with:
+          app-id: ${{ secrets.RC_BOT_APP_ID }}
+          private-key: ${{ secrets.RC_BOT_PRIVATE_KEY }}
+          permission-issues: write
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: 🚀 Run Label Syncer
         uses: micnncim/action-label-syncer@v1.3.0
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}

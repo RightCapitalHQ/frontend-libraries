@@ -19,8 +19,6 @@ module.exports = {
     'body-max-line-length': [2, 'always', Infinity],
   },
   ignores: [
-    (message) =>
-      message.startsWith('Change files') ||
-      message.startsWith('applying package updates'),
+    (message) => message.startsWith('chore(release): applying package updates'),
   ],
 };

@@ -4,6 +4,6 @@
     "rootDir": "./src",
     "outDir": "./lib"
   },
-  "references": [{ "path": "../exceptions/tsconfig.build.json" }],
+  "references": [{ "path": "../exceptions/tsconfig.lib.json" }],
   "include": ["./src"]
 }

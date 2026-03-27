@@ -1,0 +1,75 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "plugins": [
+    {
+      "plugin": "@nx/js/typescript",
+      "options": {
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json"
+        },
+        "typecheck": {
+          "targetName": "typecheck"
+        }
+      }
+    }
+  ],
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"],
+      "outputs": ["{projectRoot}/lib"],
+      "cache": true
+    },
+    "typecheck": {
+      "dependsOn": ["^typecheck"],
+      "cache": true
+    },
+    "clean": {
+      "cache": false
+    }
+  },
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "production": [
+      "default",
+      "!{projectRoot}/**/*.test.ts",
+      "!{projectRoot}/**/*.spec.ts"
+    ],
+    "sharedGlobals": ["{workspaceRoot}/tsconfig.json"]
+  },
+  "release": {
+    "projects": ["packages/*"],
+    "projectsRelationship": "independent",
+    "versionPlans": {
+      "ignorePatternsForPlanCheck": [
+        ".*ignore",
+        "prettier.config.*",
+        "eslint.config.*",
+        "jest.*.js",
+        "babel.config.js",
+        ".pnpm-store/**",
+        ".vscode/**",
+        "pnpm-lock.yaml"
+      ]
+    },
+    "version": {
+      "preVersionCommand": "pnpm run build"
+    },
+    "git": {
+      "commit": true,
+      "tag": true,
+      "commitMessage": "chore(release): applying package updates"
+    },
+    "changelog": {
+      "projectChangelogs": {
+        "renderer": "scripts/changelog-renderer.cjs",
+        "createRelease": "github"
+      },
+      "workspaceChangelog": false
+    },
+    "releaseTag": {
+      "pattern": "{projectName}_v{version}"
+    }
+  }
+}

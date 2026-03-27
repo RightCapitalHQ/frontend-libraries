@@ -1,0 +1,7 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "date-helpers",
+  "projectType": "library",
+  "sourceRoot": "packages/date-helpers/src",
+  "targets": {}
+}

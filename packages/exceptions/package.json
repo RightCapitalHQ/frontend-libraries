@@ -24,16 +24,15 @@
     "lib"
   ],
   "scripts": {
-    "build": "tsc --build tsconfig.build.json",
     "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts",
-    "eslint": "eslint --cache 'src/**/*.ts*'",
-    "lint": "pnpm prettier && pnpm eslint",
-    "lint:fix": "pnpm prettier --write && eslint 'src/**/*.ts*' --fix",
-    "prettier": "prettier \"{src,__tests__}/**/*.{tsx,ts}\" -l"
+    "prepack": "nx build"
   },
   "devDependencies": {
     "prettier": "3.2.4",
     "typedoc": "0.25.7",
     "typedoc-plugin-markdown": "3.17.1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }

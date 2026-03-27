@@ -1,10 +1,14 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "rootDir": ".",
-    "outDir": "./lib",
+    "composite": true,
     "target": "es2020",
+    "rootDir": ".",
+    "outDir": "./node_modules/.cache/rightcapital/typecheck",
   },
-  "references": [{ "path": "../exceptions/tsconfig.build.json" }],
   "include": ["src", "__tests__"],
+  "references": [
+    { "path": "../exceptions" },
+    { "path": "./tsconfig.lib.json" },
+  ],
 }
