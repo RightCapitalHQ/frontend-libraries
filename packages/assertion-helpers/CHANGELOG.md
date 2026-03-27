@@ -1,18 +1,3 @@
-## 2.1.1 (2026-03-27)
-
-### 🩹 Fixes
-
-- Migrate build tooling from pnpm workspace + Beachball to Nx-managed monorepo. ([031ffda](https://github.com/RightCapitalHQ/frontend-libraries/commit/031ffda))
-
-### 🧱 Updated Dependencies
-
-- Updated exceptions to 1.2.29
-
-### ❤️ Thank You
-
-- Claude Opus 4.6
-- Jiahao Guo @frantic1048
-
 # Change Log - @rightcapital/assertion-helpers
 
 This log was last generated on Tue, 24 Mar 2026 03:54:45 GMT and should not be manually modified.
