@@ -28,8 +28,8 @@
     "prepack": "nx build"
   },
   "devDependencies": {
-    "prettier": "3.2.4",
-    "typedoc": "0.25.7",
+    "prettier": "3.8.3",
+    "typedoc": "0.28.19",
     "typedoc-plugin-markdown": "3.17.1"
   },
   "publishConfig": {
