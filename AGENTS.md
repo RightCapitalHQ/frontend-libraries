@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to AI coding agents when working with code in this repository.
 
 ## Project Overview
 
@@ -65,7 +65,7 @@ Compiled TypeScript outputs to `packages/*/lib/`. Source is in `packages/*/src/`
 
 - **Package manager**: pnpm 10.32.1 with workspace support
 - **Module system**: CommonJS
-- **Test framework**: Jest with Babel for TypeScript transpilation
+- **Test framework**: Vitest with Vite-powered TypeScript transpilation
 - **Versioning**: Nx Release with version plans (independent versioning for all packages)
 
 ## Development Workflow
