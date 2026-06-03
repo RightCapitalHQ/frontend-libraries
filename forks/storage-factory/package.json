@@ -1,0 +1,40 @@
+{
+  "name": "@rightcapital-fork/storage-factory",
+  "version": "0.0.0",
+  "description": "Because using localStorage directly is a bad idea",
+  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RightCapitalHQ/frontend-libraries.git",
+    "directory": "forks/storage-factory"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.32.1",
+  "type": "module",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts",
+    "prepack": "nx build"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "devDependencies": {
+    "typedoc": "0.25.7",
+    "typedoc-plugin-markdown": "3.17.1"
+  }
+}

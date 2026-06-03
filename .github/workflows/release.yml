@@ -57,5 +57,5 @@ jobs:
           NPM_CONFIG_PROVENANCE: true
         run: |
           preid="${BRANCH_NAME//\//-}".${RUN_NUMBER}.${RUN_ATTEMPT}
-          pnpm --filter './packages/*' exec npm --no-git-tag-version version prerelease --preid="${preid}"
-          pnpm --filter './packages/*' publish --no-git-checks --access public --tag development
+          pnpm --filter './packages/*' --filter './forks/*' exec npm --no-git-tag-version version prerelease --preid="${preid}"
+          pnpm --filter './packages/*' --filter './forks/*' publish --no-git-checks --access public --tag development
