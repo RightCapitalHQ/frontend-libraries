@@ -1,0 +1,7 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "storage-factory",
+  "projectType": "library",
+  "sourceRoot": "forks/storage-factory/src",
+  "targets": {}
+}

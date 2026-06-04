@@ -39,7 +39,7 @@
     "sharedGlobals": ["{workspaceRoot}/tsconfig.json"]
   },
   "release": {
-    "projects": ["packages/*"],
+    "projects": ["packages/*", "forks/*"],
     "projectsRelationship": "independent",
     "versionPlans": {
       "ignorePatternsForPlanCheck": [

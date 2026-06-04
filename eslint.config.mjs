@@ -10,6 +10,7 @@ export default config(
 
       // build output
       'packages/*/lib',
+      'forks/*/lib',
 
       // scripts
       'scripts',
@@ -17,7 +18,10 @@ export default config(
   },
   ...rcPreset.configs.recommended,
   {
-    files: ['packages/*/__tests__/**/*.{ts,tsx}'],
+    files: [
+      'packages/*/__tests__/**/*.{ts,tsx}',
+      'forks/*/__tests__/**/*.{ts,tsx}',
+    ],
     rules: {
       'import-x/no-extraneous-dependencies': [
         'error',
@@ -29,6 +33,7 @@ export default config(
             './packages/color-helpers',
             './packages/date-helpers',
             './packages/exceptions',
+            './forks/storage-factory',
           ],
         },
       ],
