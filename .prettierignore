@@ -3,3 +3,6 @@ pnpm-lock.yaml
 
 # skip for all auto-enerated docs
 docs
+
+# nx release managed files
+CHANGELOG.md
