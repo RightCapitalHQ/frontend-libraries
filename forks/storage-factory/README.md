@@ -1,4 +1,4 @@
-# @rightcapital-fork/storage-factory
+# @rightcapital/storage-factory-next
 
 > Forked from [MichalZalecki/storage-factory](https://github.com/MichalZalecki/storage-factory)
 
@@ -21,13 +21,13 @@ This fork includes the following modifications:
 ## Installation
 
 ```bash
-npm install @rightcapital-fork/storage-factory
+npm install @rightcapital/storage-factory-next
 ```
 
 ## Usage
 
 ```ts
-import { storageFactory } from '@rightcapital-fork/storage-factory';
+import { storageFactory } from '@rightcapital/storage-factory-next';
 
 export const local = storageFactory(() => localStorage);
 export const session = storageFactory(() => sessionStorage);
@@ -48,11 +48,11 @@ function login(token: string) {
 
 ```bash
 # Build
-pnpm exec nx build storage-factory
+pnpm exec nx build storage-factory-next
 
 # Type check
-pnpm exec nx typecheck storage-factory
+pnpm exec nx typecheck storage-factory-next
 
 # Run tests
-pnpm exec vitest --project storage-factory
+pnpm exec vitest --project storage-factory-next
 ```

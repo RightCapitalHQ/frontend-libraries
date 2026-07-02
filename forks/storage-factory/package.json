@@ -1,6 +1,6 @@
 {
-  "name": "@rightcapital-fork/storage-factory",
-  "version": "1.0.0",
+  "name": "@rightcapital/storage-factory-next",
+  "version": "0.0.0",
   "description": "Because using localStorage directly is a bad idea",
   "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
   "repository": {
@@ -16,7 +16,8 @@
   "exports": {
     ".": {
       "types": "./lib/index.d.ts",
-      "import": "./lib/index.js"
+      "import": "./lib/index.js",
+      "default": "./lib/index.js"
     },
     "./package.json": "./package.json"
   },
