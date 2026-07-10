@@ -45,7 +45,7 @@ export default defineConfig({
       }),
       defineProject({
         test: {
-          name: 'storage-factory',
+          name: 'storage-factory-next',
           environment: 'happy-dom',
           include: [
             'forks/storage-factory/**/__tests__/**/*.ts?(x)',
