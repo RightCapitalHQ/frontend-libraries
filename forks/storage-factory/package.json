@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/storage-factory-next",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Because using localStorage directly is a bad idea",
   "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
   "repository": {
