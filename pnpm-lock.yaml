@@ -76,10 +76,6 @@ importers:
         version: 3.17.1(typedoc@0.25.7(typescript@5.3.3))
 
   packages/assert:
-    dependencies:
-      '@rightcapital/exceptions':
-        specifier: workspace:*
-        version: link:../exceptions
     devDependencies:
       typedoc:
         specifier: 0.25.7

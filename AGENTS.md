@@ -48,7 +48,6 @@ pnpm run commit
 
 ### Dependency Graph
 
-- `assert` → `exceptions`
 - `date-helpers` → `exceptions`
 - `color-helpers` (standalone)
 - `exceptions` (standalone)

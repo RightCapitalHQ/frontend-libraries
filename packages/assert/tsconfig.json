@@ -7,8 +7,5 @@
     "outDir": "./node_modules/.cache/rightcapital/typecheck",
   },
   "include": ["src", "__tests__"],
-  "references": [
-    { "path": "../exceptions" },
-    { "path": "./tsconfig.lib.json" },
-  ],
+  "references": [{ "path": "./tsconfig.lib.json" }],
 }

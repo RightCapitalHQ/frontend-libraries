@@ -4,6 +4,10 @@
 
 ## Table of contents
 
+### Classes
+
+- [AssertError](classes/AssertError.md)
+
 ### Functions
 
 - [assert](modules.md#assert)
@@ -25,20 +29,31 @@ Basic assertion: verifies that a value or expression is `true`, otherwise throws
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `value` | `unknown` | The value to assert as true |
+| `value` | `unknown` | The value to assert as truthy |
 | `message?` | `string` | Optional custom error message |
 
 #### Returns
 
 asserts value
 
-**`Author`**
+**`Throws`**
 
-lixiaoyan <lxy.lixiaoyan@gmail.com>
+Throws an error if `value` is not `true`.
+
+**`Example`**
+
+```typescript
+// Basic usage
+assert(user.age >= 18, 'User must be at least 18 years old');
+
+// Condition validation
+const isValid = validateData(data);
+assert(isValid, 'Data validation failed');
+```
 
 #### Defined in
 
-[index.ts:25](https://github.com/RightCapitalHQ/frontend-libraries/blob/10c7ccf/packages/assert/src/index.ts#L25)
+[packages/assert/src/index.ts:58](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L58)
 
 ___
 
@@ -46,7 +61,8 @@ ___
 
 ▸ **assertExhaustive**(`value`, `message?`): `never`
 
-Ensures switch or if-else statements exhaust all members of a union type.
+Used for exhaustiveness checking of union types. Ensures switch or if-else statements cover all possible types.
+Leverages TypeScript's `never` type to catch missing branches at compile time.
 
 #### Parameters
 
@@ -61,13 +77,38 @@ Ensures switch or if-else statements exhaust all members of a union type.
 
 Never returns (always throws)
 
-**`Author`**
+**`Throws`**
 
-lixiaoyan <lxy.lixiaoyan@gmail.com>
+Always thrown.
+
+**`Example`**
+
+```typescript
+type Action =
+  | { type: 'ADD'; payload: number }
+  | { type: 'SUBTRACT'; payload: number }
+  | { type: 'MULTIPLY'; payload: number };
+
+function reducer(action: Action) {
+  switch (action.type) {
+    case 'ADD':
+      return state + action.payload;
+    case 'SUBTRACT':
+      return state - action.payload;
+    case 'MULTIPLY':
+      return state * action.payload;
+    default:
+      // If all types are exhausted, action is of type never
+      // If new Action types are added but not handled, TypeScript will report error
+      return assertExhaustive(action);
+                              // ^ never
+  }
+}
+```
 
 #### Defined in
 
-[index.ts:102](https://github.com/RightCapitalHQ/frontend-libraries/blob/10c7ccf/packages/assert/src/index.ts#L102)
+[packages/assert/src/index.ts:213](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L213)
 
 ___
 
@@ -75,7 +116,8 @@ ___
 
 ▸ **assertNonNullable**\<`T`\>(`value`, `message?`): asserts value is NonNullable\<T\>
 
-Asserts that a value is not `null` or `undefined`, narrowing it to `NonNullable<T>`.
+Asserts that a value is not `null` or `undefined`, providing TypeScript type narrowing to `NonNullable<T>`.
+Ensures subsequent code can safely access the value.
 
 #### Type parameters
 
@@ -94,13 +136,23 @@ Asserts that a value is not `null` or `undefined`, narrowing it to `NonNullable<
 
 asserts value is NonNullable\<T\>
 
-**`Author`**
+**`Throws`**
 
-lixiaoyan <lxy.lixiaoyan@gmail.com>
+Throws an error if `value` is `null` or `undefined`.
+
+**`Example`**
+
+```typescript
+function processUser(user: User | null | undefined) {
+  assertNonNullable(user, 'User cannot be null');
+  // user is now typed as User
+  console.log(user.name); // Safe to access
+}
+```
 
 #### Defined in
 
-[index.ts:38](https://github.com/RightCapitalHQ/frontend-libraries/blob/10c7ccf/packages/assert/src/index.ts#L38)
+[packages/assert/src/index.ts:81](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L81)
 
 ___
 
@@ -109,6 +161,7 @@ ___
 ▸ **assertUnreachable**(`message?`): `never`
 
 Marks code branches that should theoretically never be reached.
+Used for defensive programming to prevent unexpected code execution when data or logic doesn't match expectations.
 
 #### Parameters
 
@@ -122,13 +175,28 @@ Marks code branches that should theoretically never be reached.
 
 Never returns (always throws)
 
-**`Author`**
+**`Throws`**
 
-lixiaoyan <lxy.lixiaoyan@gmail.com>
+Always thrown.
+
+**`Example`**
+
+```typescript
+function processStatus(status: 'active' | 'inactive' | 'activating') {
+  if (status === 'active') {
+    // Handle active state
+  } else if (status === 'inactive') {
+    // Handle inactive state
+  } else {
+    // According to business logic, this should never be reached
+    assertUnreachable(`Unexpected status value: ${status}`);
+  }
+}
+```
 
 #### Defined in
 
-[index.ts:90](https://github.com/RightCapitalHQ/frontend-libraries/blob/10c7ccf/packages/assert/src/index.ts#L90)
+[packages/assert/src/index.ts:176](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L176)
 
 ___
 
@@ -136,7 +204,7 @@ ___
 
 ▸ **ensure**\<`T`, `S`\>(`value`, `predicate`, `message?`): `S`
 
-Ensures a value matches a type predicate and returns it with narrowed type.
+Similar to `assert`, but returns the value. Ensures a value matches a type predicate and returns it with narrowed type.
 
 #### Type parameters
 
@@ -159,13 +227,30 @@ Ensures a value matches a type predicate and returns it with narrowed type.
 
 The value with narrowed type
 
-**`Author`**
+**`Throws`**
 
-lixiaoyan <lxy.lixiaoyan@gmail.com>
+Throws an error if `predicate` returns `false`.
+
+**`Example`**
+
+```typescript
+// Define type guard
+function isAdminUser(user: User): user is AdminUser {
+  return user.role === 'admin';
+}
+
+// Use ensure to get type-safe value
+const admin = ensure(
+  currentUser,
+  isAdminUser,
+  'Admin privileges required'
+);
+// admin is typed as AdminUser
+```
 
 #### Defined in
 
-[index.ts:56](https://github.com/RightCapitalHQ/frontend-libraries/blob/10c7ccf/packages/assert/src/index.ts#L56)
+[packages/assert/src/index.ts:115](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L115)
 
 ___
 
@@ -173,7 +258,7 @@ ___
 
 ▸ **ensureNonNullable**\<`T`\>(`value`, `message?`): `NonNullable`\<`T`\>
 
-Ensures a value is not null/undefined and returns it.
+Similar to `assertNonNullable`, but returns the value. Ensures a value is not null/undefined and returns it.
 
 #### Type parameters
 
@@ -194,10 +279,23 @@ Ensures a value is not null/undefined and returns it.
 
 The non-nullable value
 
-**`Author`**
+**`Throws`**
 
-lixiaoyan <lxy.lixiaoyan@gmail.com>
+Throws an error if `value` is `null` or `undefined`.
+
+**`Example`**
+
+```typescript
+// Use in expressions
+const config = ensureNonNullable(
+  getConfig(),
+  'Configuration not found'
+);
+
+// Chain calls
+const userName = ensureNonNullable(user, 'User not found').name;
+```
 
 #### Defined in
 
-[index.ts:73](https://github.com/RightCapitalHQ/frontend-libraries/blob/10c7ccf/packages/assert/src/index.ts#L73)
+[packages/assert/src/index.ts:144](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L144)

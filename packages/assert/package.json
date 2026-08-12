@@ -35,9 +35,6 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "dependencies": {
-    "@rightcapital/exceptions": "workspace:*"
-  },
   "devDependencies": {
     "typedoc": "0.25.7",
     "typedoc-plugin-markdown": "3.17.1"
