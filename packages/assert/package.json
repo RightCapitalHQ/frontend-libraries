@@ -9,9 +9,10 @@
     "validation",
     "defensive",
     "TypeScript",
-    "helpers",
+    "tanstack-intent",
     "utilities"
   ],
+  "sideEffects": false,
   "license": "MIT",
   "packageManager": "pnpm@10.32.1",
   "main": "lib/index.js",
@@ -26,7 +27,8 @@
   },
   "files": [
     "lib",
-    "skills"
+    "skills",
+    "src"
   ],
   "scripts": {
     "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts",

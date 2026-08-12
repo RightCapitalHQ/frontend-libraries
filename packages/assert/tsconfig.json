@@ -5,6 +5,7 @@
     "target": "es2020",
     "rootDir": ".",
     "outDir": "./node_modules/.cache/rightcapital/typecheck",
+    "declarationMap": true,
   },
   "include": ["src", "__tests__"],
   "references": [{ "path": "./tsconfig.lib.json" }],
