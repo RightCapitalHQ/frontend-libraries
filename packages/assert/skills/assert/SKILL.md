@@ -1,29 +1,36 @@
 ---
-name: assertion-helpers
+name: assert
 description: >-
   Type-safe assertion and validation utilities for defensive TypeScript programming.
   Use when you need runtime assertions, null checks with type narrowing, type guard
   validation, unreachable code markers, or exhaustive switch/if-else checking.
-  Import AssertionHelpers from @rightcapital/assertion-helpers.
+  Import named functions from @rightcapital/assert.
 license: MIT
 metadata:
   author: RightCapital
-  package: '@rightcapital/assertion-helpers'
+  package: '@rightcapital/assert'
 ---
 
-# assertion-helpers
+# assert
 
-Type-safe assertion utilities for defensive programming in TypeScript. All methods are static on the `AssertionHelpers` class and throw `UnexpectedValueException` (from `@rightcapital/exceptions`) on failure.
+Type-safe assertion utilities for defensive programming in TypeScript. All functions throw `UnexpectedValueException` (from `@rightcapital/exceptions`) on failure.
 
 ## Import
 
 ```typescript
-import { AssertionHelpers } from '@rightcapital/assertion-helpers';
+import {
+  assert,
+  assertExhaustive,
+  assertNonNullable,
+  assertUnreachable,
+  ensure,
+  ensureNonNullable,
+} from '@rightcapital/assert';
 ```
 
 ## Quick Reference
 
-| Method                                     | Purpose                             | Returns                            | Use When                                     |
+| Function                                   | Purpose                             | Returns                            | Use When                                     |
 | ------------------------------------------ | ----------------------------------- | ---------------------------------- | -------------------------------------------- |
 | `assert(value, message?)`                  | Verify condition is strictly `true` | void (narrows type)                | Validating preconditions/postconditions      |
 | `assertNonNullable(value, message?)`       | Verify not null/undefined           | void (narrows to `NonNullable<T>`) | Guarding against null in statements          |
@@ -34,16 +41,16 @@ import { AssertionHelpers } from '@rightcapital/assertion-helpers';
 
 ## Key Distinction: assert vs ensure
 
-- **`assert*` methods** are _statements_: they narrow the type of their argument for subsequent code but do not return a value. Use them to guard a code block.
-- **`ensure*` methods** are _expressions_: they return the validated value with a narrowed type. Use them inline in assignments, arguments, or chaining.
+- **`assert*` functions** are _statements_: they narrow the type of their argument for subsequent code but do not return a value. Use them to guard a code block.
+- **`ensure*` functions** are _expressions_: they return the validated value with a narrowed type. Use them inline in assignments, arguments, or chaining.
 
 ```typescript
 // Statement form — narrows `user` for subsequent code
-AssertionHelpers.assertNonNullable(user);
+assertNonNullable(user);
 console.log(user.name); // user is NonNullable<T>
 
 // Expression form — returns the validated value
-const userName = AssertionHelpers.ensureNonNullable(user).name;
+const userName = ensureNonNullable(user).name;
 ```
 
 ## Critical: `assert()` Uses Strict Boolean Checking
@@ -52,13 +59,13 @@ const userName = AssertionHelpers.ensureNonNullable(user).name;
 
 ```typescript
 // WRONG — throws even though user is a valid object
-AssertionHelpers.assert(user);
+assert(user);
 
 // CORRECT — use assertNonNullable for null/undefined checks
-AssertionHelpers.assertNonNullable(user);
+assertNonNullable(user);
 
 // CORRECT — pass a boolean expression to assert
-AssertionHelpers.assert(user.age >= 18, 'Must be 18+');
+assert(user.age >= 18, 'Must be 18+');
 ```
 
 ## Usage Patterns
@@ -67,8 +74,8 @@ AssertionHelpers.assert(user.age >= 18, 'Must be 18+');
 
 ```typescript
 function processOrder(order: Order) {
-  AssertionHelpers.assert(order.items.length > 0, 'Order must have items');
-  AssertionHelpers.assert(order.total > 0, 'Order total must be positive');
+  assert(order.items.length > 0, 'Order must have items');
+  assert(order.total > 0, 'Order total must be positive');
   // proceed with valid order...
 }
 ```
@@ -77,7 +84,7 @@ function processOrder(order: Order) {
 
 ```typescript
 function initApp(config: AppConfig | null) {
-  AssertionHelpers.assertNonNullable(config, 'Config is required');
+  assertNonNullable(config, 'Config is required');
   // config is now typed as AppConfig
   startServer(config.port);
 }
@@ -90,18 +97,14 @@ function isAdminUser(user: User): user is AdminUser {
   return user.role === 'admin';
 }
 
-const admin = AssertionHelpers.ensure(
-  currentUser,
-  isAdminUser,
-  'Admin required',
-);
+const admin = ensure(currentUser, isAdminUser, 'Admin required');
 // admin is typed as AdminUser
 ```
 
 ### Inline non-null access
 
 ```typescript
-const element = AssertionHelpers.ensureNonNullable(
+const element = ensureNonNullable(
   document.getElementById('app'),
   'App container not found',
 );
@@ -123,7 +126,7 @@ function area(shape: Shape): number {
       return shape.side ** 2;
     default:
       // TypeScript error if a new Shape kind is added but not handled
-      return AssertionHelpers.assertExhaustive(shape);
+      return assertExhaustive(shape);
   }
 }
 ```
@@ -138,7 +141,7 @@ function processStatus(status: 'active' | 'inactive' | 'activating') {
     deactivate();
   } else {
     // Business logic says this should never happen here
-    AssertionHelpers.assertUnreachable(`Unexpected status: ${status}`);
+    assertUnreachable(`Unexpected status: ${status}`);
   }
 }
 ```

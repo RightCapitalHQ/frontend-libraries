@@ -29,7 +29,7 @@ export default config(
           devDependencies: true,
           packageDir: [
             '.',
-            './packages/assertion-helpers',
+            './packages/assert',
             './packages/color-helpers',
             './packages/date-helpers',
             './packages/exceptions',

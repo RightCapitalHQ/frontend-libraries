@@ -16,7 +16,7 @@ This is a Mono repository contains a set of useful libraries/helpers in TypeScri
 it including the following packages:
 
 - @rightcapital/exceptions: This library provides a set of standard Exceptions ([API Reference](https://github.com/RightCapitalHQ/frontend-libraries/blob/main/packages/exceptions/docs/modules.md))
-- @rightcapital/assertion-helpers: Type-safe assertion utilities for defensive programming ([API Reference](https://github.com/RightCapitalHQ/frontend-libraries/blob/main/packages/assertion-helpers/docs/modules.md))
+- @rightcapital/assert: Type-safe assertion utilities for defensive programming ([API Reference](https://github.com/RightCapitalHQ/frontend-libraries/blob/main/packages/assert/docs/modules.md))
 - @rightcapital/date-helpers: A utility class providing various date formatting and parsing methods in TypeScript ([API Reference](https://github.com/RightCapitalHQ/frontend-libraries/blob/main/packages/date-helpers/docs/modules.md))
 - @rightcapital/color-helpers: Color science related helpers ([API Reference](https://github.com/RightCapitalHQ/frontend-libraries/blob/main/packages/color-helpers/docs/modules.md))
 

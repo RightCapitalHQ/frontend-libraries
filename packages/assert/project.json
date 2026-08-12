@@ -1,7 +1,7 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "name": "assertion-helpers",
+  "name": "assert",
   "projectType": "library",
-  "sourceRoot": "packages/assertion-helpers/src",
+  "sourceRoot": "packages/assert/src",
   "targets": {}
 }
