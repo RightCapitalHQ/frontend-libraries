@@ -47,6 +47,7 @@
         "prettier.config.*",
         "eslint.config.*",
         "vitest.config.*",
+        "**/CHANGELOG.md",
         ".pnpm-store/**",
         ".vscode/**",
         "pnpm-lock.yaml"
