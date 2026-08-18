@@ -16,7 +16,7 @@
   "files": [],
   "references": [
     { "path": "./packages/exceptions" },
-    { "path": "./packages/assertion-helpers" },
+    { "path": "./packages/assert" },
     { "path": "./packages/date-helpers" },
     { "path": "./packages/color-helpers" },
     { "path": "./forks/storage-factory" },

@@ -1,52 +1,23 @@
-[@rightcapital/assertion-helpers](../README.md) / [Exports](../modules.md) / AssertionHelpers
+[@rightcapital/assert](README.md) / Exports
 
-# Class: AssertionHelpers
-
-AssertionHelpers is a utility class for type-safe assertions and validation.
-When assertions fail, it throws `UnexpectedValueException`.
-
-**`Example`**
-
-```typescript
-// Basic assertion
-AssertionHelpers.assert(user.age >= 18, 'User must be at least 18 years old');
-
-// Non-nullable assertion with type narrowing
-AssertionHelpers.assertNonNullable(user, 'User cannot be null');
-// user is now typed as NonNullable<T>
-
-// Ensure with type guard
-const admin = AssertionHelpers.ensure(currentUser, isAdminUser, 'Admin required');
-// admin is now typed as AdminUser
-```
+# @rightcapital/assert
 
 ## Table of contents
 
-### Constructors
+### Classes
 
-- [constructor](AssertionHelpers.md#constructor)
+- [AssertError](classes/AssertError.md)
 
-### Methods
+### Functions
 
-- [assert](AssertionHelpers.md#assert)
-- [assertExhaustive](AssertionHelpers.md#assertexhaustive)
-- [assertNonNullable](AssertionHelpers.md#assertnonnullable)
-- [assertUnreachable](AssertionHelpers.md#assertunreachable)
-- [ensure](AssertionHelpers.md#ensure)
-- [ensureNonNullable](AssertionHelpers.md#ensurenonnullable)
-- [throwError](AssertionHelpers.md#throwerror)
+- [assert](modules.md#assert)
+- [assertExhaustive](modules.md#assertexhaustive)
+- [assertNonNullable](modules.md#assertnonnullable)
+- [assertUnreachable](modules.md#assertunreachable)
+- [ensure](modules.md#ensure)
+- [ensureNonNullable](modules.md#ensurenonnullable)
 
-## Constructors
-
-### constructor
-
-• **new AssertionHelpers**(): [`AssertionHelpers`](AssertionHelpers.md)
-
-#### Returns
-
-[`AssertionHelpers`](AssertionHelpers.md)
-
-## Methods
+## Functions
 
 ### assert
 
@@ -65,20 +36,24 @@ Basic assertion: verifies that a value or expression is `true`, otherwise throws
 
 asserts value
 
+**`Throws`**
+
+Throws an error if `value` is not `true`.
+
 **`Example`**
 
 ```typescript
 // Basic usage
-AssertionHelpers.assert(user.age >= 18, 'User must be at least 18 years old');
+assert(user.age >= 18, 'User must be at least 18 years old');
 
 // Condition validation
 const isValid = validateData(data);
-AssertionHelpers.assert(isValid, 'Data validation failed');
+assert(isValid, 'Data validation failed');
 ```
 
 #### Defined in
 
-assertion-helpers.ts:48
+[packages/assert/src/index.ts:58](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L58)
 
 ___
 
@@ -93,7 +68,7 @@ Leverages TypeScript's `never` type to catch missing branches at compile time.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `value` | `never` | The value that should be of type `never` if all cases are handled |
+| `value` | `never` | The value that should be `never` if all cases are handled |
 | `message?` | `string` | Optional custom error message |
 
 #### Returns
@@ -101,6 +76,10 @@ Leverages TypeScript's `never` type to catch missing branches at compile time.
 `never`
 
 Never returns (always throws)
+
+**`Throws`**
+
+Always thrown.
 
 **`Example`**
 
@@ -121,15 +100,15 @@ function reducer(action: Action) {
     default:
       // If all types are exhausted, action is of type never
       // If new Action types are added but not handled, TypeScript will report error
-      return AssertionHelpers.assertExhaustive(action);
-                                            // ^ never
+      return assertExhaustive(action);
+                              // ^ never
   }
 }
 ```
 
 #### Defined in
 
-assertion-helpers.ts:195
+[packages/assert/src/index.ts:213](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L213)
 
 ___
 
@@ -157,11 +136,15 @@ Ensures subsequent code can safely access the value.
 
 asserts value is NonNullable\<T\>
 
+**`Throws`**
+
+Throws an error if `value` is `null` or `undefined`.
+
 **`Example`**
 
 ```typescript
 function processUser(user: User | null | undefined) {
-  AssertionHelpers.assertNonNullable(user, 'User cannot be null');
+  assertNonNullable(user, 'User cannot be null');
   // user is now typed as User
   console.log(user.name); // Safe to access
 }
@@ -169,7 +152,7 @@ function processUser(user: User | null | undefined) {
 
 #### Defined in
 
-assertion-helpers.ts:70
+[packages/assert/src/index.ts:81](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L81)
 
 ___
 
@@ -192,6 +175,10 @@ Used for defensive programming to prevent unexpected code execution when data or
 
 Never returns (always throws)
 
+**`Throws`**
+
+Always thrown.
+
 **`Example`**
 
 ```typescript
@@ -199,17 +186,17 @@ function processStatus(status: 'active' | 'inactive' | 'activating') {
   if (status === 'active') {
     // Handle active state
   } else if (status === 'inactive') {
-    // Handle inactive state  
+    // Handle inactive state
   } else {
     // According to business logic, this should never be reached
-    AssertionHelpers.assertUnreachable(`Unexpected status value: ${status}`);
+    assertUnreachable(`Unexpected status value: ${status}`);
   }
 }
 ```
 
 #### Defined in
 
-assertion-helpers.ts:159
+[packages/assert/src/index.ts:176](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L176)
 
 ___
 
@@ -240,6 +227,10 @@ Similar to `assert`, but returns the value. Ensures a value matches a type predi
 
 The value with narrowed type
 
+**`Throws`**
+
+Throws an error if `predicate` returns `false`.
+
 **`Example`**
 
 ```typescript
@@ -249,7 +240,7 @@ function isAdminUser(user: User): user is AdminUser {
 }
 
 // Use ensure to get type-safe value
-const admin = AssertionHelpers.ensure(
+const admin = ensure(
   currentUser,
   isAdminUser,
   'Admin privileges required'
@@ -259,7 +250,7 @@ const admin = AssertionHelpers.ensure(
 
 #### Defined in
 
-assertion-helpers.ts:103
+[packages/assert/src/index.ts:115](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L115)
 
 ___
 
@@ -288,41 +279,23 @@ Similar to `assertNonNullable`, but returns the value. Ensures a value is not nu
 
 The non-nullable value
 
+**`Throws`**
+
+Throws an error if `value` is `null` or `undefined`.
+
 **`Example`**
 
 ```typescript
 // Use in expressions
-const config = AssertionHelpers.ensureNonNullable(
+const config = ensureNonNullable(
   getConfig(),
   'Configuration not found'
 );
 
 // Chain calls
-const userName = AssertionHelpers.ensureNonNullable(user, 'User not found').name;
+const userName = ensureNonNullable(user, 'User not found').name;
 ```
 
 #### Defined in
 
-assertion-helpers.ts:131
-
-___
-
-### throwError
-
-▸ **throwError**(`name`, `value`, `message`): `never`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `value` | `unknown` |
-| `message` | `undefined` \| `string` |
-
-#### Returns
-
-`never`
-
-#### Defined in
-
-assertion-helpers.ts:22
+[packages/assert/src/index.ts:144](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L144)

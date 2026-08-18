@@ -9,10 +9,10 @@ export default defineConfig({
     projects: [
       defineProject({
         test: {
-          name: 'assertion-helpers',
+          name: 'assert',
           include: [
-            'packages/assertion-helpers/**/__tests__/**/*.ts?(x)',
-            'packages/assertion-helpers/**/?(*.)+(spec|test).ts?(x)',
+            'packages/assert/**/__tests__/**/*.ts?(x)',
+            'packages/assert/**/?(*.)+(spec|test).ts?(x)',
           ],
         },
       }),

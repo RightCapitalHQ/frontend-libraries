@@ -10,7 +10,7 @@ module.exports = {
       'always',
       [
         // MEMO: pnpm -r ls --depth -1
-        'assertion-helpers',
+        'assert',
         'color-helpers',
         'date-helpers',
         'exceptions',

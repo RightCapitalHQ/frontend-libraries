@@ -1,5 +1,5 @@
 {
-  "name": "@rightcapital/assertion-helpers",
+  "name": "@rightcapital/assert",
   "version": "2.1.2",
   "description": "Type-safe assertion utilities for defensive programming.",
   "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
@@ -9,34 +9,33 @@
     "validation",
     "defensive",
     "TypeScript",
-    "helpers",
+    "tanstack-intent",
     "utilities"
   ],
+  "sideEffects": false,
   "license": "MIT",
   "packageManager": "pnpm@10.32.1",
-  "main": "lib/assertion-helpers.js",
-  "typings": "lib/assertion-helpers.d.ts",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RightCapitalHQ/frontend-libraries.git",
-    "directory": "packages/assertion-helpers"
+    "directory": "packages/assert"
   },
   "directories": {
     "lib": "lib"
   },
   "files": [
     "lib",
-    "skills"
+    "skills",
+    "src"
   ],
   "scripts": {
-    "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --out docs src/assertion-helpers.ts",
+    "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts",
     "prepack": "nx build"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
-  },
-  "dependencies": {
-    "@rightcapital/exceptions": "workspace:*"
   },
   "devDependencies": {
     "typedoc": "0.25.7",
