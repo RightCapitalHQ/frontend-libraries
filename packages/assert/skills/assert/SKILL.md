@@ -12,14 +12,14 @@ metadata:
 
 # assert
 
-Type-safe assertion utilities for defensive TypeScript programming. All functions throw `AssertError` (which extends `Error`) on failure. Default error message format is `${functionName}: Unexpected ${String(value)}`.
+Type-safe assertion utilities for defensive TypeScript programming. All functions throw `AssertionError` (which extends `Error`) on failure. Default error message format is `${functionName}: Unexpected ${String(value)}`.
 
 ## Import
 
 ```typescript
 import {
   assert,
-  AssertError,
+  AssertionError,
   assertExhaustive,
   assertNonNullable,
   assertUnreachable,
@@ -32,7 +32,7 @@ import {
 
 | Class / Function                 | Signature / Return                | Use Case                                                            |
 | -------------------------------- | --------------------------------- | ------------------------------------------------------------------- |
-| `AssertError`                    | `class extends Error`             | Error type thrown when any assertion in this package fails.         |
+| `AssertionError`                 | `class extends Error`             | Error type thrown when any assertion in this package fails.         |
 | `assert(value, msg?)`            | `asserts value`                   | Precondition or boolean check (verifies `value === true`).          |
 | `assertNonNullable(value, msg?)` | `asserts value is NonNullable<T>` | Guard statement against `null` or `undefined`.                      |
 | `ensure(value, predicate, msg?)` | `S extends T`                     | Inline validation using type guard function `(val: T) => val is S`. |
@@ -40,17 +40,17 @@ import {
 | `assertExhaustive(value, msg?)`  | `value: never` -> `never`         | Exhaustiveness check in `switch` `default` case or `if-else` chain. |
 | `assertUnreachable(msg?)`        | `never`                           | Mark logically impossible code paths.                               |
 
-## Error Handling with `AssertError`
+## Error Handling with `AssertionError`
 
-All assertion functions throw `AssertError` when a condition is not met. Use `instanceof AssertError` to catch assertion failures specifically:
+All assertion functions throw `AssertionError` when a condition is not met. Use `instanceof AssertionError` to catch assertion failures specifically:
 
 ```typescript
-import { assert, AssertError } from '@rightcapital/assert';
+import { assert, AssertionError } from '@rightcapital/assert';
 
 try {
   assert(age >= 18, 'User must be an adult');
 } catch (error) {
-  if (error instanceof AssertError) {
+  if (error instanceof AssertionError) {
     console.error('Assertion failed:', error.message);
   } else {
     throw error;

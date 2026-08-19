@@ -95,17 +95,17 @@ assertNonNullable(user, 'User cannot be null');
 // `user` is narrowed to NonNullable<User>
 ```
 
-### Error Handling (`AssertError`)
+### Error Handling (`AssertionError`)
 
-All assertion functions throw `AssertError` (which extends `Error`) when an assertion fails.
+All assertion functions throw `AssertionError` (which extends `Error`) when an assertion fails.
 
 ```typescript
-import { assert, AssertError } from '@rightcapital/assert';
+import { assert, AssertionError } from '@rightcapital/assert';
 
 try {
   assert(user.age >= 18, 'User must be at least 18 years old');
 } catch (error) {
-  if (error instanceof AssertError) {
+  if (error instanceof AssertionError) {
     console.error('Assertion failed:', error.message);
   }
 }
@@ -115,7 +115,7 @@ try {
 
 | API                              | Return / Type Behavior            | Typical Use Case                                      |
 | :------------------------------- | :-------------------------------- | :---------------------------------------------------- |
-| `AssertError`                    | `class extends Error`             | Error thrown on assertion failure                     |
+| `AssertionError`                 | `class extends Error`             | Error thrown on assertion failure                     |
 | `assertExhaustive(value, msg?)`  | `never`                           | Enforce exhaustiveness check in `switch` or `if-else` |
 | `assertUnreachable(msg?)`        | `never`                           | Mark logically unreachable code branches              |
 | `ensure(value, predicate, msg?)` | `S extends T`                     | Validate and return value with narrowed type          |
