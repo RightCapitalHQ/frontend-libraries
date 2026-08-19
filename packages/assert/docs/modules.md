@@ -29,7 +29,7 @@ Basic assertion: verifies that a value or expression is `true`, otherwise throws
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `value` | `unknown` | The value to assert as truthy |
+| `value` | `boolean` | The boolean condition to assert as `true` |
 | `message?` | `string` | Optional custom error message |
 
 #### Returns
@@ -53,7 +53,7 @@ assert(isValid, 'Data validation failed');
 
 #### Defined in
 
-[packages/assert/src/index.ts:56](https://github.com/RightCapitalHQ/frontend-libraries/blob/9a2e9d3/packages/assert/src/index.ts#L56)
+[packages/assert/src/index.ts:56](https://github.com/RightCapitalHQ/frontend-libraries/blob/cf018e5/packages/assert/src/index.ts#L56)
 
 ___
 
@@ -108,7 +108,7 @@ function reducer(action: Action) {
 
 #### Defined in
 
-[packages/assert/src/index.ts:211](https://github.com/RightCapitalHQ/frontend-libraries/blob/9a2e9d3/packages/assert/src/index.ts#L211)
+[packages/assert/src/index.ts:211](https://github.com/RightCapitalHQ/frontend-libraries/blob/cf018e5/packages/assert/src/index.ts#L211)
 
 ___
 
@@ -152,7 +152,7 @@ function processUser(user: User | null | undefined) {
 
 #### Defined in
 
-[packages/assert/src/index.ts:79](https://github.com/RightCapitalHQ/frontend-libraries/blob/9a2e9d3/packages/assert/src/index.ts#L79)
+[packages/assert/src/index.ts:79](https://github.com/RightCapitalHQ/frontend-libraries/blob/cf018e5/packages/assert/src/index.ts#L79)
 
 ___
 
@@ -196,7 +196,7 @@ function processStatus(status: 'active' | 'inactive' | 'activating') {
 
 #### Defined in
 
-[packages/assert/src/index.ts:174](https://github.com/RightCapitalHQ/frontend-libraries/blob/9a2e9d3/packages/assert/src/index.ts#L174)
+[packages/assert/src/index.ts:174](https://github.com/RightCapitalHQ/frontend-libraries/blob/cf018e5/packages/assert/src/index.ts#L174)
 
 ___
 
@@ -250,7 +250,7 @@ const admin = ensure(
 
 #### Defined in
 
-[packages/assert/src/index.ts:113](https://github.com/RightCapitalHQ/frontend-libraries/blob/9a2e9d3/packages/assert/src/index.ts#L113)
+[packages/assert/src/index.ts:113](https://github.com/RightCapitalHQ/frontend-libraries/blob/cf018e5/packages/assert/src/index.ts#L113)
 
 ___
 
@@ -298,4 +298,4 @@ const userName = ensureNonNullable(user, 'User not found').name;
 
 #### Defined in
 
-[packages/assert/src/index.ts:142](https://github.com/RightCapitalHQ/frontend-libraries/blob/9a2e9d3/packages/assert/src/index.ts#L142)
+[packages/assert/src/index.ts:142](https://github.com/RightCapitalHQ/frontend-libraries/blob/cf018e5/packages/assert/src/index.ts#L142)
