@@ -39,7 +39,7 @@ function throwError(
 /**
  * Basic assertion: verifies that a value or expression is `true`, otherwise throws an exception.
  *
- * @param value - The value to assert as truthy
+ * @param value - The boolean condition to assert as `true`
  * @param message - Optional custom error message
  * @throws {AssertionError} Throws an error if `value` is not `true`.
  *
@@ -53,7 +53,7 @@ function throwError(
  * assert(isValid, 'Data validation failed');
  * ```
  */
-export function assert(value: unknown, message?: string): asserts value {
+export function assert(value: boolean, message?: string): asserts value {
   if (value !== true) {
     throwError('assert', value, message);
   }

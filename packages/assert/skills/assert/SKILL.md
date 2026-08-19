@@ -30,15 +30,15 @@ import {
 
 ## Quick Reference
 
-| Class / Function                 | Signature / Return                | Use Case                                                            |
-| -------------------------------- | --------------------------------- | ------------------------------------------------------------------- |
-| `AssertionError`                 | `class extends Error`             | Error type thrown when any assertion in this package fails.         |
-| `assert(value, msg?)`            | `asserts value`                   | Precondition or boolean check (verifies `value === true`).          |
-| `assertNonNullable(value, msg?)` | `asserts value is NonNullable<T>` | Guard statement against `null` or `undefined`.                      |
-| `ensure(value, predicate, msg?)` | `S extends T`                     | Inline validation using type guard function `(val: T) => val is S`. |
-| `ensureNonNullable(value, msg?)` | `NonNullable<T>`                  | Inline assignment or method chain for non-null value.               |
-| `assertExhaustive(value, msg?)`  | `value: never` -> `never`         | Exhaustiveness check in `switch` `default` case or `if-else` chain. |
-| `assertUnreachable(msg?)`        | `never`                           | Mark logically impossible code paths.                               |
+| API / Signature                                                                              | Description / Typical Use Case                                      |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `AssertionError extends Error`                                                               | Error type thrown when any assertion in this package fails.         |
+| `assert(value: boolean, message?: string): asserts value`                                    | Precondition or boolean check (verifies `value === true`).          |
+| `assertNonNullable<T>(value: T, message?: string): asserts value is NonNullable<T>`          | Guard statement against `null` or `undefined`.                      |
+| `ensure<T, S extends T>(value: T, predicate: (value: T) => value is S, message?: string): S` | Inline validation using type guard function `(val: T) => val is S`. |
+| `ensureNonNullable<T>(value: T, message?: string): NonNullable<T>`                           | Inline assignment or method chain for non-null value.               |
+| `assertExhaustive(value: never, message?: string): never`                                    | Exhaustiveness check in `switch` `default` case or `if-else` chain. |
+| `assertUnreachable(message?: string): never`                                                 | Mark logically impossible code paths.                               |
 
 ## Error Handling with `AssertionError`
 

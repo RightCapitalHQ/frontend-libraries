@@ -27,14 +27,16 @@ describe(assert.name, () => {
   });
 
   it('should throw when value is falsy', () => {
-    expect(() => assert(null)).toThrow(AssertionError);
-    expect(() => assert(undefined)).toThrow(AssertionError);
     expect(() => assert(false)).toThrow(AssertionError);
-    expect(() => assert(NaN)).toThrow(AssertionError);
-    expect(() => assert(0)).toThrow(AssertionError);
-    expect(() => assert(-0)).toThrow(AssertionError);
-    expect(() => assert(0n)).toThrow(AssertionError);
-    expect(() => assert('')).toThrow(AssertionError);
+    expect(() => assert(null as unknown as boolean)).toThrow(AssertionError);
+    expect(() => assert(undefined as unknown as boolean)).toThrow(
+      AssertionError,
+    );
+    expect(() => assert(NaN as unknown as boolean)).toThrow(AssertionError);
+    expect(() => assert(0 as unknown as boolean)).toThrow(AssertionError);
+    expect(() => assert(-0 as unknown as boolean)).toThrow(AssertionError);
+    expect(() => assert(0n as unknown as boolean)).toThrow(AssertionError);
+    expect(() => assert('' as unknown as boolean)).toThrow(AssertionError);
   });
 
   it('should throw with custom message', () => {

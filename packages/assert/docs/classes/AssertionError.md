@@ -72,7 +72,7 @@ Error.name
 
 #### Defined in
 
-[packages/assert/src/index.ts:25](https://github.com/RightCapitalHQ/frontend-libraries/blob/9a2e9d3/packages/assert/src/index.ts#L25)
+[packages/assert/src/index.ts:25](https://github.com/RightCapitalHQ/frontend-libraries/blob/cf018e5/packages/assert/src/index.ts#L25)
 
 ___
 

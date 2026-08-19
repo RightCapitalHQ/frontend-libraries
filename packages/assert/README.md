@@ -113,15 +113,15 @@ try {
 
 ## API Summary
 
-| API                              | Return / Type Behavior            | Typical Use Case                                      |
-| :------------------------------- | :-------------------------------- | :---------------------------------------------------- |
-| `AssertionError`                 | `class extends Error`             | Error thrown on assertion failure                     |
-| `assertExhaustive(value, msg?)`  | `never`                           | Enforce exhaustiveness check in `switch` or `if-else` |
-| `assertUnreachable(msg?)`        | `never`                           | Mark logically unreachable code branches              |
-| `ensure(value, predicate, msg?)` | `S extends T`                     | Validate and return value with narrowed type          |
-| `ensureNonNullable(value, msg?)` | `NonNullable<T>`                  | Validate non-null/undefined and return value          |
-| `assert(value, msg?)`            | `asserts value`                   | Standard boolean condition assertion                  |
-| `assertNonNullable(value, msg?)` | `asserts value is NonNullable<T>` | Standard non-null/undefined assertion                 |
+| API / Signature                                                                              | Description / Typical Use Case                        |
+| :------------------------------------------------------------------------------------------- | :---------------------------------------------------- |
+| `AssertionError extends Error`                                                               | Error thrown on assertion failure                     |
+| `assertExhaustive(value: never, message?: string): never`                                    | Enforce exhaustiveness check in `switch` or `if-else` |
+| `assertUnreachable(message?: string): never`                                                 | Mark logically unreachable code branches              |
+| `ensure<T, S extends T>(value: T, predicate: (value: T) => value is S, message?: string): S` | Validate and return value with narrowed type          |
+| `ensureNonNullable<T>(value: T, message?: string): NonNullable<T>`                           | Validate non-null/undefined and return value          |
+| `assert(value: boolean, message?: string): asserts value`                                    | Standard boolean condition assertion                  |
+| `assertNonNullable<T>(value: T, message?: string): asserts value is NonNullable<T>`          | Standard non-null/undefined assertion                 |
 
 ## Agent Skills
 
