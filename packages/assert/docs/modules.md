@@ -6,7 +6,7 @@
 
 ### Classes
 
-- [AssertError](classes/AssertError.md)
+- [AssertionError](classes/AssertionError.md)
 
 ### Functions
 
@@ -53,7 +53,7 @@ assert(isValid, 'Data validation failed');
 
 #### Defined in
 
-[packages/assert/src/index.ts:58](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L58)
+[packages/assert/src/index.ts:56](https://github.com/RightCapitalHQ/frontend-libraries/blob/9a2e9d3/packages/assert/src/index.ts#L56)
 
 ___
 
@@ -108,7 +108,7 @@ function reducer(action: Action) {
 
 #### Defined in
 
-[packages/assert/src/index.ts:213](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L213)
+[packages/assert/src/index.ts:211](https://github.com/RightCapitalHQ/frontend-libraries/blob/9a2e9d3/packages/assert/src/index.ts#L211)
 
 ___
 
@@ -152,7 +152,7 @@ function processUser(user: User | null | undefined) {
 
 #### Defined in
 
-[packages/assert/src/index.ts:81](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L81)
+[packages/assert/src/index.ts:79](https://github.com/RightCapitalHQ/frontend-libraries/blob/9a2e9d3/packages/assert/src/index.ts#L79)
 
 ___
 
@@ -196,7 +196,7 @@ function processStatus(status: 'active' | 'inactive' | 'activating') {
 
 #### Defined in
 
-[packages/assert/src/index.ts:176](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L176)
+[packages/assert/src/index.ts:174](https://github.com/RightCapitalHQ/frontend-libraries/blob/9a2e9d3/packages/assert/src/index.ts#L174)
 
 ___
 
@@ -250,7 +250,7 @@ const admin = ensure(
 
 #### Defined in
 
-[packages/assert/src/index.ts:115](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L115)
+[packages/assert/src/index.ts:113](https://github.com/RightCapitalHQ/frontend-libraries/blob/9a2e9d3/packages/assert/src/index.ts#L113)
 
 ___
 
@@ -298,4 +298,4 @@ const userName = ensureNonNullable(user, 'User not found').name;
 
 #### Defined in
 
-[packages/assert/src/index.ts:144](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L144)
+[packages/assert/src/index.ts:142](https://github.com/RightCapitalHQ/frontend-libraries/blob/9a2e9d3/packages/assert/src/index.ts#L142)

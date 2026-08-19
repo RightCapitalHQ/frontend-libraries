@@ -1,6 +1,6 @@
-[@rightcapital/assert](../README.md) / [Exports](../modules.md) / AssertError
+[@rightcapital/assert](../README.md) / [Exports](../modules.md) / AssertionError
 
-# Class: AssertError
+# Class: AssertionError
 
 Error thrown when an assertion fails.
 
@@ -8,25 +8,25 @@ Error thrown when an assertion fails.
 
 - `Error`
 
-  ↳ **`AssertError`**
+  ↳ **`AssertionError`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](AssertError.md#constructor)
+- [constructor](AssertionError.md#constructor)
 
 ### Properties
 
-- [message](AssertError.md#message)
-- [name](AssertError.md#name)
-- [stack](AssertError.md#stack)
+- [message](AssertionError.md#message)
+- [name](AssertionError.md#name)
+- [stack](AssertionError.md#stack)
 
 ## Constructors
 
 ### constructor
 
-• **new AssertError**(`message?`): [`AssertError`](AssertError.md)
+• **new AssertionError**(`message?`): [`AssertionError`](AssertionError.md)
 
 #### Parameters
 
@@ -36,7 +36,7 @@ Error thrown when an assertion fails.
 
 #### Returns
 
-[`AssertError`](AssertError.md)
+[`AssertionError`](AssertionError.md)
 
 #### Inherited from
 
@@ -64,7 +64,7 @@ ___
 
 ### name
 
-• **name**: `string` = `'AssertError'`
+• `Readonly` **name**: ``"AssertionError"``
 
 #### Overrides
 
@@ -72,7 +72,7 @@ Error.name
 
 #### Defined in
 
-[packages/assert/src/index.ts:27](https://github.com/RightCapitalHQ/frontend-libraries/blob/318339c/packages/assert/src/index.ts#L27)
+[packages/assert/src/index.ts:25](https://github.com/RightCapitalHQ/frontend-libraries/blob/9a2e9d3/packages/assert/src/index.ts#L25)
 
 ___
 

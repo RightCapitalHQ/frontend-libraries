@@ -1,6 +1,6 @@
 /**
  * Assertion functions provide type-safe assertions and validation.
- * When assertions fail, they throw `AssertError`.
+ * When assertions fail, they throw `AssertionError`.
  *
  * @author lixiaoyan <lxy.lixiaoyan@gmail.com>
  * @example
@@ -21,19 +21,19 @@
 /**
  * Error thrown when an assertion fails.
  */
-export class AssertError extends Error {
-  public override readonly name = 'AssertError';
+export class AssertionError extends Error {
+  public override readonly name = 'AssertionError';
 }
 
 /**
- * Throws an AssertError for failed assertions.
+ * Throws an AssertionError for failed assertions.
  */
 function throwError(
   name: string,
   value: unknown,
   message: string | undefined,
 ): never {
-  throw new AssertError(message ?? `${name}: Unexpected ${String(value)}`);
+  throw new AssertionError(message ?? `${name}: Unexpected ${String(value)}`);
 }
 
 /**
@@ -41,7 +41,7 @@ function throwError(
  *
  * @param value - The value to assert as truthy
  * @param message - Optional custom error message
- * @throws {AssertError} Throws an error if `value` is not `true`.
+ * @throws {AssertionError} Throws an error if `value` is not `true`.
  *
  * @example
  * ```typescript
@@ -65,7 +65,7 @@ export function assert(value: unknown, message?: string): asserts value {
  *
  * @param value - The value to check for null/undefined
  * @param message - Optional custom error message
- * @throws {AssertError} Throws an error if `value` is `null` or `undefined`.
+ * @throws {AssertionError} Throws an error if `value` is `null` or `undefined`.
  *
  * @example
  * ```typescript
@@ -92,7 +92,7 @@ export function assertNonNullable<T>(
  * @param predicate - Type guard function that validates the value
  * @param message - Optional custom error message
  * @returns The value with narrowed type
- * @throws {AssertError} Throws an error if `predicate` returns `false`.
+ * @throws {AssertionError} Throws an error if `predicate` returns `false`.
  *
  * @example
  * ```typescript
@@ -125,7 +125,7 @@ export function ensure<T, S extends T>(
  * @param value - The value to check for null/undefined
  * @param message - Optional custom error message
  * @returns The non-nullable value
- * @throws {AssertError} Throws an error if `value` is `null` or `undefined`.
+ * @throws {AssertionError} Throws an error if `value` is `null` or `undefined`.
  *
  * @example
  * ```typescript
@@ -155,7 +155,7 @@ export function ensureNonNullable<T>(
  *
  * @param message - Optional custom error message
  * @returns Never returns (always throws)
- * @throws {AssertError} Always thrown.
+ * @throws {AssertionError} Always thrown.
  *
  * @example
  * ```typescript
@@ -182,7 +182,7 @@ export function assertUnreachable(message?: string): never {
  * @param value - The value that should be `never` if all cases are handled
  * @param message - Optional custom error message
  * @returns Never returns (always throws)
- * @throws {AssertError} Always thrown.
+ * @throws {AssertionError} Always thrown.
  *
  * @example
  * ```typescript

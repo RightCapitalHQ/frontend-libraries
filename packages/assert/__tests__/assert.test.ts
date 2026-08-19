@@ -2,22 +2,22 @@ import { describe, expect, it } from 'vitest';
 
 import {
   assert,
-  AssertError,
   assertExhaustive,
+  AssertionError,
   assertNonNullable,
   assertUnreachable,
   ensure,
   ensureNonNullable,
 } from '../src';
 
-describe(AssertError.name, () => {
+describe(AssertionError.name, () => {
   it('should extend Error with its own name', () => {
-    const error = new AssertError('Assertion failed');
+    const error = new AssertionError('Assertion failed');
 
     expect(error).toBeInstanceOf(Error);
-    expect(error).toBeInstanceOf(AssertError);
-    expect(error.name).toBe('AssertError');
-    expect(String(error)).toBe('AssertError: Assertion failed');
+    expect(error).toBeInstanceOf(AssertionError);
+    expect(error.name).toBe('AssertionError');
+    expect(String(error)).toBe('AssertionError: Assertion failed');
   });
 });
 
@@ -27,14 +27,14 @@ describe(assert.name, () => {
   });
 
   it('should throw when value is falsy', () => {
-    expect(() => assert(null)).toThrow(AssertError);
-    expect(() => assert(undefined)).toThrow(AssertError);
-    expect(() => assert(false)).toThrow(AssertError);
-    expect(() => assert(NaN)).toThrow(AssertError);
-    expect(() => assert(0)).toThrow(AssertError);
-    expect(() => assert(-0)).toThrow(AssertError);
-    expect(() => assert(0n)).toThrow(AssertError);
-    expect(() => assert('')).toThrow(AssertError);
+    expect(() => assert(null)).toThrow(AssertionError);
+    expect(() => assert(undefined)).toThrow(AssertionError);
+    expect(() => assert(false)).toThrow(AssertionError);
+    expect(() => assert(NaN)).toThrow(AssertionError);
+    expect(() => assert(0)).toThrow(AssertionError);
+    expect(() => assert(-0)).toThrow(AssertionError);
+    expect(() => assert(0n)).toThrow(AssertionError);
+    expect(() => assert('')).toThrow(AssertionError);
   });
 
   it('should throw with custom message', () => {
@@ -54,11 +54,11 @@ describe(assertNonNullable.name, () => {
   });
 
   it('should throw for null', () => {
-    expect(() => assertNonNullable(null)).toThrow(AssertError);
+    expect(() => assertNonNullable(null)).toThrow(AssertionError);
   });
 
   it('should throw for undefined', () => {
-    expect(() => assertNonNullable(undefined)).toThrow(AssertError);
+    expect(() => assertNonNullable(undefined)).toThrow(AssertionError);
   });
 
   it('should throw with custom message', () => {
@@ -77,7 +77,7 @@ describe(ensure.name, () => {
   });
 
   it('should throw when predicate fails', () => {
-    expect(() => ensure(123, isString)).toThrow(AssertError);
+    expect(() => ensure(123, isString)).toThrow(AssertionError);
   });
 
   it('should throw with custom message', () => {
@@ -101,11 +101,11 @@ describe(ensureNonNullable.name, () => {
   });
 
   it('should throw for null', () => {
-    expect(() => ensureNonNullable(null)).toThrow(AssertError);
+    expect(() => ensureNonNullable(null)).toThrow(AssertionError);
   });
 
   it('should throw for undefined', () => {
-    expect(() => ensureNonNullable(undefined)).toThrow(AssertError);
+    expect(() => ensureNonNullable(undefined)).toThrow(AssertionError);
   });
 
   it('should throw with custom message', () => {
@@ -116,7 +116,7 @@ describe(ensureNonNullable.name, () => {
 
 describe(assertUnreachable.name, () => {
   it('should always throw', () => {
-    expect(() => assertUnreachable()).toThrow(AssertError);
+    expect(() => assertUnreachable()).toThrow(AssertionError);
   });
 
   it('should throw with custom message', () => {
@@ -127,7 +127,9 @@ describe(assertUnreachable.name, () => {
 
 describe(assertExhaustive.name, () => {
   it('should always throw', () => {
-    expect(() => assertExhaustive('unexpected' as never)).toThrow(AssertError);
+    expect(() => assertExhaustive('unexpected' as never)).toThrow(
+      AssertionError,
+    );
   });
 
   it('should throw with custom message', () => {
@@ -159,7 +161,7 @@ describe('real-world usage examples', () => {
     expect(handleStatus('success')).toBe('Success!');
     expect(handleStatus('error')).toBe('Error occurred');
     expect(() => handleStatus('unexpected' as unknown as Status)).toThrow(
-      AssertError,
+      AssertionError,
     );
   });
 
@@ -185,7 +187,7 @@ describe('real-world usage examples', () => {
       permissions: ['read', 'write'],
     } as IAdminUser;
 
-    expect(() => ensure(regularUser, isAdmin)).toThrow(AssertError);
+    expect(() => ensure(regularUser, isAdmin)).toThrow(AssertionError);
 
     const admin = ensure(adminUser, isAdmin);
     expect(admin.permissions).toEqual(['read', 'write']);
