@@ -11,7 +11,7 @@
     "experimentalDecorators": true,
     "target": "es6",
     "sourceMap": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
   "files": [],
   "references": [
@@ -19,6 +19,6 @@
     { "path": "./packages/assert" },
     { "path": "./packages/date-helpers" },
     { "path": "./packages/color-helpers" },
-    { "path": "./forks/storage-factory" },
-  ],
+    { "path": "./forks/storage-factory" }
+  ]
 }
