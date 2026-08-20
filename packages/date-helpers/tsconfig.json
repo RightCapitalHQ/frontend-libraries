@@ -3,11 +3,8 @@
   "compilerOptions": {
     "composite": true,
     "rootDir": ".",
-    "outDir": "./node_modules/.cache/rightcapital/typecheck",
+    "outDir": "./node_modules/.cache/rightcapital/typecheck"
   },
   "include": ["src", "__tests__"],
-  "references": [
-    { "path": "../exceptions" },
-    { "path": "./tsconfig.lib.json" },
-  ],
+  "references": [{ "path": "../exceptions" }, { "path": "./tsconfig.lib.json" }]
 }

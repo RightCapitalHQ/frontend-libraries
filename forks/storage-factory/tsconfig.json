@@ -6,8 +6,8 @@
     "outDir": "./node_modules/.cache/rightcapital/typecheck/storage-factory-next",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "lib": ["ES2018", "DOM"],
+    "lib": ["ES2018", "DOM"]
   },
   "include": ["src", "__tests__"],
-  "references": [{ "path": "./tsconfig.lib.json" }],
+  "references": [{ "path": "./tsconfig.lib.json" }]
 }
