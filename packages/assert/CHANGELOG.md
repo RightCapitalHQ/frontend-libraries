@@ -1,3 +1,26 @@
+## 3.0.0 (2026-08-19)
+
+### 🩹 Fixes
+
+- Update package keywords and declare the package side-effect free. ([47d599e](https://github.com/RightCapitalHQ/frontend-libraries/commit/47d599e))
+
+### ⚠️  Breaking Changes
+
+- Throw AssertError instances instead of UnexpectedValueException. ([66994b9](https://github.com/RightCapitalHQ/frontend-libraries/commit/66994b9))
+- Rename @rightcapital/assertion-helpers to @rightcapital/assert and replace the AssertionHelpers class API with named assertion functions. ([8481989](https://github.com/RightCapitalHQ/frontend-libraries/commit/8481989))
+- Rename the exported `AssertError` class to `AssertionError`. ([8df6668](https://github.com/RightCapitalHQ/frontend-libraries/commit/8df6668))
+
+  This is a breaking API change. Update imports and `instanceof` checks from `AssertError` to `AssertionError`.
+
+- Change `assert` to accept only boolean conditions. ([f0ffd10](https://github.com/RightCapitalHQ/frontend-libraries/commit/f0ffd10))
+
+  This is a breaking TypeScript API change. Pass an explicit boolean expression to `assert`, or use `assertNonNullable` for null and undefined checks.
+
+### ❤️ Thank You
+
+- Codex
+- Pink Champagne @PinkChampagne17
+
 ## 2.1.2 (2026-06-04)
 
 ### 🩹 Fixes
