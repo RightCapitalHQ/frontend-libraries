@@ -5,5 +5,5 @@ import { LogicException } from './logic.exception';
  * @public
  */
 export class BadFunctionCallException extends LogicException {
-  name = 'BadFunctionCallException';
+  public name = 'BadFunctionCallException';
 }

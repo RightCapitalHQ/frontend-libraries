@@ -6,5 +6,5 @@ import { RuntimeException } from './runtime.exception';
  * @public
  */
 export class RangeException extends RuntimeException {
-  name = 'RangeException';
+  public name = 'RangeException';
 }

@@ -5,5 +5,5 @@ import { LogicException } from './logic.exception';
  * @public
  */
 export class DomainException extends LogicException {
-  name = 'DomainException';
+  public name = 'DomainException';
 }

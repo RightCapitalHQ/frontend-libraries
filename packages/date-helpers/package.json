@@ -2,7 +2,6 @@
   "name": "@rightcapital/date-helpers",
   "version": "3.1.30",
   "description": "Format dates with date-fns.",
-  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
   "keywords": [
     "date",
     "date-fns",
@@ -19,7 +18,7 @@
     "directory": "packages/date-helpers"
   },
   "license": "MIT",
-  "packageManager": "pnpm@10.32.1",
+  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
   "main": "lib/date-helpers.js",
   "typings": "lib/date-helpers.d.ts",
   "directories": {
@@ -32,18 +31,19 @@
     "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --out docs src/date-helpers.ts",
     "prepack": "nx build"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
   "dependencies": {
     "@rightcapital/exceptions": "workspace:*",
     "date-fns": "4.1.0"
   },
+  "devDependencies": {
+    "typedoc": "0.28.20",
+    "typedoc-plugin-markdown": "4.12.0"
+  },
   "peerDependencies": {
     "date-fns": "^2.29.3 || ^3.0.0 || ^4.0.0"
   },
-  "devDependencies": {
-    "typedoc": "0.25.7",
-    "typedoc-plugin-markdown": "4.12.0"
+  "packageManager": "pnpm@10.32.1",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }

@@ -5,5 +5,5 @@ import { BaseException } from './base.exception';
  * @public
  */
 export class IgnorableException extends BaseException {
-  name = 'IgnorableException';
+  public name = 'IgnorableException';
 }

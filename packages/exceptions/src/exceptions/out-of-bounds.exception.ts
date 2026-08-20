@@ -5,5 +5,5 @@ import { RuntimeException } from './runtime.exception';
  * @public
  */
 export class OutOfBoundsException extends RuntimeException {
-  name = 'OutOfBoundsException';
+  public name = 'OutOfBoundsException';
 }

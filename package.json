@@ -1,14 +1,11 @@
 {
   "name": "@rightcapital/libraries",
   "version": "1.0.2",
-  "main": "index.js",
-  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
   "private": true,
-  "packageManager": "pnpm@10.32.1",
-  "engines": {
-    "node": ">=18.16.1"
-  },
   "repository": "https://github.com/RightCapitalHQ/frontend-libraries",
+  "license": "MIT",
+  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
+  "main": "index.js",
   "scripts": {
     "build": "nx run-many -t build",
     "change": "nx release plan",
@@ -18,24 +15,18 @@
     "fix": "pnpm run fix:eslint && pnpm run fix:prettier",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write .",
+    "preinstall": "npx only-allow pnpm",
     "lint": "concurrently pnpm:lint:*",
     "lint:eslint": "eslint --max-warnings=0 .",
     "lint:prettier": "prettier -c .",
-    "preinstall": "npx only-allow pnpm",
     "prepare": "husky",
     "test": "vitest",
     "typecheck": "nx run-many -t typecheck"
   },
-  "license": "MIT",
   "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
     }
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "nx"
-    ]
   },
   "devDependencies": {
     "@commitlint/cli": "21.2.1",
@@ -51,11 +42,20 @@
     "eslint": "10.8.1",
     "happy-dom": "20.9.0",
     "husky": "9.0.7",
-    "inquirer": "14.0.2",
-    "nx": "22.0.2",
+    "inquirer": "12.11.1",
+    "nx": "23.1.1",
     "prettier": "3.2.4",
     "ts-node": "10.9.2",
-    "typescript": "7.0.2",
+    "typescript": "6.0.3",
     "vitest": "4.1.0"
+  },
+  "packageManager": "pnpm@10.32.1",
+  "engines": {
+    "node": ">=18.16.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "nx"
+    ]
   }
 }

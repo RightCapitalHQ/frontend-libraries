@@ -19,6 +19,7 @@ import {
 } from '../src/index';
 
 const exceptionCtorList = [
+  BaseException,
   LogicException,
   RuntimeException,
   IgnorableException,

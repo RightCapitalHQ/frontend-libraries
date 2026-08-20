@@ -5,5 +5,5 @@ import { LogicException } from './logic.exception';
  * @public
  */
 export class InvalidArgumentException extends LogicException {
-  name = 'InvalidArgumentException';
+  public name = 'InvalidArgumentException';
 }

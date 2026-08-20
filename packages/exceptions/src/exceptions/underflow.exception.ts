@@ -5,5 +5,5 @@ import { RuntimeException } from './runtime.exception';
  * @public
  */
 export class UnderflowException extends RuntimeException {
-  name = 'UnderflowException';
+  public name = 'UnderflowException';
 }

@@ -8,10 +8,10 @@ export enum BrightnessDirection {
 }
 
 // A generic type representing a pair of foreground content candidates -- one for dark backgrounds and another one for light ones.
-type ForegroundContentCandidates<T> = {
+interface ForegroundContentCandidates<T> {
   dark: T;
   light: T;
-};
+}
 
 // The YIQ contrast threshold at which we will switch from "dark" to "light" foreground content.
 // If the YIQ contrast of the background color is less than this number, the "light" foreground content will be used.

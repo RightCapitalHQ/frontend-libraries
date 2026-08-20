@@ -5,5 +5,5 @@ import { LogicException } from './logic.exception';
  * @public
  */
 export class LengthException extends LogicException {
-  name = 'LengthException';
+  public name = 'LengthException';
 }

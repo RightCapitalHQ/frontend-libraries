@@ -7,5 +7,5 @@ import { BaseException } from './base.exception';
  * @public
  */
 export class UnexpectedValueException extends BaseException {
-  name = 'UnexpectedValueException';
+  public name = 'UnexpectedValueException';
 }
