@@ -1,8 +1,8 @@
 import rcPreset from '@rightcapital/eslint-config';
 
-const { config } = rcPreset.utils;
+const { defineConfig } = rcPreset.utils;
 
-export default config(
+export default defineConfig(
   {
     ignores: [
       // nx cache

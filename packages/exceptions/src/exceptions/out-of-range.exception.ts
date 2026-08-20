@@ -5,5 +5,5 @@ import { LogicException } from './logic.exception';
  * @public
  */
 export class OutOfRangeException extends LogicException {
-  name = 'OutOfRangeException';
+  public name = 'OutOfRangeException';
 }

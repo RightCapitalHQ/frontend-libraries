@@ -39,6 +39,7 @@ export class DateHelpers {
     }
 
     throw new InvalidArgumentException(
+      // eslint-disable-next-line @typescript-eslint/no-base-to-string -- Preserve the invalid runtime value in the error message.
       `Input must be a Date object or a string. Received: ${typeof input} - ${String(input)}`,
     );
   }

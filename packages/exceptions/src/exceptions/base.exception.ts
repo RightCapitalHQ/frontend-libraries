@@ -6,7 +6,10 @@
  * @see https://www.php.net/manual/en/spl.exceptions.php
  * @see https://javascript.info/custom-errors
  */
+// eslint-disable-next-line unicorn/custom-error-definition -- Preserve the PHP SPL-compatible public class name.
 export class BaseException extends Error {
+  public name = 'BaseException';
+
   /**
    * @param message A human-readable description of the error.
    * @param cause The value of cause can be of any type. You should not make assumptions that the error you caught has an Error as its cause, in the same way that you cannot be sure the variable bound in the catch statement is an Error either. The "Providing structured data as the error cause" example below shows a case where a non-error is deliberately provided as the cause.

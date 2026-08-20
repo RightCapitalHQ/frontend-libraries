@@ -5,5 +5,5 @@ import { BaseException } from './base.exception';
  * @public
  */
 export class RuntimeException extends BaseException {
-  name = 'RuntimeException';
+  public name = 'RuntimeException';
 }

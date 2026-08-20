@@ -2,7 +2,6 @@
   "name": "@rightcapital/color-helpers",
   "version": "2.1.25",
   "description": "Color science related helpers",
-  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
   "keywords": [
     "color",
     "color-science",
@@ -10,15 +9,15 @@
     "WCAG",
     "TypeScript"
   ],
-  "license": "MIT",
-  "packageManager": "pnpm@10.32.1",
-  "main": "lib/color-helpers.js",
-  "typings": "lib/color-helpers.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RightCapitalHQ/frontend-libraries.git",
     "directory": "packages/color-helpers"
   },
+  "license": "MIT",
+  "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
+  "main": "lib/color-helpers.js",
+  "typings": "lib/color-helpers.d.ts",
   "directories": {
     "lib": "lib"
   },
@@ -30,11 +29,12 @@
     "prepack": "nx build",
     "test": "vitest"
   },
+  "devDependencies": {
+    "typedoc": "0.28.20",
+    "typedoc-plugin-markdown": "4.12.0"
+  },
+  "packageManager": "pnpm@10.32.1",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
-  },
-  "devDependencies": {
-    "typedoc": "0.25.7",
-    "typedoc-plugin-markdown": "3.17.1"
   }
 }

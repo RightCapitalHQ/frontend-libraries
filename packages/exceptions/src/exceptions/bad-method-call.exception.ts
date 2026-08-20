@@ -5,5 +5,5 @@ import { BadFunctionCallException } from './bad-function-call.exception';
  * @public
  */
 export class BadMethodCallException extends BadFunctionCallException {
-  name = 'BadMethodCallException';
+  public name = 'BadMethodCallException';
 }
