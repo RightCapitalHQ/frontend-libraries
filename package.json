@@ -42,11 +42,11 @@
     "eslint": "10.8.1",
     "happy-dom": "20.11.2",
     "husky": "9.1.7",
-    "inquirer": "12.11.1",
+    "inquirer": "14.0.2",
     "nx": "23.1.1",
     "prettier": "3.9.6",
     "ts-node": "10.9.2",
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "vitest": "4.1.10"
   },
   "packageManager": "pnpm@10.32.1",
