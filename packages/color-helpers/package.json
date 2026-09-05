@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "typedoc": "0.28.20",
-    "typedoc-plugin-markdown": "4.12.0"
+    "typedoc-plugin-markdown": "4.13.0"
   },
   "packageManager": "pnpm@10.32.1",
   "publishConfig": {
