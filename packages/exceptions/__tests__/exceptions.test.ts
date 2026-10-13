@@ -16,7 +16,7 @@ import {
   RuntimeException,
   UnderflowException,
   UnexpectedValueException,
-} from '../src/index';
+} from '../src/index.ts';
 
 const exceptionCtorList = [
   BaseException,

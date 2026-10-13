@@ -14,6 +14,15 @@
   },
   "license": "MIT",
   "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "directories": {
@@ -23,7 +32,7 @@
     "lib"
   ],
   "scripts": {
-    "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --tsconfig tsconfig.lib.json --modulesFileName modules --out docs src/index.ts",
+    "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --tsconfig tsconfig.src.json --modulesFileName modules --out docs src/index.ts",
     "prepack": "nx build"
   },
   "devDependencies": {

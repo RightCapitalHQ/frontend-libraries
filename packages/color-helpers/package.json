@@ -16,6 +16,15 @@
   },
   "license": "MIT",
   "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/color-helpers.d.ts",
+      "default": "./lib/color-helpers.js"
+    },
+    "./package.json": "./package.json"
+  },
   "main": "lib/color-helpers.js",
   "typings": "lib/color-helpers.d.ts",
   "directories": {
@@ -25,7 +34,7 @@
     "lib"
   ],
   "scripts": {
-    "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --tsconfig tsconfig.lib.json --modulesFileName modules --out docs src/color-helpers.ts",
+    "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --tsconfig tsconfig.src.json --modulesFileName modules --out docs src/color-helpers.ts",
     "prepack": "nx build",
     "test": "vitest"
   },

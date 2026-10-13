@@ -1,4 +1,4 @@
-import { RuntimeException } from './runtime.exception';
+import { RuntimeException } from './runtime.exception.ts';
 
 /**
  * Exception thrown to indicate range errors during program execution. Normally this means there was an arithmetic error other than under/overflow.

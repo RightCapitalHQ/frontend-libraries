@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "composite": true,
+    "module": "nodenext",
+    "rewriteRelativeImportExtensions": true,
+    "allowImportingTsExtensions": true,
+    "declarationMap": true,
+    "target": "es2020",
+    "lib": ["ES2020"],
+    "sourceMap": true,
+    "skipLibCheck": true
+  }
+}

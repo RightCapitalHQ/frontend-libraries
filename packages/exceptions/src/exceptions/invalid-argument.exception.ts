@@ -1,4 +1,4 @@
-import { LogicException } from './logic.exception';
+import { LogicException } from './logic.exception.ts';
 
 /**
  * Exception thrown if an argument is not of the expected type.

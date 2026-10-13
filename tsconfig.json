@@ -1,24 +1,23 @@
 {
-  "compilerOptions": {
-    "strict": true,
-    "composite": true,
-    "module": "commonjs",
-    "declaration": true,
-    "declarationMap": true,
-    "removeComments": false,
-    "noLib": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "target": "es6",
-    "sourceMap": true,
-    "skipLibCheck": true
-  },
   "files": [],
   "references": [
-    { "path": "./packages/exceptions" },
-    { "path": "./packages/assert" },
-    { "path": "./packages/date-helpers" },
-    { "path": "./packages/color-helpers" },
-    { "path": "./forks/storage-factory" }
+    {
+      "path": "./packages/exceptions"
+    },
+    {
+      "path": "./packages/assert"
+    },
+    {
+      "path": "./packages/date-helpers"
+    },
+    {
+      "path": "./packages/color-helpers"
+    },
+    {
+      "path": "./forks/storage-factory"
+    },
+    {
+      "path": "./tsconfig.misc.json"
+    }
   ]
 }

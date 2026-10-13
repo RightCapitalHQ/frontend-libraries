@@ -1,4 +1,4 @@
-import { RuntimeException } from './runtime.exception';
+import { RuntimeException } from './runtime.exception.ts';
 
 /**
  * Exception thrown when adding an element to a full container.
