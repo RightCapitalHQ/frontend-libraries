@@ -145,4 +145,4 @@ npx skills add https://github.com/RightCapitalHQ/frontend-libraries/tree/main/pa
 
 ## API Reference
 
-See the [generated documentation](./docs/README.md) for detailed API reference.
+See the [generated documentation](/packages/assert/docs/modules.md) for detailed API reference.

@@ -1,4 +1,6 @@
-@rightcapital/date-helpers / [Exports](modules.md)
+**@rightcapital/date-helpers**
+
+***
 
 # `@rightcapital/date-helpers`
 

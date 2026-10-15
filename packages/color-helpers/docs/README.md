@@ -1,4 +1,6 @@
-@rightcapital/color-helpers / [Exports](modules.md)
+**@rightcapital/color-helpers**
+
+***
 
 # `@rightcapital/color-helpers`
 

@@ -30,7 +30,7 @@
     "src"
   ],
   "scripts": {
-    "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts",
+    "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --tsconfig tsconfig.lib.json --modulesFileName modules --out docs src/index.ts",
     "prepack": "nx build"
   },
   "devDependencies": {

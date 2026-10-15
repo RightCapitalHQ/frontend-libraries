@@ -25,6 +25,9 @@
       "dependsOn": ["^typecheck"],
       "cache": true
     },
+    "docs": {
+      "dependsOn": ["^build"]
+    },
     "clean": {
       "cache": false
     }

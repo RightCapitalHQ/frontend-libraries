@@ -1,89 +1,73 @@
-[@rightcapital/assert](../README.md) / [Exports](../modules.md) / AssertionError
+[**@rightcapital/assert**](../README.md)
+
+***
+
+[@rightcapital/assert](../modules.md) / AssertionError
 
 # Class: AssertionError
 
+Defined in: [packages/assert/src/index.ts:24](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/assert/src/index.ts#L24)
+
 Error thrown when an assertion fails.
 
-## Hierarchy
+## Extends
 
 - `Error`
 
-  ↳ **`AssertionError`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](AssertionError.md#constructor)
-
-### Properties
-
-- [message](AssertionError.md#message)
-- [name](AssertionError.md#name)
-- [stack](AssertionError.md#stack)
-
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new AssertionError**(`message?`): [`AssertionError`](AssertionError.md)
+> **new AssertionError**(`message?`): `AssertionError`
+
+Defined in: node\_modules/.pnpm/typescript@6.0.3/node\_modules/typescript/lib/lib.es5.d.ts:1080
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message?` | `string` |
+##### message?
+
+`string`
 
 #### Returns
 
-[`AssertionError`](AssertionError.md)
+`AssertionError`
 
 #### Inherited from
 
-Error.constructor
-
-#### Defined in
-
-node_modules/.pnpm/typescript@5.3.3/node_modules/typescript/lib/lib.es5.d.ts:1081
+`Error.constructor`
 
 ## Properties
 
 ### message
 
-• **message**: `string`
+> **message**: `string`
+
+Defined in: node\_modules/.pnpm/typescript@6.0.3/node\_modules/typescript/lib/lib.es5.d.ts:1075
 
 #### Inherited from
 
-Error.message
+`Error.message`
 
-#### Defined in
-
-node_modules/.pnpm/typescript@5.3.3/node_modules/typescript/lib/lib.es5.d.ts:1076
-
-___
+***
 
 ### name
 
-• `Readonly` **name**: ``"AssertionError"``
+> `readonly` **name**: `"AssertionError"` = `'AssertionError'`
+
+Defined in: [packages/assert/src/index.ts:25](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/assert/src/index.ts#L25)
 
 #### Overrides
 
-Error.name
+`Error.name`
 
-#### Defined in
+***
 
-[packages/assert/src/index.ts:25](https://github.com/RightCapitalHQ/frontend-libraries/blob/cf018e5/packages/assert/src/index.ts#L25)
+### stack?
 
-___
+> `optional` **stack?**: `string`
 
-### stack
-
-• `Optional` **stack**: `string`
+Defined in: node\_modules/.pnpm/typescript@6.0.3/node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 #### Inherited from
 
-Error.stack
-
-#### Defined in
-
-node_modules/.pnpm/typescript@5.3.3/node_modules/typescript/lib/lib.es5.d.ts:1077
+`Error.stack`

@@ -1,35 +1,30 @@
-[@rightcapital/color-helpers](../README.md) / [Exports](../modules.md) / ColorHelpers
+[**@rightcapital/color-helpers**](../README.md)
+
+***
+
+[@rightcapital/color-helpers](../modules.md) / ColorHelpers
 
 # Class: ColorHelpers
 
-## Table of contents
-
-### Constructors
-
-- [constructor](ColorHelpers.md#constructor)
-
-### Methods
-
-- [getColorBrightnessDirectionByHexColor](ColorHelpers.md#getcolorbrightnessdirectionbyhexcolor)
-- [getHighContrastContentOnBackgroundColor](ColorHelpers.md#gethighcontrastcontentonbackgroundcolor)
-- [getYiqContrastScoreByHexColor](ColorHelpers.md#getyiqcontrastscorebyhexcolor)
-- [normalizeHexColor](ColorHelpers.md#normalizehexcolor)
+Defined in: [color-helpers.ts:21](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/color-helpers/src/color-helpers.ts#L21)
 
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new ColorHelpers**(): [`ColorHelpers`](ColorHelpers.md)
+> **new ColorHelpers**(): `ColorHelpers`
 
 #### Returns
 
-[`ColorHelpers`](ColorHelpers.md)
+`ColorHelpers`
 
 ## Methods
 
-### getColorBrightnessDirectionByHexColor
+### getColorBrightnessDirectionByHexColor()
 
-▸ **getColorBrightnessDirectionByHexColor**(`hexColor`): `BrightnessDirection`
+> `static` **getColorBrightnessDirectionByHexColor**(`hexColor`): [`BrightnessDirection`](../enumerations/BrightnessDirection.md)
+
+Defined in: [color-helpers.ts:63](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/color-helpers/src/color-helpers.ts#L63)
 
 Determines the brightness direction (i.e., light or dark) of a given hex color.
 
@@ -39,25 +34,25 @@ the color is closer to white (light) or black (dark).
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `hexColor` | `string` | The hexadecimal color code to evaluate. |
+##### hexColor
+
+`string`
+
+The hexadecimal color code to evaluate.
 
 #### Returns
 
-`BrightnessDirection`
+[`BrightnessDirection`](../enumerations/BrightnessDirection.md)
 
 - The brightness direction of the color - either "light" or "dark".
 
-#### Defined in
+***
 
-[color-helpers.ts:64](https://github.com/RightCapitalHQ/frontend-libraries/blob/a3dbc90/packages/color-helpers/src/color-helpers.ts#L64)
+### getHighContrastContentOnBackgroundColor()
 
-___
+> `static` **getHighContrastContentOnBackgroundColor**\<`FOREGROUND_CONTENT_T`\>(`backgroundColor`, `contentCandidates`): `FOREGROUND_CONTENT_T`
 
-### getHighContrastContentOnBackgroundColor
-
-▸ **getHighContrastContentOnBackgroundColor**\<`FOREGROUND_CONTENT_T`\>(`backgroundColor`, `contentCandidates`): `FOREGROUND_CONTENT_T`
+Defined in: [color-helpers.ts:36](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/color-helpers/src/color-helpers.ts#L36)
 
 Computes and returns the optimal foreground content for a given background color,
 ensuring there is high contrast between them.
@@ -65,18 +60,27 @@ This function uses the YIQ formula to determine the brightness of the background
 and then chooses the best contrast option (i.e., the value that will stand out most clearly on this background)
 from the provided content candidates.
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Description |
-| :------ | :------ |
-| `FOREGROUND_CONTENT_T` | The type of the foreground content. |
+##### FOREGROUND_CONTENT_T
+
+`FOREGROUND_CONTENT_T`
+
+The type of the foreground content.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `backgroundColor` | `string` | The color code of the background, on top of which the content will appear. |
-| `contentCandidates` | `ForegroundContentCandidates`\<`FOREGROUND_CONTENT_T`\> | The two potential candidates for foreground content. One optimized for light backgrounds, another one for dark backgrounds. |
+##### backgroundColor
+
+`string`
+
+The color code of the background, on top of which the content will appear.
+
+##### contentCandidates
+
+`ForegroundContentCandidates`\<`FOREGROUND_CONTENT_T`\>
+
+The two potential candidates for foreground content. One optimized for light backgrounds, another one for dark backgrounds.
 
 #### Returns
 
@@ -84,15 +88,13 @@ from the provided content candidates.
 
 - If the background is dark (closer to black), returns the "light" foreground content. If the background is light (closer to white), returns the "dark" foreground content.
 
-#### Defined in
+***
 
-[color-helpers.ts:36](https://github.com/RightCapitalHQ/frontend-libraries/blob/a3dbc90/packages/color-helpers/src/color-helpers.ts#L36)
+### getYiqContrastScoreByHexColor()
 
-___
+> `static` **getYiqContrastScoreByHexColor**(`hexColor`): `number`
 
-### getYiqContrastScoreByHexColor
-
-▸ **getYiqContrastScoreByHexColor**(`hexColor`): `number`
+Defined in: [color-helpers.ts:82](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/color-helpers/src/color-helpers.ts#L82)
 
 Calculates the YIQ contrast score of a given hex color.
 
@@ -101,9 +103,11 @@ Lower scores indicate darker colors, while higher scores indicate lighter colors
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `hexColor` | `string` | The hexadecimal color code to convert to a YIQ contrast score. |
+##### hexColor
+
+`string`
+
+The hexadecimal color code to convert to a YIQ contrast score.
 
 #### Returns
 
@@ -111,15 +115,13 @@ Lower scores indicate darker colors, while higher scores indicate lighter colors
 
 - The YIQ contrast score of the color.
 
-#### Defined in
+***
 
-[color-helpers.ts:83](https://github.com/RightCapitalHQ/frontend-libraries/blob/a3dbc90/packages/color-helpers/src/color-helpers.ts#L83)
+### normalizeHexColor()
 
-___
+> `static` **normalizeHexColor**(`color`): `string`
 
-### normalizeHexColor
-
-▸ **normalizeHexColor**(`color`): `string`
+Defined in: [color-helpers.ts:104](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/color-helpers/src/color-helpers.ts#L104)
 
 Get a normalized hex color from any hex color string
 
@@ -134,16 +136,14 @@ f       -> ff0000
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `color` | `string` | original color |
+##### color
+
+`string`
+
+original color
 
 #### Returns
 
 `string`
 
 normalized hexadecimal color with format RRGGBB
-
-#### Defined in
-
-[color-helpers.ts:105](https://github.com/RightCapitalHQ/frontend-libraries/blob/a3dbc90/packages/color-helpers/src/color-helpers.ts#L105)
