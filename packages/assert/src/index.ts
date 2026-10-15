@@ -26,14 +26,21 @@ export class AssertionError extends Error {
 }
 
 /**
- * Throws an AssertionError for failed assertions.
+ * Throws an AssertionError with a message prefixed by the assertion name.
  */
-function throwError(
+function throwError(name: string, message: string): never {
+  throw new AssertionError(`${name}: ${message}`);
+}
+
+/**
+ * Throws an AssertionError for an unexpected value.
+ */
+function throwUnexpectedValueError(
   name: string,
   value: unknown,
-  message: string | undefined,
+  message = `Unexpected ${String(value)}`,
 ): never {
-  throw new AssertionError(message ?? `${name}: Unexpected ${String(value)}`);
+  throwError(name, message);
 }
 
 /**
@@ -55,7 +62,7 @@ function throwError(
  */
 export function assert(value: boolean, message?: string): asserts value {
   if (value !== true) {
-    throwError('assert', value, message);
+    throwUnexpectedValueError('assert', value, message);
   }
 }
 
@@ -81,7 +88,7 @@ export function assertNonNullable<T>(
   message?: string,
 ): asserts value is NonNullable<T> {
   if (value === null || value === undefined) {
-    throwError('assertNonNullable', value, message);
+    throwUnexpectedValueError('assertNonNullable', value, message);
   }
 }
 
@@ -144,7 +151,7 @@ export function ensureNonNullable<T>(
   message?: string,
 ): NonNullable<T> {
   if (value === null || value === undefined) {
-    throwError('ensureNonNullable', value, message);
+    throwUnexpectedValueError('ensureNonNullable', value, message);
   }
   return value;
 }
@@ -171,8 +178,8 @@ export function ensureNonNullable<T>(
  * }
  * ```
  */
-export function assertUnreachable(message?: string): never {
-  throwError('assertUnreachable', null, message);
+export function assertUnreachable(message = 'Reached unreachable code'): never {
+  throwError('assertUnreachable', message);
 }
 
 /**
@@ -209,5 +216,23 @@ export function assertUnreachable(message?: string): never {
  * ```
  */
 export function assertExhaustive(value: never, message?: string): never {
-  throwError('assertExhaustive', value, message);
+  throwUnexpectedValueError('assertExhaustive', value, message);
+}
+
+/**
+ * Marks methods or code paths that are intentionally not implemented yet.
+ *
+ * @param message - Optional custom error message
+ * @returns Never returns (always throws)
+ * @throws {AssertionError} Always thrown.
+ *
+ * @example
+ * ```typescript
+ * function saveDraft(): never {
+ *   return unimplemented('Draft saving is not available yet');
+ * }
+ * ```
+ */
+export function unimplemented(message = 'Not implemented'): never {
+  throwError('unimplemented', message);
 }

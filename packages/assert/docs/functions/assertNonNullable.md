@@ -8,7 +8,7 @@
 
 > **assertNonNullable**\<`T`\>(`value`, `message?`): `asserts value is NonNullable<T>`
 
-Defined in: [packages/assert/src/index.ts:79](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/assert/src/index.ts#L79)
+Defined in: [packages/assert/src/index.ts:86](https://github.com/RightCapitalHQ/frontend-libraries/blob/50d63d804b69ec02a23503bf7845af27f8ab0fdd/packages/assert/src/index.ts#L86)
 
 Asserts that a value is not `null` or `undefined`, providing TypeScript type narrowing to `NonNullable<T>`.
 Ensures subsequent code can safely access the value.

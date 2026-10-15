@@ -8,7 +8,7 @@
 
 > **assertUnreachable**(`message?`): `never`
 
-Defined in: [packages/assert/src/index.ts:174](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/assert/src/index.ts#L174)
+Defined in: [packages/assert/src/index.ts:181](https://github.com/RightCapitalHQ/frontend-libraries/blob/50d63d804b69ec02a23503bf7845af27f8ab0fdd/packages/assert/src/index.ts#L181)
 
 Marks code branches that should theoretically never be reached.
 Used for defensive programming to prevent unexpected code execution when data or logic doesn't match expectations.
@@ -17,7 +17,7 @@ Used for defensive programming to prevent unexpected code execution when data or
 
 ### message?
 
-`string`
+`string` = `'Reached unreachable code'`
 
 Optional custom error message
 

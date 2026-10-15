@@ -8,6 +8,7 @@ Type-safe assertion utilities for defensive programming in TypeScript applicatio
 - **Control-Flow Guard (`assertUnreachable`)**: Mark unreachable branches for control-flow analysis and runtime safety.
 - **Expression-Level Assertions (`ensure` / `ensureNonNullable`)**: Assert and return narrowed values in single-line expressions.
 - **Type Narrowing (`assert` / `assertNonNullable`)**: Narrow types with standard TypeScript assertion signatures.
+- **Unimplemented Stubs (`unimplemented`)**: Mark methods that should throw when called.
 
 ## Installation
 
@@ -111,6 +112,18 @@ try {
 }
 ```
 
+### Unimplemented Stubs (`unimplemented`)
+
+Use `unimplemented` to mark a method that is intentionally not implemented yet. Calling it always throws an `AssertionError`.
+
+```typescript
+import { unimplemented } from '@rightcapital/assert';
+
+function saveDraft(): never {
+  return unimplemented('Draft saving is not available yet');
+}
+```
+
 ## API Summary
 
 | API / Signature                                                                              | Description / Typical Use Case                        |
@@ -118,6 +131,7 @@ try {
 | `AssertionError extends Error`                                                               | Error thrown on assertion failure                     |
 | `assertExhaustive(value: never, message?: string): never`                                    | Enforce exhaustiveness check in `switch` or `if-else` |
 | `assertUnreachable(message?: string): never`                                                 | Mark logically unreachable code branches              |
+| `unimplemented(message?: string): never`                                                     | Mark a method stub that always throws                 |
 | `ensure<T, S extends T>(value: T, predicate: (value: T) => value is S, message?: string): S` | Validate and return value with narrowed type          |
 | `ensureNonNullable<T>(value: T, message?: string): NonNullable<T>`                           | Validate non-null/undefined and return value          |
 | `assert(value: boolean, message?: string): asserts value`                                    | Standard boolean condition assertion                  |

@@ -8,7 +8,7 @@
 
 > **ensure**\<`T`, `S`\>(`value`, `predicate`, `message?`): `S`
 
-Defined in: [packages/assert/src/index.ts:113](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/assert/src/index.ts#L113)
+Defined in: [packages/assert/src/index.ts:120](https://github.com/RightCapitalHQ/frontend-libraries/blob/50d63d804b69ec02a23503bf7845af27f8ab0fdd/packages/assert/src/index.ts#L120)
 
 Similar to `assert`, but returns the value. Ensures a value matches a type predicate and returns it with narrowed type.
 
