@@ -25,6 +25,9 @@
       "dependsOn": ["^typecheck"],
       "cache": true
     },
+    "docs": {
+      "dependsOn": ["^build"]
+    },
     "clean": {
       "cache": false
     }
@@ -48,6 +51,7 @@
         "eslint.config.*",
         "vitest.config.*",
         "**/CHANGELOG.md",
+        "**/docs/**",
         ".pnpm-store/**",
         ".vscode/**",
         "pnpm-lock.yaml"
@@ -63,7 +67,7 @@
     },
     "changelog": {
       "projectChangelogs": {
-        "renderer": "scripts/changelog-renderer.cjs",
+        "renderer": "{workspaceRoot}/scripts/changelog-renderer.cjs",
         "createRelease": "github"
       },
       "workspaceChangelog": false

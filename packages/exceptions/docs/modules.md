@@ -1,10 +1,10 @@
-[@rightcapital/exceptions](README.md) / Exports
+[**@rightcapital/exceptions**](README.md)
+
+***
 
 # @rightcapital/exceptions
 
-## Table of contents
-
-### Classes
+## Classes
 
 - [BadFunctionCallException](classes/BadFunctionCallException.md)
 - [BadMethodCallException](classes/BadMethodCallException.md)

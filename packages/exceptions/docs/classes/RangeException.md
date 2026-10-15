@@ -1,129 +1,121 @@
-[@rightcapital/exceptions](../README.md) / [Exports](../modules.md) / RangeException
+[**@rightcapital/exceptions**](../README.md)
+
+***
+
+[@rightcapital/exceptions](../modules.md) / RangeException
 
 # Class: RangeException
+
+Defined in: [packages/exceptions/src/exceptions/range.exception.ts:8](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/exceptions/src/exceptions/range.exception.ts#L8)
 
 Exception thrown to indicate range errors during program execution. Normally this means there was an arithmetic error other than under/overflow.
 This is the runtime version of
 
-**`See`**
+## See
 
 DomainException.
 
-## Hierarchy
+## Extends
 
 - [`RuntimeException`](RuntimeException.md)
 
-  ↳ **`RangeException`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](RangeException.md#constructor)
-
-### Properties
-
-- [cause](RangeException.md#cause)
-- [message](RangeException.md#message)
-- [name](RangeException.md#name)
-- [stack](RangeException.md#stack)
-
-### Methods
-
-- [isCausedBy](RangeException.md#iscausedby)
-
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new RangeException**(`message`, `cause?`)
+> **new RangeException**(`message`, `cause?`): `RangeException`
+
+Defined in: [packages/exceptions/src/exceptions/base.exception.ts:17](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/exceptions/src/exceptions/base.exception.ts#L17)
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `message` | `string` | A human-readable description of the error. |
-| `cause?` | `any` | The value of cause can be of any type. You should not make assumptions that the error you caught has an Error as its cause, in the same way that you cannot be sure the variable bound in the catch statement is an Error either. The "Providing structured data as the error cause" example below shows a case where a non-error is deliberately provided as the cause. |
+##### message
+
+`string`
+
+A human-readable description of the error.
+
+##### cause?
+
+`unknown`
+
+The value of cause can be of any type. You should not make assumptions that the error you caught has an Error as its cause, in the same way that you cannot be sure the variable bound in the catch statement is an Error either. The "Providing structured data as the error cause" example below shows a case where a non-error is deliberately provided as the cause.
+
+#### Returns
+
+`RangeException`
 
 #### Inherited from
 
-[RuntimeException](RuntimeException.md).[constructor](RuntimeException.md#constructor)
-
-#### Defined in
-
-[packages/exceptions/src/exceptions/base.exception.ts:14](https://github.com/RightCapitalHQ/frontend-libraries/blob/d583627/packages/exceptions/src/exceptions/base.exception.ts#L14)
+[`RuntimeException`](RuntimeException.md).[`constructor`](RuntimeException.md#constructor)
 
 ## Properties
 
-### cause
+### cause?
 
-• `Optional` **cause**: `any`
+> `optional` **cause?**: `unknown`
+
+Defined in: [packages/exceptions/src/exceptions/base.exception.ts:19](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/exceptions/src/exceptions/base.exception.ts#L19)
 
 The value of cause can be of any type. You should not make assumptions that the error you caught has an Error as its cause, in the same way that you cannot be sure the variable bound in the catch statement is an Error either. The "Providing structured data as the error cause" example below shows a case where a non-error is deliberately provided as the cause.
 
 #### Inherited from
 
-[RuntimeException](RuntimeException.md).[cause](RuntimeException.md#cause)
+[`RuntimeException`](RuntimeException.md).[`cause`](RuntimeException.md#cause)
 
-#### Defined in
-
-[packages/exceptions/src/exceptions/base.exception.ts:16](https://github.com/RightCapitalHQ/frontend-libraries/blob/d583627/packages/exceptions/src/exceptions/base.exception.ts#L16)
-
-___
+***
 
 ### message
 
-• **message**: `string`
+> **message**: `string`
+
+Defined in: node\_modules/.pnpm/typescript@6.0.3/node\_modules/typescript/lib/lib.es5.d.ts:1075
 
 #### Inherited from
 
-[RuntimeException](RuntimeException.md).[message](RuntimeException.md#message)
+[`RuntimeException`](RuntimeException.md).[`message`](RuntimeException.md#message)
 
-#### Defined in
-
-node_modules/.pnpm/typescript@5.1.6/node_modules/typescript/lib/lib.es5.d.ts:1068
-
-___
+***
 
 ### name
 
-• **name**: `string` = `'RangeException'`
+> **name**: `string` = `'RangeException'`
+
+Defined in: [packages/exceptions/src/exceptions/range.exception.ts:9](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/exceptions/src/exceptions/range.exception.ts#L9)
 
 #### Overrides
 
-[RuntimeException](RuntimeException.md).[name](RuntimeException.md#name)
+[`RuntimeException`](RuntimeException.md).[`name`](RuntimeException.md#name)
 
-#### Defined in
+***
 
-[packages/exceptions/src/exceptions/range.exception.ts:9](https://github.com/RightCapitalHQ/frontend-libraries/blob/d583627/packages/exceptions/src/exceptions/range.exception.ts#L9)
+### stack?
 
-___
+> `optional` **stack?**: `string`
 
-### stack
-
-• `Optional` **stack**: `string`
+Defined in: node\_modules/.pnpm/typescript@6.0.3/node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 #### Inherited from
 
-[RuntimeException](RuntimeException.md).[stack](RuntimeException.md#stack)
-
-#### Defined in
-
-node_modules/.pnpm/typescript@5.1.6/node_modules/typescript/lib/lib.es5.d.ts:1069
+[`RuntimeException`](RuntimeException.md).[`stack`](RuntimeException.md#stack)
 
 ## Methods
 
-### isCausedBy
+### isCausedBy()
 
-▸ **isCausedBy**(`cause`): `boolean`
+> **isCausedBy**(`cause`): `boolean`
+
+Defined in: [packages/exceptions/src/exceptions/base.exception.ts:30](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/exceptions/src/exceptions/base.exception.ts#L30)
 
 If the Error is caused by the cause we passed in the construction method
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `cause` | `any` | the cause we assume that cause the current exception |
+##### cause
+
+`unknown`
+
+the cause we assume that cause the current exception
 
 #### Returns
 
@@ -133,8 +125,4 @@ true if the cause we passed is the original cause when the Exception constructed
 
 #### Inherited from
 
-[RuntimeException](RuntimeException.md).[isCausedBy](RuntimeException.md#iscausedby)
-
-#### Defined in
-
-[packages/exceptions/src/exceptions/base.exception.ts:27](https://github.com/RightCapitalHQ/frontend-libraries/blob/d583627/packages/exceptions/src/exceptions/base.exception.ts#L27)
+[`RuntimeException`](RuntimeException.md).[`isCausedBy`](RuntimeException.md#iscausedby)

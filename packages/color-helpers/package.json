@@ -25,7 +25,7 @@
     "lib"
   ],
   "scripts": {
-    "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --out docs src/color-helpers.ts",
+    "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --tsconfig tsconfig.lib.json --modulesFileName modules --out docs src/color-helpers.ts",
     "prepack": "nx build",
     "test": "vitest"
   },

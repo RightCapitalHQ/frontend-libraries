@@ -1,4 +1,6 @@
-@rightcapital/assert / [Exports](modules.md)
+**@rightcapital/assert**
+
+***
 
 # @rightcapital/assert
 
@@ -115,15 +117,15 @@ try {
 
 ## API Summary
 
-| API / Signature                                                                            | Description / Typical Use Case                            |
-| :----------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
-| `AssertionError extends Error`                                                             | Error thrown on assertion failure                         |
-| `assertExhaustive(value: never, message?: string): never`                                  | Enforce exhaustiveness check in `switch` or `if-else`     |
-| `assertUnreachable(message?: string): never`                                               | Mark logically unreachable code branches                  |
-| `ensure<T, S extends T>(value: T, predicate: (value: T) => value is S, message?: string): S` | Validate and return value with narrowed type              |
-| `ensureNonNullable<T>(value: T, message?: string): NonNullable<T>`                        | Validate non-null/undefined and return value              |
-| `assert(value: boolean, message?: string): asserts value`                                 | Standard boolean condition assertion                      |
-| `assertNonNullable<T>(value: T, message?: string): asserts value is NonNullable<T>`       | Standard non-null/undefined assertion                     |
+| API / Signature                                                                              | Description / Typical Use Case                        |
+| :------------------------------------------------------------------------------------------- | :---------------------------------------------------- |
+| `AssertionError extends Error`                                                               | Error thrown on assertion failure                     |
+| `assertExhaustive(value: never, message?: string): never`                                    | Enforce exhaustiveness check in `switch` or `if-else` |
+| `assertUnreachable(message?: string): never`                                                 | Mark logically unreachable code branches              |
+| `ensure<T, S extends T>(value: T, predicate: (value: T) => value is S, message?: string): S` | Validate and return value with narrowed type          |
+| `ensureNonNullable<T>(value: T, message?: string): NonNullable<T>`                           | Validate non-null/undefined and return value          |
+| `assert(value: boolean, message?: string): asserts value`                                    | Standard boolean condition assertion                  |
+| `assertNonNullable<T>(value: T, message?: string): asserts value is NonNullable<T>`          | Standard non-null/undefined assertion                 |
 
 ## Agent Skills
 
@@ -147,4 +149,4 @@ npx skills add https://github.com/RightCapitalHQ/frontend-libraries/tree/main/pa
 
 ## API Reference
 
-See the [generated documentation](./docs/README.md) for detailed API reference.
+See the [generated documentation](/packages/assert/docs/modules.md) for detailed API reference.
