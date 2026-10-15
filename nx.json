@@ -51,6 +51,7 @@
         "eslint.config.*",
         "vitest.config.*",
         "**/CHANGELOG.md",
+        "**/docs/**",
         ".pnpm-store/**",
         ".vscode/**",
         "pnpm-lock.yaml"
