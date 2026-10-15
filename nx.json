@@ -67,7 +67,7 @@
     },
     "changelog": {
       "projectChangelogs": {
-        "renderer": "scripts/changelog-renderer.cjs",
+        "renderer": "{workspaceRoot}/scripts/changelog-renderer.cjs",
         "createRelease": "github"
       },
       "workspaceChangelog": false
