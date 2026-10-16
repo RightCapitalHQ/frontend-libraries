@@ -6,7 +6,7 @@
 
 # Class: AssertionError
 
-Defined in: [packages/assert/src/index.ts:24](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/assert/src/index.ts#L24)
+Defined in: [packages/assert/src/index.ts:24](https://github.com/RightCapitalHQ/frontend-libraries/blob/50d63d804b69ec02a23503bf7845af27f8ab0fdd/packages/assert/src/index.ts#L24)
 
 Error thrown when an assertion fails.
 
@@ -54,7 +54,7 @@ Defined in: node\_modules/.pnpm/typescript@6.0.3/node\_modules/typescript/lib/li
 
 > `readonly` **name**: `"AssertionError"` = `'AssertionError'`
 
-Defined in: [packages/assert/src/index.ts:25](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/assert/src/index.ts#L25)
+Defined in: [packages/assert/src/index.ts:25](https://github.com/RightCapitalHQ/frontend-libraries/blob/50d63d804b69ec02a23503bf7845af27f8ab0fdd/packages/assert/src/index.ts#L25)
 
 #### Overrides
 

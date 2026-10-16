@@ -2,7 +2,7 @@
 name: assert
 description: >-
   Type-safe assertion and validation utilities for defensive TypeScript programming.
-  Use when writing runtime assertions, null checks, type guard validations, unreachable code markers, or exhaustive switch/if-else checking.
+  Use when writing runtime assertions, null checks, type guard validations, unreachable code markers, exhaustive switch/if-else checking, or unimplemented stubs.
   Import named functions from @rightcapital/assert.
 license: MIT
 metadata:
@@ -12,7 +12,7 @@ metadata:
 
 # assert
 
-Type-safe assertion utilities for defensive TypeScript programming. All functions throw `AssertionError` (which extends `Error`) on failure. Default error message format is `${functionName}: Unexpected ${String(value)}`.
+Type-safe assertion utilities for defensive TypeScript programming. All functions throw `AssertionError` (which extends `Error`) on failure. Error messages are formatted as `${functionName}: ${message}`. When no message is provided, value assertions default to `Unexpected ${String(value)}`.
 
 ## Import
 
@@ -25,6 +25,7 @@ import {
   assertUnreachable,
   ensure,
   ensureNonNullable,
+  unimplemented,
 } from '@rightcapital/assert';
 ```
 
@@ -39,6 +40,7 @@ import {
 | `ensureNonNullable<T>(value: T, message?: string): NonNullable<T>`                           | Inline assignment or method chain for non-null value.               |
 | `assertExhaustive(value: never, message?: string): never`                                    | Exhaustiveness check in `switch` `default` case or `if-else` chain. |
 | `assertUnreachable(message?: string): never`                                                 | Mark logically impossible code paths.                               |
+| `unimplemented(message?: string): never`                                                     | Mark a stub that always throws `AssertionError`.                    |
 
 ## Error Handling with `AssertionError`
 

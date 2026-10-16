@@ -8,7 +8,7 @@
 
 > **ensureNonNullable**\<`T`\>(`value`, `message?`): `NonNullable`\<`T`\>
 
-Defined in: [packages/assert/src/index.ts:142](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/assert/src/index.ts#L142)
+Defined in: [packages/assert/src/index.ts:149](https://github.com/RightCapitalHQ/frontend-libraries/blob/50d63d804b69ec02a23503bf7845af27f8ab0fdd/packages/assert/src/index.ts#L149)
 
 Similar to `assertNonNullable`, but returns the value. Ensures a value is not null/undefined and returns it.
 

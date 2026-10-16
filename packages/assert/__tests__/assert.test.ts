@@ -8,6 +8,7 @@ import {
   assertUnreachable,
   ensure,
   ensureNonNullable,
+  unimplemented,
 } from '../src';
 
 describe(AssertionError.name, () => {
@@ -39,9 +40,15 @@ describe(assert.name, () => {
     expect(() => assert('' as unknown as boolean)).toThrow(AssertionError);
   });
 
+  it('should throw with the default message', () => {
+    expect(() => assert(false)).toThrowError(/^assert: Unexpected false$/);
+  });
+
   it('should throw with custom message', () => {
     const message = 'Custom error message';
-    expect(() => assert(false, message)).toThrow(message);
+    expect(() => assert(false, message)).toThrowError(
+      /^assert: Custom error message$/,
+    );
   });
 });
 
@@ -121,6 +128,12 @@ describe(assertUnreachable.name, () => {
     expect(() => assertUnreachable()).toThrow(AssertionError);
   });
 
+  it('should throw with the default message', () => {
+    expect(() => assertUnreachable()).toThrowError(
+      /^assertUnreachable: Reached unreachable code$/,
+    );
+  });
+
   it('should throw with custom message', () => {
     const message = 'This should not be reached';
     expect(() => assertUnreachable(message)).toThrow(message);
@@ -138,6 +151,22 @@ describe(assertExhaustive.name, () => {
     const message = 'Unhandled case';
     expect(() => assertExhaustive('unexpected' as never, message)).toThrow(
       message,
+    );
+  });
+});
+
+describe(unimplemented.name, () => {
+  it('should throw with the default message', () => {
+    expect(() => unimplemented()).toThrowError(AssertionError);
+    expect(() => unimplemented()).toThrowError(
+      /^unimplemented: Not implemented$/,
+    );
+  });
+
+  it('should throw with a custom message', () => {
+    expect(() => unimplemented('CUSTOM MESSAGE')).toThrowError(AssertionError);
+    expect(() => unimplemented('CUSTOM MESSAGE')).toThrowError(
+      /^unimplemented: CUSTOM MESSAGE$/,
     );
   });
 });

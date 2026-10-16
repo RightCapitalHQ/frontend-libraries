@@ -8,7 +8,7 @@
 
 > **assertExhaustive**(`value`, `message?`): `never`
 
-Defined in: [packages/assert/src/index.ts:211](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/assert/src/index.ts#L211)
+Defined in: [packages/assert/src/index.ts:218](https://github.com/RightCapitalHQ/frontend-libraries/blob/50d63d804b69ec02a23503bf7845af27f8ab0fdd/packages/assert/src/index.ts#L218)
 
 Used for exhaustiveness checking of union types. Ensures switch or if-else statements cover all possible types.
 Leverages TypeScript's `never` type to catch missing branches at compile time.

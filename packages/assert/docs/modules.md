@@ -16,3 +16,4 @@
 - [assertUnreachable](functions/assertUnreachable.md)
 - [ensure](functions/ensure.md)
 - [ensureNonNullable](functions/ensureNonNullable.md)
+- [unimplemented](functions/unimplemented.md)
