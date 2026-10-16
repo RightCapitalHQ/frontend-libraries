@@ -1,3 +1,23 @@
+## 4.0.0 (2026-10-16)
+
+### 🚀 Features
+
+- Add the unimplemented assertion helper. ([ecd7557](https://github.com/RightCapitalHQ/frontend-libraries/commit/ecd7557))
+
+### ⚠️  Breaking Changes
+
+- Migrate to ESM-only. ([ffc7a37](https://github.com/RightCapitalHQ/frontend-libraries/commit/ffc7a37))
+
+  This is a breaking change. The packages now ship ES modules only (`"type": "module"`) and no longer provide a CommonJS build. Imports are restricted to the package entry point via `exports`; deep imports such as `lib/*` are no longer supported.
+
+  All packages are now compiled with `target: es2020` (previously `es6`).
+
+### ❤️ Thank You
+
+- Codex
+- Ech0xff @Ech0xff
+- Pink Champagne @PinkChampagne17
+
 ## 3.0.0 (2026-08-19)
 
 ### 🩹 Fixes
