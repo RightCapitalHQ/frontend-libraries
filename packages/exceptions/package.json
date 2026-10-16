@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/exceptions",
-  "version": "1.2.30",
+  "version": "2.0.0",
   "description": "TypeScript Exception definitions inspired by PHP SPL Exceptions etc...",
   "keywords": [
     "Exception",
