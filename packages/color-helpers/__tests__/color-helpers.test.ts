@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import { BrightnessDirection, ColorHelpers } from '../src/color-helpers';
+import { BrightnessDirection, ColorHelpers } from '../src/color-helpers.ts';
 
 describe('@rightcapital/color-helpers', () => {
   test('Test getHighContrastContentOnBackgroundColor color result', () => {

@@ -18,6 +18,11 @@ export default defineConfig(
   },
   ...rcPreset.configs.recommended,
   {
+    rules: {
+      'import-x/extensions': 'off',
+    },
+  },
+  {
     files: [
       'packages/*/__tests__/**/*.{ts,tsx}',
       'forks/*/__tests__/**/*.{ts,tsx}',
@@ -37,16 +42,6 @@ export default defineConfig(
           ],
         },
       ],
-    },
-  },
-  {
-    files: ['**/*.{ts,cts,mts,tsx}'],
-    languageOptions: {
-      parserOptions: {
-        projectService: {
-          allowDefaultProject: ['*.config.ts'],
-        },
-      },
     },
   },
 );

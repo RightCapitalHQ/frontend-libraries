@@ -19,6 +19,15 @@
   },
   "license": "MIT",
   "author": "RightCapital Ecosystem team <npm-publisher@rightcapital.com>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/date-helpers.d.ts",
+      "default": "./lib/date-helpers.js"
+    },
+    "./package.json": "./package.json"
+  },
   "main": "lib/date-helpers.js",
   "typings": "lib/date-helpers.d.ts",
   "directories": {
@@ -28,7 +37,7 @@
     "lib"
   ],
   "scripts": {
-    "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --tsconfig tsconfig.lib.json --modulesFileName modules --out docs src/date-helpers.ts",
+    "docs": "pnpm exec typedoc --plugin typedoc-plugin-markdown --tsconfig tsconfig.src.json --modulesFileName modules --out docs src/date-helpers.ts",
     "prepack": "nx build"
   },
   "dependencies": {

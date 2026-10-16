@@ -9,7 +9,7 @@ import {
   ensure,
   ensureNonNullable,
   unimplemented,
-} from '../src';
+} from '../src/index.ts';
 
 describe(AssertionError.name, () => {
   it('should extend Error with its own name', () => {

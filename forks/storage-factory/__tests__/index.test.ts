@@ -2,7 +2,7 @@
 
 import { beforeEach, describe, expect, it } from 'vitest';
 
-import { storageFactory } from '../src/index.js';
+import { storageFactory } from '../src/index.ts';
 
 const createStorageTests = (storage: Storage) => {
   beforeEach(() => {

@@ -1,4 +1,4 @@
-import { BadFunctionCallException } from './bad-function-call.exception';
+import { BadFunctionCallException } from './bad-function-call.exception.ts';
 
 /**
  * Exception thrown if a callback refers to an undefined method or if some arguments are missing.

@@ -54,7 +54,20 @@ pnpm run commit
 
 ### Build System
 
-The `@nx/js/typescript` plugin auto-infers `build` and `typecheck` targets from `tsconfig.lib.json` files. Each package has a `project.json` for Nx metadata with empty `targets: {}` since the plugin handles inference.
+The `@nx/js/typescript` plugin auto-infers `build` (from `tsconfig.src.json`) and `typecheck` (from `tsconfig.json`) targets. Each package has a `project.json` for Nx metadata with empty `targets: {}` since the plugin handles inference.
+
+The `@nx/js:typescript-sync` generator is configured to manage references between `tsconfig.src.json` files. Keep `tsconfig.misc.json` references hand-maintained: they should point to source configs, not other packages' test configs.
+
+### TypeScript Configuration
+
+TypeScript project references are used throughout, and every `.ts` file belongs to exactly one tsconfig:
+
+- `tsconfig.base.json` (root) - Shared compiler options
+- `tsconfig.json` (root) - Solution file referencing every package and the root `tsconfig.misc.json`
+- `tsconfig.misc.json` (root) - Root-level files such as `vitest.config.ts`
+- `packages/*/tsconfig.json` - Solution file (`"files": []`) referencing the two configs below
+- `packages/*/tsconfig.src.json` - Source files in `src/`, emitted to `lib/`; references the `tsconfig.src.json` of workspace dependencies
+- `packages/*/tsconfig.misc.json` - Non-source files such as `__tests__/`; references `./tsconfig.src.json`
 
 ### Build Output
 
@@ -63,7 +76,7 @@ Compiled TypeScript outputs to `packages/*/lib/`. Source is in `packages/*/src/`
 ## Technical Details
 
 - **Package manager**: pnpm 10.32.1 with workspace support
-- **Module system**: CommonJS
+- **Module system**: ESM
 - **Test framework**: Vitest with Vite-powered TypeScript transpilation
 - **Versioning**: Nx Release with version plans (independent versioning for all packages)
 

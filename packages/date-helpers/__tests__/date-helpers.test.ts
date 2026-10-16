@@ -2,7 +2,7 @@ import { InvalidArgumentException } from '@rightcapital/exceptions';
 import { parseISO } from 'date-fns';
 import { describe, expect, it } from 'vitest';
 
-import { DateHelpers } from '../src/date-helpers';
+import { DateHelpers } from '../src/date-helpers.ts';
 
 const output = parseISO('2019-10-21');
 

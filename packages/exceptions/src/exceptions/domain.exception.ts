@@ -1,4 +1,4 @@
-import { LogicException } from './logic.exception';
+import { LogicException } from './logic.exception.ts';
 
 /**
  * Exception thrown if a value does not adhere to a defined valid data domain.

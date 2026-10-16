@@ -1,11 +1,12 @@
 {
-  "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "composite": true,
-    "lib": ["ES2017"],
-    "rootDir": ".",
-    "outDir": "./node_modules/.cache/rightcapital/typecheck"
-  },
-  "include": ["src", "__tests__"],
-  "references": [{ "path": "./tsconfig.lib.json" }]
+  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.src.json"
+    },
+    {
+      "path": "./tsconfig.misc.json"
+    }
+  ]
 }
