@@ -41,15 +41,16 @@ pnpm run commit
 
 ### Package Structure
 
-- `packages/exceptions` - TypeScript exception definitions (base dependency for other packages)
 - `packages/assert` - Type-safe assertion utilities for defensive programming
-- `packages/date-helpers` - Date formatting/parsing helpers using date-fns
 - `packages/color-helpers` - Color science helpers (WCAG compliance, hex normalization)
+- `packages/date-helpers` - Date formatting/parsing helpers using date-fns
+- `packages/exceptions` - Legacy TypeScript exception definitions (see [error-handling.md](./docs/error-handling.md))
 
 ### Dependency Graph
 
-- `date-helpers` → `exceptions`
+- `assert` (standalone)
 - `color-helpers` (standalone)
+- `date-helpers` (standalone)
 - `exceptions` (standalone)
 
 ### Build System

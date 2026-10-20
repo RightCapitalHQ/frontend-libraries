@@ -6,8 +6,8 @@
     "rewriteRelativeImportExtensions": true,
     "allowImportingTsExtensions": true,
     "declarationMap": true,
-    "target": "es2020",
-    "lib": ["ES2020"],
+    "target": "es2022",
+    "lib": ["ES2022"],
     "sourceMap": true,
     "skipLibCheck": true
   }

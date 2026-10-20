@@ -6,7 +6,7 @@
 
 # Class: DateHelpers
 
-Defined in: [date-helpers.ts:14](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/date-helpers/src/date-helpers.ts#L14)
+Defined in: [date-helpers.ts:13](https://github.com/RightCapitalHQ/frontend-libraries/blob/f5f08a3f065b151e2a7ffab5cda448e38bf9ef71/packages/date-helpers/src/date-helpers.ts#L13)
 
 A utility class that provides various date formatting and parsing methods.
 
@@ -26,7 +26,7 @@ A utility class that provides various date formatting and parsing methods.
 
 > `static` **isoDateFormat**: `string` = `'yyyy-MM-dd'`
 
-Defined in: [date-helpers.ts:22](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/date-helpers/src/date-helpers.ts#L22)
+Defined in: [date-helpers.ts:21](https://github.com/RightCapitalHQ/frontend-libraries/blob/f5f08a3f065b151e2a7ffab5cda448e38bf9ef71/packages/date-helpers/src/date-helpers.ts#L21)
 
 Format for date strings in ISO format, e.g., "2023-12-31"
 
@@ -36,7 +36,7 @@ Format for date strings in ISO format, e.g., "2023-12-31"
 
 > `static` **usLocaleDateFormat**: `string` = `'MM/dd/yyyy'`
 
-Defined in: [date-helpers.ts:16](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/date-helpers/src/date-helpers.ts#L16)
+Defined in: [date-helpers.ts:15](https://github.com/RightCapitalHQ/frontend-libraries/blob/f5f08a3f065b151e2a7ffab5cda448e38bf9ef71/packages/date-helpers/src/date-helpers.ts#L15)
 
 Format for date strings in US locale, e.g., "12/31/2023"
 
@@ -46,7 +46,7 @@ Format for date strings in US locale, e.g., "12/31/2023"
 
 > `static` **usLocaleDateTimeFormat**: `string` = `'MM/dd/yyyy HH:mm:ss'`
 
-Defined in: [date-helpers.ts:19](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/date-helpers/src/date-helpers.ts#L19)
+Defined in: [date-helpers.ts:18](https://github.com/RightCapitalHQ/frontend-libraries/blob/f5f08a3f065b151e2a7ffab5cda448e38bf9ef71/packages/date-helpers/src/date-helpers.ts#L18)
 
 Format for date and time strings in US locale, e.g., "12/31/2023 23:59:59"
 
@@ -56,7 +56,7 @@ Format for date and time strings in US locale, e.g., "12/31/2023 23:59:59"
 
 > `static` **formatDateLikeToIsoDateString**(`dateInput`): `string`
 
-Defined in: [date-helpers.ts:157](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/date-helpers/src/date-helpers.ts#L157)
+Defined in: [date-helpers.ts:154](https://github.com/RightCapitalHQ/frontend-libraries/blob/f5f08a3f065b151e2a7ffab5cda448e38bf9ef71/packages/date-helpers/src/date-helpers.ts#L154)
 
 Formats a date as an ISO date string.
 
@@ -92,14 +92,14 @@ const isoDateString = DateHelpers.formatDateLikeToIsoDateString("2025/10/20");
 
 > `static` **formatDateLikeToString**(`dateInput`, `dateFormat`): `string`
 
-Defined in: [date-helpers.ts:119](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/date-helpers/src/date-helpers.ts#L119)
+Defined in: [date-helpers.ts:116](https://github.com/RightCapitalHQ/frontend-libraries/blob/f5f08a3f065b151e2a7ffab5cda448e38bf9ef71/packages/date-helpers/src/date-helpers.ts#L116)
 
 Formats a date-like input into a string using a specified date format.
 
 This method accepts both `Date` objects and date strings as input and formats them into a string
 using the provided date format. It internally handles parsing of date strings and formatting of Date objects.
-If the input is an empty string, it returns the input without formatting. If the input is invalid or cannot be parsed,
-an `InvalidArgumentException` is thrown.
+If the input is an empty string, it returns the input without formatting. If the input is not a `Date` or string, a
+`TypeError` is thrown. If the date cannot be parsed or the format is invalid, a `RangeError` is thrown.
 
 #### Parameters
 
@@ -136,7 +136,7 @@ const formattedDate3 = DateHelpers.formatDateLikeToString("", 'MM/dd/yyyy');
 
 #### Throws
 
-Throws an exception if the date string cannot be parsed or the input is invalid.
+Throws a TypeError if the input type is invalid or a RangeError if the date cannot be parsed or formatted.
 
 ***
 
@@ -144,7 +144,7 @@ Throws an exception if the date string cannot be parsed or the input is invalid.
 
 > `static` **formatDateLikeToUsLocaleDateString**(`dateInput`): `string`
 
-Defined in: [date-helpers.ts:182](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/date-helpers/src/date-helpers.ts#L182)
+Defined in: [date-helpers.ts:179](https://github.com/RightCapitalHQ/frontend-libraries/blob/f5f08a3f065b151e2a7ffab5cda448e38bf9ef71/packages/date-helpers/src/date-helpers.ts#L179)
 
 Formats a date as a US locale date string.
 
@@ -180,7 +180,7 @@ const usDateString = DateHelpers.formatDateLikeToUsLocaleDateString("2025/10/20"
 
 > `static` **formatDateLikeToUsLocaleDateTimeString**(`dateInput`): `string`
 
-Defined in: [date-helpers.ts:209](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/date-helpers/src/date-helpers.ts#L209)
+Defined in: [date-helpers.ts:206](https://github.com/RightCapitalHQ/frontend-libraries/blob/f5f08a3f065b151e2a7ffab5cda448e38bf9ef71/packages/date-helpers/src/date-helpers.ts#L206)
 
 Formats a date as a US locale time string.
 
@@ -216,7 +216,7 @@ const usTimeString = DateHelpers.formatDateLikeToUsLocaleDateTimeString("2025/10
 
 > `static` **formatDateLikeToUsLocaleMediumDateString**(`dateInput`): `string`
 
-Defined in: [date-helpers.ts:241](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/date-helpers/src/date-helpers.ts#L241)
+Defined in: [date-helpers.ts:238](https://github.com/RightCapitalHQ/frontend-libraries/blob/f5f08a3f065b151e2a7ffab5cda448e38bf9ef71/packages/date-helpers/src/date-helpers.ts#L238)
 
 Formats a date as a string in the MDY format.
 
@@ -260,7 +260,7 @@ https://angular.io/api/common/DatePipe#:~:text=mediumDate
 
 > `static` **parseDateString**(`input`): `Date`
 
-Defined in: [date-helpers.ts:60](https://github.com/RightCapitalHQ/frontend-libraries/blob/37d3759414217a78db138b4b9b1b420fa796a485/packages/date-helpers/src/date-helpers.ts#L60)
+Defined in: [date-helpers.ts:57](https://github.com/RightCapitalHQ/frontend-libraries/blob/f5f08a3f065b151e2a7ffab5cda448e38bf9ef71/packages/date-helpers/src/date-helpers.ts#L57)
 
 Converts a date string to a Date object using various possible formats.
 
@@ -287,4 +287,4 @@ const date = DateHelpers.parseDateString("2023/01/01");
 
 #### Throws
 
-Throws an exception if the date string cannot be parsed.
+Throws a TypeError if the input type is invalid at runtime or a RangeError if the date string cannot be parsed.

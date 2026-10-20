@@ -9,9 +9,6 @@
   "include": ["__tests__"],
   "references": [
     {
-      "path": "../exceptions/tsconfig.src.json"
-    },
-    {
       "path": "./tsconfig.src.json"
     }
   ]
