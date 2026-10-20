@@ -1,3 +1,13 @@
+## 5.0.0 (2026-10-20)
+
+### ⚠️  Breaking Changes
+
+- Replace custom exceptions with native errors ([9b957c4](https://github.com/RightCapitalHQ/frontend-libraries/commit/9b957c4))
+
+### ❤️ Thank You
+
+- Pink Champagne @PinkChampagne17
+
 ## 4.0.0 (2026-10-16)
 
 ### ⚠️  Breaking Changes
