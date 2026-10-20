@@ -4,8 +4,7 @@
     "rootDir": ".",
     "outDir": "./node_modules/.cache/rightcapital/typecheck",
     "emitDeclarationOnly": true,
-    "rewriteRelativeImportExtensions": false,
-    "lib": ["ES2022"]
+    "rewriteRelativeImportExtensions": false
   },
   "include": ["__tests__"],
   "references": [
