@@ -1,4 +1,3 @@
-import { InvalidArgumentException } from '@rightcapital/exceptions';
 import { format, isValid, parse, parseISO } from 'date-fns';
 
 export type DateLike = Date | string;
@@ -21,11 +20,9 @@ export class DateHelpers {
   /** Format for date strings in ISO format, e.g., "2023-12-31" */
   public static isoDateFormat = 'yyyy-MM-dd';
 
-  private static ensureValidDateInput(
-    input: unknown,
-  ): asserts input is DateLike {
+  private static assertDateLike(input: unknown): asserts input is DateLike {
     if (input === null || input === undefined) {
-      throw new InvalidArgumentException(
+      throw new TypeError(
         `Input cannot be null or undefined. Received: ${input}`,
       );
     }
@@ -38,7 +35,7 @@ export class DateHelpers {
       return; // It's a valid string.
     }
 
-    throw new InvalidArgumentException(
+    throw new TypeError(
       // eslint-disable-next-line @typescript-eslint/no-base-to-string -- Preserve the invalid runtime value in the error message.
       `Input must be a Date object or a string. Received: ${typeof input} - ${String(input)}`,
     );
@@ -55,10 +52,10 @@ export class DateHelpers {
    *
    * @param input - The date string to convert.
    * @returns The converted Date object.
-   * @throws {InvalidArgumentException} Throws an exception if the date string cannot be parsed.
+   * @throws {TypeError | RangeError} Throws a TypeError if the input type is invalid at runtime or a RangeError if the date string cannot be parsed.
    */
   public static parseDateString(input: string): Date {
-    this.ensureValidDateInput(input);
+    this.assertDateLike(input);
 
     let output = parseISO(input);
 
@@ -83,7 +80,7 @@ export class DateHelpers {
     });
 
     if (!isValid(output)) {
-      throw new InvalidArgumentException(
+      throw new RangeError(
         `Invalid Date: unable to parse date string - ${input}. The input might not match any expected formats or is not a valid date.`,
       );
     }
@@ -96,8 +93,8 @@ export class DateHelpers {
    *
    * This method accepts both `Date` objects and date strings as input and formats them into a string
    * using the provided date format. It internally handles parsing of date strings and formatting of Date objects.
-   * If the input is an empty string, it returns the input without formatting. If the input is invalid or cannot be parsed,
-   * an `InvalidArgumentException` is thrown.
+   * If the input is an empty string, it returns the input without formatting. If the input is not a `Date` or string, a
+   * `TypeError` is thrown. If the date cannot be parsed or the format is invalid, a `RangeError` is thrown.
    *
    * @example
    * ```typescript
@@ -114,13 +111,13 @@ export class DateHelpers {
    * @param dateInput - The date to format, can be a `Date` object or a string.
    * @param dateFormat - The date format string to use for formatting the date.
    * @returns The formatted date string.
-   * @throws {InvalidArgumentException} Throws an exception if the date string cannot be parsed or the input is invalid.
+   * @throws {TypeError | RangeError} Throws a TypeError if the input type is invalid or a RangeError if the date cannot be parsed or formatted.
    */
   public static formatDateLikeToString(
     dateInput: DateLike,
     dateFormat: string,
   ): string {
-    this.ensureValidDateInput(dateInput);
+    this.assertDateLike(dateInput);
 
     // Do nothing with empty strings
     if (dateInput === '') {
@@ -130,9 +127,9 @@ export class DateHelpers {
     try {
       return format(getParsedDate(dateInput), dateFormat);
     } catch (error) {
-      throw new InvalidArgumentException(
+      throw new RangeError(
         `Unable to format date: ${String(dateInput)} with format: ${dateFormat}`,
-        error,
+        { cause: error },
       );
     }
   }

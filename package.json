@@ -34,7 +34,6 @@
     "@commitlint/cz-commitlint": "21.2.2",
     "@nx/js": "23.1.1",
     "@rightcapital/eslint-config": "69.0.0",
-    "@rightcapital/exceptions": "workspace:*",
     "@rightcapital/prettier-config": "8.0.5",
     "@vitest/coverage-v8": "4.1.11",
     "commitizen": "4.3.2",

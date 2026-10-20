@@ -1,4 +1,3 @@
-import { InvalidArgumentException } from '@rightcapital/exceptions';
 import { parseISO } from 'date-fns';
 import { describe, expect, it } from 'vitest';
 
@@ -10,54 +9,67 @@ describe('DateHelpers input validation', () => {
   it('parseDateString should throw for unrecognized date formats', () => {
     const invalidDateString = 'ABCDE';
     expect(() => DateHelpers.parseDateString(invalidDateString)).toThrowError(
-      InvalidArgumentException,
+      RangeError,
     );
   });
 
   it('parseDateString should throw error for null or undefined input', () => {
     // @ts-expect-error - intentionally passing invalid input to test error handling
-    expect(() => DateHelpers.parseDateString(null)).toThrow(
-      'Input cannot be null or undefined.',
-    );
+    expect(() => DateHelpers.parseDateString(null)).toThrowError(TypeError);
 
     // @ts-expect-error - intentionally passing invalid input to test error handling
-    expect(() => DateHelpers.parseDateString(undefined)).toThrow(
-      'Input cannot be null or undefined.',
+    expect(() => DateHelpers.parseDateString(undefined)).toThrowError(
+      TypeError,
     );
   });
 
-  it('formatDateLikeToString should throw InvalidArgumentException for invalid date input', () => {
+  it('formatDateLikeToString should throw RangeError for an unparseable date string', () => {
     expect(() =>
       DateHelpers.formatDateLikeToString(
         'invalid date',
         DateHelpers.isoDateFormat,
       ),
-    ).toThrowError(InvalidArgumentException);
+    ).toThrowError(RangeError);
   });
 
-  it('formatDateLikeToString should throw InvalidArgumentException for invalid date format', () => {
+  it('formatDateLikeToString should preserve the cause for an invalid date format', () => {
+    let thrown: unknown;
+    try {
+      DateHelpers.formatDateLikeToString(new Date(), 'invalid format');
+    } catch (error) {
+      thrown = error;
+    }
+
+    expect(thrown).toBeInstanceOf(RangeError);
+    expect((thrown as RangeError).cause).toBeInstanceOf(RangeError);
+  });
+
+  it('formatDateLikeToString should throw RangeError for an invalid Date', () => {
     expect(() =>
-      DateHelpers.formatDateLikeToString(new Date(), 'invalid format'),
-    ).toThrowError(InvalidArgumentException);
+      DateHelpers.formatDateLikeToString(
+        new Date(Number.NaN),
+        DateHelpers.isoDateFormat,
+      ),
+    ).toThrowError(RangeError);
   });
 
-  it('formatDateLikeToString should throw error for null, undefined, or invalid input', () => {
+  it('formatDateLikeToString should throw TypeError for null, undefined, or other invalid input types', () => {
     expect(() =>
       // @ts-expect-error - intentionally passing invalid input to test error handling
       DateHelpers.formatDateLikeToString(null, DateHelpers.isoDateFormat),
-    ).toThrowError(InvalidArgumentException);
+    ).toThrowError(TypeError);
     expect(() =>
       // @ts-expect-error - intentionally passing invalid input to test error handling
       DateHelpers.formatDateLikeToString(undefined, DateHelpers.isoDateFormat),
-    ).toThrowError(InvalidArgumentException);
+    ).toThrowError(TypeError);
     expect(() =>
       // @ts-expect-error - intentionally passing invalid input to test error handling
       DateHelpers.formatDateLikeToString({}, DateHelpers.isoDateFormat),
-    ).toThrowError(InvalidArgumentException);
+    ).toThrowError(TypeError);
     expect(() =>
       // @ts-expect-error - intentionally passing invalid input to test error handling
       DateHelpers.formatDateLikeToString(12345, DateHelpers.isoDateFormat),
-    ).toThrowError(InvalidArgumentException);
+    ).toThrowError(TypeError);
   });
 });
 

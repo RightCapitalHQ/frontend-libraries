@@ -41,7 +41,6 @@
     "prepack": "nx build"
   },
   "dependencies": {
-    "@rightcapital/exceptions": "workspace:*",
     "date-fns": "4.1.0"
   },
   "devDependencies": {

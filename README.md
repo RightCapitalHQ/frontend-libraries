@@ -22,6 +22,8 @@ it including the following packages:
 
 ## Development
 
+See [error handling conventions](docs/error-handling.md) for guidance on assertions and error types.
+
 If you are confused about Develop and _README.md_, please see the document
 [How to Develop](<>) (to be done)
 

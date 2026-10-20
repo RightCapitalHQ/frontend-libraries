@@ -2,12 +2,8 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "./lib"
+    "outDir": "./lib",
+    "lib": ["ES2022"]
   },
-  "include": ["src"],
-  "references": [
-    {
-      "path": "../exceptions/tsconfig.src.json"
-    }
-  ]
+  "include": ["src"]
 }
