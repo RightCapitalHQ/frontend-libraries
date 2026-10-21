@@ -22,6 +22,6 @@ Evaluate error and assertion sites using this 3-step decision tree in order:
 
 ---
 
-Do not add new dependencies on `@rightcapital/exceptions`. The package remains available for existing consumers, but workspace packages should use `@rightcapital/assert` or native `Error` subclasses according to the decision tree above.
+Do not add new dependencies on `@rightcapital/exceptions`. The package is no longer maintained in this repository; existing consumers may continue using published npm versions. Workspace packages should use `@rightcapital/assert` or native `Error` subclasses according to the decision tree above.
 
 In `@rightcapital/date-helpers`, non-`Date`/non-string runtime inputs throw `TypeError`. Unparseable dates and invalid date formats throw `RangeError`.

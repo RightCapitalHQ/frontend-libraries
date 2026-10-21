@@ -37,7 +37,6 @@ export default defineConfig(
             './packages/assert',
             './packages/color-helpers',
             './packages/date-helpers',
-            './packages/exceptions',
             './forks/storage-factory',
           ],
         },

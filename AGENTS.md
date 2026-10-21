@@ -44,14 +44,12 @@ pnpm run commit
 - `packages/assert` - Type-safe assertion utilities for defensive programming
 - `packages/color-helpers` - Color science helpers (WCAG compliance, hex normalization)
 - `packages/date-helpers` - Date formatting/parsing helpers using date-fns
-- `packages/exceptions` - Legacy TypeScript exception definitions (see [error-handling.md](./docs/error-handling.md))
 
 ### Dependency Graph
 
 - `assert` (standalone)
 - `color-helpers` (standalone)
 - `date-helpers` (standalone)
-- `exceptions` (standalone)
 
 ### Build System
 
@@ -91,7 +89,7 @@ Additional conventions:
 
 - ESLint uses modern flat config format (`eslint.config.mjs`)
 - Conventional commits are enforced via commitlint
-- Allowed scopes: `assert`, `color-helpers`, `date-helpers`, `exceptions`
+- Allowed scopes: `assert`, `color-helpers`, `date-helpers`
 - Use `pnpm exec` or `pnpm dlx` instead of `npx` for running binaries
 
 ## Nx Release
