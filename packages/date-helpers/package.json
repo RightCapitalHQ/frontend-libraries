@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/date-helpers",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Format dates with date-fns.",
   "keywords": [
     "date",
