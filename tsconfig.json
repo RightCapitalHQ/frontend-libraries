@@ -2,9 +2,6 @@
   "files": [],
   "references": [
     {
-      "path": "./packages/exceptions"
-    },
-    {
       "path": "./packages/assert"
     },
     {

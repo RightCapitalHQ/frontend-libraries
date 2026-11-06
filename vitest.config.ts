@@ -36,15 +36,6 @@ export default defineConfig({
       }),
       defineProject({
         test: {
-          name: 'exceptions',
-          include: [
-            'packages/exceptions/**/__tests__/**/*.ts?(x)',
-            'packages/exceptions/**/?(*.)+(spec|test).ts?(x)',
-          ],
-        },
-      }),
-      defineProject({
-        test: {
           name: 'storage-factory-next',
           environment: 'happy-dom',
           include: [
