@@ -25,11 +25,19 @@ export class AssertionError extends Error {
   public override readonly name = 'AssertionError';
 }
 
+type Caller = (...args: never[]) => unknown;
+
+interface ErrorWithCaptureStackTrace {
+  captureStackTrace?(object: object, constructor?: Caller): void;
+}
+
 /**
  * Throws an AssertionError with a message prefixed by the assertion name.
  */
-function throwError(name: string, message: string): never {
-  throw new AssertionError(`${name}: ${message}`);
+function throwError(name: string, message: string, caller: Caller): never {
+  const error = new AssertionError(`${name}: ${message}`);
+  (Error as ErrorWithCaptureStackTrace).captureStackTrace?.(error, caller);
+  throw error;
 }
 
 /**
@@ -38,9 +46,10 @@ function throwError(name: string, message: string): never {
 function throwUnexpectedValueError(
   name: string,
   value: unknown,
-  message = `Unexpected ${String(value)}`,
+  message: string | undefined,
+  caller: Caller,
 ): never {
-  throwError(name, message);
+  throwError(name, message ?? `Unexpected ${String(value)}`, caller);
 }
 
 /**
@@ -62,7 +71,7 @@ function throwUnexpectedValueError(
  */
 export function assert(value: boolean, message?: string): asserts value {
   if (value !== true) {
-    throwUnexpectedValueError('assert', value, message);
+    throwUnexpectedValueError('assert', value, message, assert);
   }
 }
 
@@ -88,7 +97,12 @@ export function assertNonNullable<T>(
   message?: string,
 ): asserts value is NonNullable<T> {
   if (value === null || value === undefined) {
-    throwUnexpectedValueError('assertNonNullable', value, message);
+    throwUnexpectedValueError(
+      'assertNonNullable',
+      value,
+      message,
+      assertNonNullable,
+    );
   }
 }
 
@@ -122,7 +136,9 @@ export function ensure<T, S extends T>(
   predicate: (value: T) => value is S,
   message?: string,
 ): S {
-  assert(predicate(value), message);
+  if (!predicate(value)) {
+    throwUnexpectedValueError('ensure', value, message, ensure);
+  }
   return value;
 }
 
@@ -151,7 +167,12 @@ export function ensureNonNullable<T>(
   message?: string,
 ): NonNullable<T> {
   if (value === null || value === undefined) {
-    throwUnexpectedValueError('ensureNonNullable', value, message);
+    throwUnexpectedValueError(
+      'ensureNonNullable',
+      value,
+      message,
+      ensureNonNullable,
+    );
   }
   return value;
 }
@@ -179,7 +200,7 @@ export function ensureNonNullable<T>(
  * ```
  */
 export function assertUnreachable(message = 'Reached unreachable code'): never {
-  throwError('assertUnreachable', message);
+  throwError('assertUnreachable', message, assertUnreachable);
 }
 
 /**
@@ -216,7 +237,12 @@ export function assertUnreachable(message = 'Reached unreachable code'): never {
  * ```
  */
 export function assertExhaustive(value: never, message?: string): never {
-  throwUnexpectedValueError('assertExhaustive', value, message);
+  throwUnexpectedValueError(
+    'assertExhaustive',
+    value,
+    message,
+    assertExhaustive,
+  );
 }
 
 /**
@@ -234,5 +260,5 @@ export function assertExhaustive(value: never, message?: string): never {
  * ```
  */
 export function unimplemented(message = 'Not implemented'): never {
-  throwError('unimplemented', message);
+  throwError('unimplemented', message, unimplemented);
 }

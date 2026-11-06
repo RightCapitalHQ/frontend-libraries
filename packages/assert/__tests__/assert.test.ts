@@ -87,11 +87,16 @@ describe(ensure.name, () => {
 
   it('should throw when predicate fails', () => {
     expect(() => ensure(123, isString)).toThrow(AssertionError);
+    expect(() => ensure(123, isString)).toThrowError(
+      /^ensure: Unexpected 123$/,
+    );
   });
 
   it('should throw with custom message', () => {
     const message = 'Expected string';
-    expect(() => ensure(123, isString, message)).toThrow(message);
+    expect(() => ensure(123, isString, message)).toThrowError(
+      /^ensure: Expected string$/,
+    );
   });
 
   it('should work with type narrowing', () => {
