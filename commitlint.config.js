@@ -13,7 +13,6 @@ module.exports = {
         'assert',
         'color-helpers',
         'date-helpers',
-        'exceptions',
       ],
     ],
     'body-max-line-length': [2, 'always', Infinity],

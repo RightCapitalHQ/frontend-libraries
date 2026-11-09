@@ -103,18 +103,6 @@ importers:
         specifier: 4.12.0
         version: 4.12.0(typedoc@0.28.20(typescript@6.0.3))
 
-  packages/exceptions:
-    devDependencies:
-      prettier:
-        specifier: 3.9.6
-        version: 3.9.6
-      typedoc:
-        specifier: 0.28.20
-        version: 0.28.20(typescript@6.0.3)
-      typedoc-plugin-markdown:
-        specifier: 4.12.0
-        version: 4.12.0(typedoc@0.28.20(typescript@6.0.3))
-
 packages:
 
   '@babel/code-frame@7.29.0':
