@@ -1,3 +1,15 @@
+## 4.1.0 (2026-11-09)
+
+### 🚀 Features
+
+- Trim internal stack frames from AssertionError with Error.captureStackTrace. ([a86a183](https://github.com/RightCapitalHQ/frontend-libraries/commit/a86a183))
+
+### ❤️ Thank You
+
+- Codex
+- Gemini 4 Argon
+- Pink Champagne @PinkChampagne17
+
 ## 4.0.0 (2026-10-16)
 
 ### 🚀 Features
